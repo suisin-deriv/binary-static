@@ -27,9 +27,11 @@ const getRegex                = require('../../../../_common/utility').getRegex;
 const Authenticate = (() => {
     let is_any_upload_failed     = false;
     let is_any_upload_failed_uns = false;
+    let is_any_upload_failed_edd = false;
     let account_status    = {};
     let file_checks          = {};
     let file_checks_uns      = {};
+    let file_checks_edd      = {};
     let onfido_sdk,
         available_document_list,
         residence_list,
@@ -39,7 +41,10 @@ const Authenticate = (() => {
         $submit_table,
         $button_uns,
         $submit_status_uns,
-        $submit_table_uns;
+        $submit_table_uns,
+        $button_edd,
+        $submit_status_edd,
+        $submit_table_edd;
 
     const init = () => {
         file_checks    = {};
@@ -75,6 +80,8 @@ const Authenticate = (() => {
             $('#expiry_datepicker_proofid').setVisibility(0);
             $('#exp_date_2').datepicker('setDate', '2099-12-31');
         }
+
+        initEdd();
     };
 
     const getAccountStatus = () => new Promise((resolve) => {
@@ -110,6 +117,39 @@ const Authenticate = (() => {
         const link = Url.urlForCurrentDomain(`https://marketing.binary.com/authentication/Authentication_Process${language_based_link}.pdf`);
 
         $not_authenticated_uns.find('.learn_more').setVisibility(1).find('a').attr('href', link);
+
+        if (isIdentificationNoExpiry(Client.get('residence'))) {
+            $('#expiry_datepicker_proofid').setVisibility(0);
+            $('#exp_date_2').datepicker('setDate', '2099-12-31');
+        }
+    };
+
+    const initEdd = () => {
+        file_checks_edd    = {};
+        $submit_status_edd = $('.submit-status-edd');
+        $submit_table_edd  = $submit_status_edd.find('table tbody');
+
+        // Setup accordion
+        $('#not_authenticated_edd .files').accordion({
+            heightStyle: 'content',
+            collapsible: true,
+            active     : false,
+        });
+        // Setup Date picker
+        $('#not_authenticated_edd .date-picker').datepicker({
+            dateFormat : 'yy-mm-dd',
+            changeMonth: true,
+            changeYear : true,
+            minDate    : '+6m',
+        });
+        $('#not_authenticated_edd .file-picker').on('change', onFileSelectedEdd);
+
+        const language               = getLanguage();
+        const language_based_link    = ['ID', 'RU', 'PT'].includes(language) ? `_${language}` : '';
+        const $not_authenticated_edd = $('#not_authenticated_edd');
+        const link = Url.urlForCurrentDomain(`https://marketing.binary.com/authentication/Authentication_Process${language_based_link}.pdf`);
+
+        $not_authenticated_edd.find('.learn_more').setVisibility(1).find('a').attr('href', link);
 
         if (isIdentificationNoExpiry(Client.get('residence'))) {
             $('#expiry_datepicker_proofid').setVisibility(0);
@@ -188,6 +228,36 @@ const Authenticate = (() => {
         enableDisableSubmitUns();
     };
 
+    const onFileSelectedEdd = (event) => {
+        if (!event.target.files || !event.target.files.length) {
+            resetLabelEdd(event);
+            return;
+        }
+        const $target      = $(event.target);
+        const file_name    = event.target.files[0].name || '';
+        const display_name = file_name.length > 20 ? `${file_name.slice(0, 10)}..${file_name.slice(-8)}` : file_name;
+        $target.attr('data-status', '')
+            .parent().find('label')
+            .off('click')
+            // Prevent opening file selector.
+            .on('click', (e) => {
+                if ($(e.target).is('span.remove')) e.preventDefault();
+            })
+            .text(display_name)
+            .removeClass('error')
+            .addClass('selected')
+            .append($('<span/>', { class: 'remove' }))
+            .find('.remove')
+            .click((e) => {
+                if ($(e.target).is('span.remove')) resetLabelEdd(event);
+            });
+
+        // Hide success message on another file selected
+        hideSuccessEdd();
+        // Change submit button state
+        enableDisableSubmitEdd();
+    };
+
     // Reset file-selector label
     const resetLabel = (event) => {
         const $target = $(event.target);
@@ -216,6 +286,21 @@ const Authenticate = (() => {
             .append($('<span/>', { class: 'add' }));
         // Change submit button state
         enableDisableSubmitUns();
+    };
+
+    // Reset file-selector label
+    const resetLabelEdd = (event) => {
+        const $target = $(event.target);
+        let default_text = toTitleCase($target.attr('id').split('_')[0]);
+        if (default_text !== 'Add') {
+            default_text = default_text === 'Back' ? localize('Reverse Side') : localize('Front Side');
+        }
+        fileTracker($target, false);
+        // Remove previously selected file and set the label
+        $target.val('').parent().find('label').text(default_text).removeClass('selected error')
+            .append($('<span/>', { class: 'add' }));
+        // Change submit button state
+        enableDisableSubmitEdd();
     };
 
     /**
@@ -272,6 +357,33 @@ const Authenticate = (() => {
         }
     };
 
+    /**
+     * Enables the submit button if any file is selected, also adds the event handler for the button.
+     * Disables the button if it no files are selected.
+     */
+     const enableDisableSubmitEdd = () => {
+        const $not_authenticated = $('#not_authenticated_edd');
+        const $files             = $not_authenticated.find('input[type="file"]');
+        $button_edd = $not_authenticated.find('#btn_submit_edd');
+
+        const file_selected  = $('label[class~="selected"]').length;
+        const has_file_error = $('label[class~="error"]').length;
+
+        if (file_selected && !has_file_error) {
+            if ($button_edd.hasClass('button')) return;
+            $('#resolve_error').setVisibility(0);
+            $button_edd.removeClass('button-disabled')
+                .addClass('button')
+                .off('click') // To avoid binding multiple click events
+                .click(() => submitFilesEdd($files));
+        } else {
+            if ($button_edd.hasClass('button-disabled')) return;
+            $button_edd.removeClass('button')
+                .addClass('button-disabled')
+                .off('click');
+        }
+    };
+
     const showButtonLoading = () => {
         if ($button.length && !$button.find('.barspinner').length) {
             const $btn_text = $('<span/>', { text: $button.find('span').text(), class: 'invisible' });
@@ -288,6 +400,14 @@ const Authenticate = (() => {
         }
     };
 
+    const showButtonLoadingEdd = () => {
+        if ($button_edd.length && !$button_edd.find('.barspinner').length) {
+            const $btn_text = $('<span/>', { text: $button_edd.find('span').text(), class: 'invisible' });
+            showLoadingImage($button_edd.find('span'), 'white');
+            $button_edd.find('span').append($btn_text);
+        }
+    };
+
     const removeButtonLoading = () => {
         if ($button.length && $button.find('.barspinner').length) {
             $button.find('>span').html($button.find('>span>span').text());
@@ -297,6 +417,12 @@ const Authenticate = (() => {
     const removeButtonLoadingUns = () => {
         if ($button_uns.length && $button_uns.find('.barspinner').length) {
             $button_uns.find('>span').html($button_uns.find('>span>span').text());
+        }
+    };
+
+    const removeButtonLoadingEdd = () => {
+        if ($button_edd.length && $button_edd.find('.barspinner').length) {
+            $button_edd.find('>span').html($button_edd.find('>span>span').text());
         }
     };
 
@@ -400,6 +526,57 @@ const Authenticate = (() => {
         });
         $submit_status_uns.setVisibility(1);
         processFilesUns(files);
+    };
+
+    /**
+     * On submit button click
+     */
+    const submitFilesEdd = ($files) => {
+        if ($button_edd.length && $button_edd.find('.barspinner').length) { // it's still in submit process
+            return;
+        }
+        // Disable submit button
+        showButtonLoadingEdd();
+        const files = [];
+        is_any_upload_failed_edd = false;
+        $submit_table_edd.children().remove();
+        $files.each((i, e) => {
+            if (e.files && e.files.length) {
+                const $e        = $(e);
+                const id        = $e.attr('id');
+                const type      = `${($e.attr('data-type') || '').replace(/\s/g, '_').toLowerCase()}`;
+                const name      = $e.attr('data-name');
+                const page_type = $e.attr('data-page-type');
+                const $inputs   = $e.closest('.fields').find('input[type="text"]');
+                const file_obj  = {
+                    file     : e.files[0],
+                    chunkSize: 16384, // any higher than this sends garbage data to websocket currently.
+                    class    : id,
+                    type,
+                    name,
+                    page_type,
+                };
+                if ($inputs.length) {
+                    file_obj.id_number = $($inputs[0]).val();
+                    file_obj.exp_date  = $($inputs[1]).val();
+                }
+                fileTrackerEdd($e, true);
+                files.push(file_obj);
+
+                let display_name = name;
+                if (/front|back/.test(id)) {
+                    display_name += ` - ${/front/.test(id) ? localize('Front Side') : localize('Reverse Side')}`;
+                }
+
+                $submit_table_edd.append($('<tr/>', { id: file_obj.type, class: id })
+                    .append($('<td/>', { text: display_name }))                           // document type, e.g. Passport - Front Side
+                    .append($('<td/>', { text: e.files[0].name, class: 'filename' }))     // file name, e.g. sample.pdf
+                    .append($('<td/>', { text: localize('Pending'), class: 'status' }))   // status of uploading file, first set to Pending
+                );
+            }
+        });
+        $submit_status_edd.setVisibility(1);
+        processFilesEdd(files);
     };
 
     const cancelUpload = () => {
@@ -520,6 +697,59 @@ const Authenticate = (() => {
         });
     };
 
+    const processFilesEdd = (files) => {
+        const uploader = new DocumentUploader({ connection: BinarySocket.get() }); // send 'debug: true' here for debugging
+        let idx_to_upload     = 0;
+        let is_any_file_error = false;
+
+        compressImageFilesEdd(files).then((files_to_process) => {
+            readFilesEdd(files_to_process).then((processed_files) => {
+                processed_files.forEach((file) => {
+                    if (file.message) {
+                        is_any_file_error = true;
+                        showErrorUns(file);
+                    }
+                });
+                const total_to_upload = processed_files.length;
+                if (is_any_file_error || !total_to_upload) {
+                    removeButtonLoadingEdd();
+                    enableDisableSubmitEdd();
+                    return; // don't start submitting files until all front-end validation checks pass
+                }
+
+                const isLastUpload = () => total_to_upload === idx_to_upload + 1;
+                // sequentially send files
+                const uploadFile = () => {
+                    const $status = $submit_table_edd.find(`.${processed_files[idx_to_upload].passthrough.class} .status`);
+                    $status.text(`${localize('Submitting')}...`);
+                    uploader.upload(processed_files[idx_to_upload]).then((api_response) => {
+                        onResponseEdd(api_response, isLastUpload());
+                        if (!api_response.error && !api_response.warning) {
+                            $status.text(localize('Submitted')).append($('<span/>', { class: 'checked' }));
+                            $(`#${api_response.passthrough.class}`).attr('type', 'hidden'); // don't allow users to change submitted files
+                            $(`label[for=${api_response.passthrough.class}]`).removeClass('selected error').find('span').attr('class', 'checked');
+                        }
+                        uploadNextFile();
+                    }).catch((error) => {
+                        is_any_upload_failed_edd = true;
+                        showErrorEdd({
+                            message: error.message || localize('Failed'),
+                            class  : error.passthrough ? error.passthrough.class : '',
+                        });
+                        uploadNextFile();
+                    });
+                };
+                const uploadNextFile = () => {
+                    if (!isLastUpload()) {
+                        idx_to_upload += 1;
+                        uploadFile();
+                    }
+                };
+                uploadFile();
+            });
+        });
+    };
+
     const compressImageFiles = (files) => {
         const promises = [];
         files.forEach((f) => {
@@ -554,6 +784,33 @@ const Authenticate = (() => {
                 if (isImageType(f.file.name)) {
                     const $status = $submit_table_uns.find(`.${f.class} .status`);
                     const $filename = $submit_table_uns.find(`.${f.class} .filename`);
+                    $status.text(`${localize('Compressing Image')}...`);
+
+                    ConvertToBase64(f.file).then((img) => {
+                        CompressImage(img).then((compressed_img) => {
+                            const file_arr = f;
+                            file_arr.file = compressed_img;
+                            $filename.text(file_arr.file.name);
+                            resolve(file_arr);
+                        });
+                    });
+                } else {
+                    resolve(f);
+                }
+            });
+            promises.push(promise);
+        });
+
+        return Promise.all(promises);
+    };
+
+    const compressImageFilesEdd = (files) => {
+        const promises = [];
+        files.forEach((f) => {
+            const promise = new Promise((resolve) => {
+                if (isImageType(f.file.name)) {
+                    const $status = $submit_table_edd.find(`.${f.class} .status`);
+                    const $filename = $submit_table_edd.find(`.${f.class} .filename`);
                     $status.text(`${localize('Compressing Image')}...`);
 
                     ConvertToBase64(f.file).then((img) => {
@@ -687,6 +944,62 @@ const Authenticate = (() => {
         return Promise.all(promises);
     };
 
+    // Returns file promise.
+    const readFilesEdd = (files) => {
+        const promises = [];
+        files.forEach((f) => {
+            const fr      = new FileReader();
+            const promise = new Promise((resolve) => {
+                fr.onload = () => {
+                    const $status = $submit_table_edd.find(`.${f.class} .status`);
+                    $status.text(`${localize('Checking')}...`);
+
+                    const format = (f.file.type.split('/')[1] || (f.file.name.match(/\.([\w\d]+)$/) || [])[1] || '').toUpperCase();
+                    const obj    = {
+                        filename      : f.file.name,
+                        buffer        : fr.result,
+                        documentType  : f.type,
+                        pageType      : f.page_type,
+                        documentFormat: format,
+                        documentId    : f.id_number || undefined,
+                        expirationDate: f.exp_date || undefined,
+                        chunkSize     : f.chunkSize,
+                        passthrough   : {
+                            filename: f.file.name,
+                            name    : f.name,
+                            class   : f.class,
+                        },
+                    };
+
+                    const error = { message: validate(obj) };
+                    if (error && error.message) {
+                        resolve({
+                            message: error.message,
+                            class  : f.class,
+                        });
+                    } else {
+                        $status.text(localize('Checked')).append($('<span/>', { class: 'checked' }));
+                    }
+
+                    resolve(obj);
+                };
+
+                fr.onerror = () => {
+                    resolve({
+                        message: localize('Unable to read file [_1]', f.file.name),
+                        class  : f.class,
+                    });
+                };
+                // Reading file.
+                fr.readAsArrayBuffer(f.file);
+            });
+
+            promises.push(promise);
+        });
+
+        return Promise.all(promises);
+    };
+
     const fileTracker = ($e, selected) => {
         const doc_type = ($e.attr('data-type') || '').replace(/\s/g, '_').toLowerCase();
         const file_type = ($e.attr('id').match(/\D+/g) || [])[0];
@@ -708,6 +1021,18 @@ const Authenticate = (() => {
             file_checks_uns[doc_type][file_type] = true;
         } else if (file_checks_uns[doc_type]) {
             file_checks_uns[doc_type][file_type] = false;
+        }
+    };
+
+    const fileTrackerEdd = ($e, selected) => {
+        const doc_type = ($e.attr('data-type') || '').replace(/\s/g, '_').toLowerCase();
+        const file_type = ($e.attr('id').match(/\D+/g) || [])[0];
+        // Keep track of front and back sides of files.
+        if (selected) {
+            file_checks_edd[doc_type] = file_checks_edd[doc_type] || {};
+            file_checks_edd[doc_type][file_type] = true;
+        } else if (file_checks_edd[doc_type]) {
+            file_checks_edd[doc_type][file_type] = false;
         }
     };
 
@@ -787,6 +1112,21 @@ const Authenticate = (() => {
         enableDisableSubmitUns();
     };
 
+    const showErrorEdd = (obj_error) => {
+        removeButtonLoadingUns();
+        const $error      = $('#msg_form_edd');
+        const $file_error = $submit_table_edd.find(`.${obj_error.class} .status`);
+        const message     = obj_error.message;
+        if ($file_error.length) {
+            $file_error.text(message).addClass('error-msg');
+            $(`label[for=${obj_error.class}]`).addClass('error');
+            $('#resolve_error_edd').setVisibility(1);
+        } else {
+            $error.text(message).setVisibility(1);
+        }
+        enableDisableSubmitEdd();
+    };
+
     const showSuccess = () => {
         BinarySocket.send({ get_account_status: 1 }, { forced: true }).then(response => {
             account_status = response.get_account_status;
@@ -815,6 +1155,21 @@ const Authenticate = (() => {
         });
     };
 
+    const showSuccessEdd = () => {
+        BinarySocket.send({ get_account_status: 1 }, { forced: true }).then(response => {
+            account_status = response.get_account_status;
+            Header.displayAccountStatus();
+            removeButtonLoadingEdd();
+            $button_edd.setVisibility(0);
+            $('.submit-status-edd').setVisibility(0);
+            $('#not_authenticated_edd').setVisibility(0);
+
+            showCTAButton('document', 'pending');
+            $('#upload_complete').setVisibility(1);
+            $('#msg_personal_details').setVisibility(0);
+        });
+    };
+
     const hideSuccess = () => {
         if ($button) {
             $button.setVisibility(1);
@@ -825,6 +1180,13 @@ const Authenticate = (() => {
     const hideSuccessUns = () => {
         if ($button_uns) {
             $button_uns.setVisibility(1);
+        }
+        $('#upload_complete').setVisibility(0);
+    };
+
+    const hideSuccessEdd = () => {
+        if ($button_edd) {
+            $button_edd.setVisibility(1);
         }
         $('#upload_complete').setVisibility(0);
     };
@@ -850,6 +1212,18 @@ const Authenticate = (() => {
             });
         } else if (is_last_upload && !is_any_upload_failed_uns) {
             showSuccessUns();
+        }
+    };
+
+    const onResponseEdd = (response, is_last_upload) => {
+        if (response.warning || response.error) {
+            is_any_upload_failed_edd = true;
+            showErrorEdd({
+                message: response.message || (response.error ? response.error.message : localize('Failed')),
+                class  : response.passthrough.class,
+            });
+        } else if (is_last_upload && !is_any_upload_failed_edd) {
+            showSuccessEdd();
         }
     };
 
@@ -1552,7 +1926,6 @@ const Authenticate = (() => {
     const onLoad = async () => {
         cleanElementVisibility();
         account_status = await getAccountStatus();
-
         if (isAuthenticationAllowed()) {
             initTab();
             initAuthentication();

@@ -1,6 +1,7 @@
 import React             from 'react';
 import {
     AuthenticateMessage,
+    EddMessage,
     UnsupportedMessage } from '../_includes/authenticate_message.jsx';
 import { Button }        from '../../_common/components/elements.jsx';
 import Loading           from '../../_common/components/loading.jsx';
@@ -160,6 +161,7 @@ const Authenticate = () => (
                     items={[
                         { id: 'poi',      text: it.L('Proof of identity') },
                         { id: 'poa',      text: it.L('Proof of address') },
+                        { id: 'edd',      text: it.L('Proof of income') },  
                         { id: 'authentication_tab_selector', className: 'tab-selector' },
                     ]}
                 />
@@ -343,6 +345,13 @@ const Authenticate = () => (
 
                                 <p className='center-text notice-msg invisible' id='error_message' />
                             </div>
+                        </div>
+                    </TabContent>
+                    <TabContent id='edd'>
+                        {/* proof of income content */}
+                        {/* <h1>HI</h1> */}
+                        <div id='not_authenticated_edd' className='invisible'>
+                            <EddMessage />
                         </div>
                     </TabContent>
                 </TabContentContainer>

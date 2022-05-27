@@ -85,6 +85,14 @@ const FileSelector = ({
                                                     </div>
                                                 </div>
                                             )}
+                                            { type === 'edd' && (
+                                                <div className='gr-row form-row gr-centered'>
+                                                    <div className='gr-12'>
+                                                        <input id={`add_file_edd${j}`} className='file-picker' type='file' accept='.jpg, .jpeg, .gif, .png, .pdf' data-type={document.value} data-name={document.name} />
+                                                        <label htmlFor={`add_file_edd${j}`} className='button'>{it.L('Add')} <span className='add' /></label>
+                                                    </div>
+                                                </div>
+                                            )}
                                             { type === 'selfie' && (
                                                 <div className='gr-row form-row gr-centered'>
                                                     <div className='gr-12'>
@@ -229,3 +237,54 @@ export const AuthenticateMessage = () => (
         </div>
     </React.Fragment>
 );
+
+export const EddMessage = () => (
+    <React.Fragment>
+        <FileSelector
+            instructions={[
+                it.L('Issued under your own name'),
+                it.L('Dated within the last six months'),
+                it.L('Only JPG, JPEG, GIF, PNG and PDF formats are accepted'),
+                it.L('Maximum upload size for each file is [_1]', '8MB'),
+            ]}
+            type='edd'
+            accepted_documents={[
+                { name: it.L('Tax return'), value: 'tax_return' },
+                { name: it.L('Employment contract'), value: 'employment_contract' },
+                { name: it.L('Payslip'), value: 'payslip' },
+                { name: it.L('COI'), value: 'coi' },
+                { name: it.L('Business POA'), value: 'business_poa' },
+                { name: it.L('Article of association'), value: 'article_of_association' },
+                { name: it.L('Memorandum'), value: 'memorandum' },
+                { name: it.L('Authorize letter'), value: 'authorize_letter' },
+                { name: it.L('Declaration'), value: 'declaration' },
+            ]}
+        />
+
+        <div className='submit-status-edd gr-centered gr-padding-30 invisible'>
+            <h2 className='center-text'>{it.L('Document submission status')}</h2>
+            <Table
+                scroll
+                data={{
+                    thead: [
+                        [
+                            { text: it.L('Document Type'), className: 'gr-padding-10 align-start' },
+                            { text: it.L('File Name'),     className: 'gr-padding-10 align-start' },
+                            { text: it.L('Status'),        className: 'gr-padding-10 align-start' },
+                        ],
+                    ],
+                }}
+            />
+        </div>
+
+        <div className='center-text'>
+            <div id='resolve_error_edd' className='invisible center-text'>{it.L('Please resolve all pending issues to continue')}</div>
+            <div id='msg_form_edd' className='error-msg invisible center-text' />
+            <div className='gr-padding-10'>
+                <a className='button-disabled' id='btn_submit_edd' type='submit'>
+                    <span>{it.L('Submit for review')}</span>
+                </a>
+            </div>
+        </div>
+    </React.Fragment>
+)
