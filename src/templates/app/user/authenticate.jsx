@@ -351,7 +351,7 @@ const Authenticate = () => (
                     </TabContent>
                     <TabContent id='edd'>
                         {/* proof of income content */}
-                        <div id='not_authenticated_edd' className='invisible'>
+                        <div id='not_authenticated_edd' className=''>
                             <EddMessage />
                         </div>
 
