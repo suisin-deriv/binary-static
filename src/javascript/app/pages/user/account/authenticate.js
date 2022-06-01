@@ -361,7 +361,7 @@ const Authenticate = (() => {
      * Enables the submit button if any file is selected, also adds the event handler for the button.
      * Disables the button if it no files are selected.
      */
-     const enableDisableSubmitEdd = () => {
+    const enableDisableSubmitEdd = () => {
         const $not_authenticated = $('#not_authenticated_edd');
         const $files             = $not_authenticated.find('input[type="file"]');
         $button_edd = $not_authenticated.find('#btn_submit_edd');
@@ -1723,6 +1723,34 @@ const Authenticate = (() => {
         }
     };
 
+    //Edited
+    // const syncToBackOffice = async () => { 
+    //     account_status = await getAccountStatus();
+    //     const needs_edd = account_status.authentication
+    //     const {
+    //         status,
+    //         submission_left,
+    //         last_rejected: rejected_reasons,
+    //     } = account_status.authentication.identity.service.backoffice;
+    //     const is_idv_disallowed = account_status.status.some(ac => ac =='idv_disallowed')
+    //     $('#authentication_tab').setVisibility(1);
+
+    //     switch (status) {
+    //         case 'none':
+    //             handleCountrySelector();
+    //             break;
+    //         case 'pending':
+
+    //             break;
+    //         case 'rejected':
+    //             break;
+    //         case 'verified':
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }
+
     const handleOnfido = async () => {
         $('#idv-container').setVisibility(0);
         account_status = await getAccountStatus();
@@ -1817,6 +1845,16 @@ const Authenticate = (() => {
         initUnsupported();
     };
 
+    //Edited
+    // const handleIncomeManual = () => {
+    //     $('#idv-container').setVisibily(0);
+    //     $('#authentication_tab').setVisibility(1);
+    //     $('#msg_personal_details').setVisibility(1);
+    //     TabSelector.updateTabDisplay();
+    //     $('#not_authenticated_edd').setVisibility(1);
+    //     initEdd();
+    // }
+
     const initAuthentication = async () => {
         account_status = await getAccountStatus();
         if (!account_status || account_status.error) {
@@ -1838,7 +1876,7 @@ const Authenticate = (() => {
         if (identity_status === 'none' || allow_poi_resubmission) {
             handleCountrySelector();
         } else if (is_fully_authenticated) {
-            $('#authentication_verified').setVisibility(1);
+            $('#authentication_verified').setVisibility(1); 
         } else if (!identity_last_attempt ||
             // Prioritise verified status from back office. How we know this is if there is mismatch between current statuses (Should be refactored)
             (identity_status === 'verified' && identity_status !== identity_last_attempt.status)) {

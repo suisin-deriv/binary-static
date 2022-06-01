@@ -161,7 +161,7 @@ const Authenticate = () => (
                     items={[
                         { id: 'poi',      text: it.L('Proof of identity') },
                         { id: 'poa',      text: it.L('Proof of address') },
-                        { id: 'edd',      text: it.L('Proof of income') },  
+                        { id: 'edd',      text: it.L('Proof of income') },
                         { id: 'authentication_tab_selector', className: 'tab-selector' },
                     ]}
                 />

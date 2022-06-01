@@ -269,8 +269,8 @@ export const EddMessage = () => (
                     thead: [
                         [
                             { text: it.L('Document Type'), className: 'gr-padding-10 align-start' },
-                            { text: it.L('File Name'),     className: 'gr-padding-10 align-start' },
-                            { text: it.L('Status'),        className: 'gr-padding-10 align-start' },
+                            { text: it.L('File Name'), className: 'gr-padding-10 align-start' },
+                            { text: it.L('Status'), className: 'gr-padding-10 align-start' },
                         ],
                     ],
                 }}
@@ -287,4 +287,4 @@ export const EddMessage = () => (
             </div>
         </div>
     </React.Fragment>
-)
+);
