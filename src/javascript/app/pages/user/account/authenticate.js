@@ -1723,8 +1723,8 @@ const Authenticate = (() => {
         }
     };
 
-    //Edited
-    // const syncToBackOffice = async () => { 
+    //  Edited
+    // const syncToBackOffice = async () => {
     //     account_status = await getAccountStatus();
     //     const needs_edd = account_status.authentication
     //     const {
@@ -1845,7 +1845,7 @@ const Authenticate = (() => {
         initUnsupported();
     };
 
-    //Edited
+    //  Edited
     // const handleIncomeManual = () => {
     //     $('#idv-container').setVisibily(0);
     //     $('#authentication_tab').setVisibility(1);
@@ -1876,7 +1876,7 @@ const Authenticate = (() => {
         if (identity_status === 'none' || allow_poi_resubmission) {
             handleCountrySelector();
         } else if (is_fully_authenticated) {
-            $('#authentication_verified').setVisibility(1); 
+            $('#authentication_verified').setVisibility(1);
         } else if (!identity_last_attempt ||
             // Prioritise verified status from back office. How we know this is if there is mismatch between current statuses (Should be refactored)
             (identity_status === 'verified' && identity_status !== identity_last_attempt.status)) {
