@@ -1113,7 +1113,7 @@ const Authenticate = (() => {
     };
 
     const showErrorEdd = (obj_error) => {
-        removeButtonLoadingUns();
+        removeButtonLoadingEdd();
         const $error      = $('#msg_form_edd');
         const $file_error = $submit_table_edd.find(`.${obj_error.class} .status`);
         const message     = obj_error.message;
