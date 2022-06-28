@@ -13837,7 +13837,7 @@ msgstr ""
 msgid "Verify your identity"
 msgstr ""
 
-msgid "Version 54. Last modified 10-05-2022."
+msgid "Version 55. Last modified 30-05-2022."
 msgstr ""
 
 msgid "Video Room Facility"
@@ -14656,9 +14656,6 @@ msgstr ""
 msgid "XRP/USD"
 msgstr ""
 
-msgid "XTB International Limited"
-msgstr ""
-
 msgid "Yes"
 msgstr ""
 
@@ -15029,6 +15026,12 @@ msgid "Your access to Cashier has been temporarily disabled as you have not set 
 msgstr ""
 
 msgid "Your account does not need authentication at this time.%1We will inform you if authentication is required in the future."
+msgstr ""
+
+msgid "Your account funds will be rescinded if your account has been inactive for 30 days with an account balance of USD/AUD/EUR/GBP1 or less."
+msgstr ""
+
+msgid "Your account funds will be rescinded if your account has been locked or has not recorded any transactions for a period of more than twelve months."
 msgstr ""
 
 msgid "Your account has been verified successfully"
