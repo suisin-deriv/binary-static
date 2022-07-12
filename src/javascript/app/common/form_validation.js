@@ -181,7 +181,7 @@ const Validation = (() => {
         return false;
     };
     const validLetterSymbol = value => !/[`~!@#$%^&*)(_=+[}{\]\\/";:?><,|\d]+/.test(value);
-    const validAddressCity  = value => /^[a-zA-Z]+[^]*$/.test(value);
+    const validAddressCity  = value => /^[a-zA-Z ]+[-.'a-zA-z ]*$/.test(value);
     const validGeneral      = value => !/[`~!@#$%^&*)(_=+[}{\]\\/";:?><|]+/.test(value);
     const validAddress      = value => !/[`~!$%^&*_=+[}{\]\\"?><|]+/.test(value);
     const validPostCode     = value => value === '' || /^[A-Za-z0-9][A-Za-z0-9\s-]*$/.test(value);
