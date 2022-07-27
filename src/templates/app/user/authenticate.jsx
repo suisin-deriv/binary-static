@@ -189,6 +189,12 @@ const Authenticate = () => (
                                 href={`${it.url_for('user/authenticate')}?authentication_tab=poa`}
                                 text={it.L('Proof of address')}
                             />
+                            <Button
+                                id='button_pending_edd_required'
+                                className='button invisible'
+                                href={`${it.url_for('user/authenticate')}?authentication_tab=edd`}
+                                text={it.L('Proof of income')}
+                            />
                         </div>
 
                         <div id='error_occured' className='center-text gr-padding-20 invisible'>
@@ -250,11 +256,18 @@ const Authenticate = () => (
                             <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/valid.svg')} />
                             <h1 className='gr-padding-10'>{it.L('Your proof of identity has been verified successfully')}</h1>
                             <p id='text_verified_poa_required' className='invisible'>{it.L('You must also submit a proof of address.')}</p>
+                            <p id='text_verified_edd_required' className='invisible'>{it.L('You must also submit a proof of income.')}</p>
                             <Button
                                 id='button_verified_poa_required'
                                 className='button invisible'
                                 href={`${it.url_for('user/authenticate')}?authentication_tab=poa`}
                                 text={it.L('Proof of address')}
+                            />
+                            <Button
+                                id='button_verified_edd_required'
+                                className='button invisible'
+                                href={`${it.url_for('user/authenticate')}?authentication_tab=edd`}
+                                text={it.L('Proof of income')}
                             />
                         </div>
 
@@ -275,10 +288,16 @@ const Authenticate = () => (
                                 <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/submit_successfully.svg')} />
                                 <h1 className='gr-padding-10'>{it.L('We\'ve received your document number')}</h1>
                                 <p>{it.L('We\'ll process your details within a few minutes and notify its status via email. Next, we\'ll need your proof of address')}</p>
+                                <p>{it.L('We\'ll process your details within a few minutes and notify its status via email. Next, we\'ll need your proof of income')}</p>
                                 <Button
                                     id='idv_pending_submit_poa_btn'
                                     className='button idv-status'
                                     text={it.L('Submit proof of address')}
+                                />
+                                <Button
+                                    id='idv_pending_submit_edd_btn'
+                                    className='button idv-status'
+                                    text={it.L('Submit proof of income')}
                                 />
                             </div>
 
@@ -291,6 +310,29 @@ const Authenticate = () => (
                                     className='button idv-status'
                                     href={`${it.url_for('user/authenticate')}?authentication_tab=poa`}
                                     text={it.L('Submit proof of address')}
+                                />
+                            </div>
+
+                            <div id='idv_submit_pending_need_edd' className='center-text gr-padding-20 invisible'>
+                                <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/submit_successfully.svg')} />
+                                <h1 className='gr-padding-10'>{it.L('We\'ve received your document number')}</h1>
+                                <p>{it.L('We\'ll process your details within a few minutes and notify its status via email. Next, we\'ll need your proof of income')}</p>
+                                <Button
+                                    id='idv_pending_submit_edd_btn'
+                                    className='button idv-status'
+                                    text={it.L('Submit proof of income')}
+                                />
+                            </div>
+
+                            <div id='idv_document_verified_need_edd' className='center-text gr-padding-20 invisible'>
+                                <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/verification_passed.svg')} />
+                                <h1 className='gr-padding-10'>{it.L('Your document number has been verified')}</h1>
+                                <p>{it.L('Next, we\'ll need your proof of income')}</p>
+                                <Button
+                                    id='idv_verified_edd_btn'
+                                    className='button idv-status'
+                                    href={`${it.url_for('user/authenticate')}?authentication_tab=edd`}
+                                    text={it.L('Submit proof of income')}
                                 />
                             </div>
 
@@ -311,11 +353,18 @@ const Authenticate = () => (
                                     <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/valid.svg')} />
                                     <h1>{it.L('Your proof of address has been verified successfully')}</h1>
                                     <p id='text_verified_poi_required' className='invisible'>{it.L('You must also submit a proof of identity.')}</p>
+                                    <p id='text_verified_edd_required' className='invisible'>{it.L('You must also submit a proof of income.')}</p>
                                     <Button
                                         id='button_verified_poi_required'
                                         className='button invisible'
                                         href={`${it.url_for('user/authenticate')}?authentication_tab=poi`}
                                         text={it.L('Proof of identity')}
+                                    />
+                                    <Button
+                                        id='button_verified_edd_required'
+                                        className='button invisible'
+                                        href={`${it.url_for('user/authenticate')}?authentication_tab=edd`}
+                                        text={it.L('Proof of income')}
                                     />
                                 </div>
 
@@ -330,6 +379,12 @@ const Authenticate = () => (
                                         className='button invisible'
                                         href={`${it.url_for('user/authenticate')}?authentication_tab=poi`}
                                         text={it.L('Proof of identity')}
+                                    />
+                                    <Button
+                                        id='button_pending_edd_required'
+                                        className='button invisible'
+                                        href={`${it.url_for('user/authenticate')}?authentication_tab=edd`}
+                                        text={it.L('Proof of income')}
                                     />
                                 </div>
 
@@ -351,7 +406,7 @@ const Authenticate = () => (
                     </TabContent>
                     <TabContent id='edd'>
                         {/* proof of income content */}
-                        <div id='not_authenticated_edd' className=''>
+                        <div id='not_authenticated_edd' className='invisible'>
                             <EddMessage />
                         </div>
 
@@ -359,11 +414,18 @@ const Authenticate = () => (
                             <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/valid.svg')} />
                             <h1>{it.L('Your proof of income has been verified successfully')}</h1>
                             <p id='text_verified_poi_required' className='invisible'>{it.L('You must also submit a proof of identity.')}</p>
+                            <p id='text_verified_poa_required' className='invisible'>{it.L('You must also submit a proof of address.')}</p>
                             <Button
                                 id='button_verified_poi_required'
                                 className='button invisible'
-                                href={`${it.url_for('user/authenticate')}?authentication_tab=edd`}
+                                href={`${it.url_for('user/authenticate')}?authentication_tab=poi`}
                                 text={it.L('Proof of identity')}
+                            />
+                            <Button
+                                id='button_verified_poa_required'
+                                className='button invisible'
+                                href={`${it.url_for('user/authenticate')}?authentication_tab=poa`}
+                                text={it.L('Proof of address')}
                             />
                         </div>
 
@@ -376,8 +438,14 @@ const Authenticate = () => (
                             <Button
                                 id='button_pending_poi_required'
                                 className='button invisible'
-                                href={`${it.url_for('user/authenticate')}?authentication_tab=edd`}
+                                href={`${it.url_for('user/authenticate')}?authentication_tab=poi`}
                                 text={it.L('Proof of identity')}
+                            />
+                            <Button
+                                id='button_pending_poa_required'
+                                className='button invisible'
+                                href={`${it.url_for('user/authenticate')}?authentication_tab=poa`}
+                                text={it.L('Proof of address')}
                             />
                         </div>
 

@@ -80,8 +80,6 @@ const Authenticate = (() => {
             $('#expiry_datepicker_proofid').setVisibility(0);
             $('#exp_date_2').datepicker('setDate', '2099-12-31');
         }
-
-        initEdd();
     };
 
     const getAccountStatus = () => new Promise((resolve) => {
@@ -149,7 +147,7 @@ const Authenticate = (() => {
         const $not_authenticated_edd = $('#not_authenticated_edd');
         const link = Url.urlForCurrentDomain(`https://marketing.binary.com/authentication/Authentication_Process${language_based_link}.pdf`);
 
-        $not_authenticated_edd.find('.learn_more').setVisibility(1).find('a').attr('href', link);
+        $not_authenticated_edd.setVisibility(1)
 
         if (isIdentificationNoExpiry(Client.get('residence'))) {
             $('#expiry_datepicker_proofid').setVisibility(0);
@@ -1164,7 +1162,7 @@ const Authenticate = (() => {
             $('.submit-status-edd').setVisibility(0);
             $('#not_authenticated_edd').setVisibility(0);
 
-            showCTAButton('document', 'pending');
+            showCTAButton('income', 'pending');
             $('#upload_complete').setVisibility(1);
             $('#msg_personal_details').setVisibility(0);
         });
@@ -1320,8 +1318,8 @@ const Authenticate = (() => {
             account_status = response.get_account_status;
             const { needs_verification } = account_status.authentication;
             
-            const type_required = type === 'identity' ? 'poi' : 'poa';
-            const type_pending = type === 'identity' ? 'poa' : 'poi';
+            const type_required = type === 'identity' ? 'poi' : type === 'income'? 'edd' : 'poa';
+            const type_pending = type === 'identity' ? 'poa' : type === 'income' ? 'poi' : 'edd';
             const description_status = status !== 'verified';
     
             $(`#text_verified_${type_pending}_required, #text_pending_${type_pending}_required`).setVisibility(0);
@@ -1611,16 +1609,35 @@ const Authenticate = (() => {
                             account_status = res.get_account_status;
                             const needs_verification = account_status.authentication.needs_verification;
                             const needs_poa = needs_verification.length && needs_verification.includes('document');
+                            const needs_edd = needs_verification.length && needs_verification.includes('income');
+
                             $('#idv_document_submit').setVisibility(0);
                             if (needs_poa) {
                                 $('#authentication_tab').setVisibility(1);
                                 $('#idv_submit_pending_need_poa').setVisibility(1);
                                 Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
+                                Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
                                 TabSelector.updateTabDisplay();
                                 $('#idv_pending_submit_poa_btn').on('click', () => {
                                     init();
                                     $('#not_authenticated').setVisibility(1);
                                     Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
+                                    TabSelector.updateTabDisplay();
+                                });
+                            } else {
+                                $('#idv_submit_pending').setVisibility(1);
+                            }
+
+                            if (needs_edd) {
+                                $('#authentication_tab').setVisibility(1);
+                                $('#idv_submit_pending_need_edd').setVisibility(1);
+                                Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
+                                Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
+                                TabSelector.updateTabDisplay();
+                                $('#idv_pending_submit_edd_btn').on('click', () => {
+                                    initEdd();
+                                    $('#not_authenticated_edd').setVisibility(1);
+                                    Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
                                     TabSelector.updateTabDisplay();
                                 });
                             } else {
@@ -1641,6 +1658,7 @@ const Authenticate = (() => {
         const { status, submissions_left: idv_submissions_left } = idv;
         const { submissions_left: onfido_submissions_left } = onfido;
         const needs_poa = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('document');
+        const needs_edd = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('income');
         $('#idv-container').setVisibility(1);
 
         switch (status) {
@@ -1654,7 +1672,18 @@ const Authenticate = (() => {
                         $('#poa').setVisibility(1);
                         TabSelector.updateTabDisplay();
                     });
-                } else {
+                }
+                if (needs_edd){
+                    $('#authentication_tab').setVisibility(1);
+                    $('#idv_submit_pending_need_edd').setVisibility(1);
+                    $('#idv_pending_submit_edd_btn').on('click', () => {
+                        $('#not_authenticated_edd').setVisibility(1);
+                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
+                        $('#edd').setVisibility(1);
+                        TabSelector.updateTabDisplay();
+                    });
+                }
+                else {
                     if (is_idv_disallowed) {
                         $('#authentication_tab').setVisibility(1);
                         Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
@@ -1698,11 +1727,23 @@ const Authenticate = (() => {
                         Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
                         TabSelector.updateTabDisplay();
                     });
+                } 
+                if (needs_edd) {
+                    $('#authentication_tab').setVisibility(1);
+                    Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
+                    TabSelector.updateTabDisplay();
+                    $('#idv_document_verified_need_edd').setVisibility(1);
+                    $('#idv_verified_edd_btn').on('click', () => {
+                        $('#edd').setVisibility(1);
+                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
+                        TabSelector.updateTabDisplay();
+                    });
                 } else {
                     const is_visible = 1;
                     if (is_idv_disallowed) {
                         $('#authentication_tab').setVisibility(is_visible);
                         Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
+                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
                         TabSelector.updateTabDisplay();
                         $('#poa').setVisibility(is_visible);
                         $('#idv_document_verified_poi').setVisibility(is_visible);
@@ -1723,38 +1764,11 @@ const Authenticate = (() => {
         }
     };
 
-    //  Edited
-    // const syncToBackOffice = async () => {
-    //     account_status = await getAccountStatus();
-    //     const needs_edd = account_status.authentication
-    //     const {
-    //         status,
-    //         submission_left,
-    //         last_rejected: rejected_reasons,
-    //     } = account_status.authentication.identity.service.backoffice;
-    //     const is_idv_disallowed = account_status.status.some(ac => ac =='idv_disallowed')
-    //     $('#authentication_tab').setVisibility(1);
-
-    //     switch (status) {
-    //         case 'none':
-    //             handleCountrySelector();
-    //             break;
-    //         case 'pending':
-
-    //             break;
-    //         case 'rejected':
-    //             break;
-    //         case 'verified':
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // }
-
     const handleOnfido = async () => {
         $('#idv-container').setVisibility(0);
         account_status = await getAccountStatus();
         const needs_poa = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('document');
+        const needs_edd = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('income');
         const {
             status,
             submissions_left,
@@ -1821,6 +1835,11 @@ const Authenticate = (() => {
                     $('#poa').setVisibility(1);
                     TabSelector.updateTabDisplay();
                 }
+                if (needs_edd || is_idv_disallowed) {
+                    Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
+                    $('#edd').setVisibility(1);
+                    TabSelector.updateTabDisplay();
+                }
                 showCTAButton('document', 'verified');
                 $('#verified').setVisibility(1);
                 break;
@@ -1845,16 +1864,6 @@ const Authenticate = (() => {
         initUnsupported();
     };
 
-    //  Edited
-    // const handleIncomeManual = () => {
-    //     $('#idv-container').setVisibily(0);
-    //     $('#authentication_tab').setVisibility(1);
-    //     $('#msg_personal_details').setVisibility(1);
-    //     TabSelector.updateTabDisplay();
-    //     $('#not_authenticated_edd').setVisibility(1);
-    //     initEdd();
-    // }
-
     const initAuthentication = async () => {
         account_status = await getAccountStatus();
         if (!account_status || account_status.error) {
@@ -1865,13 +1874,14 @@ const Authenticate = (() => {
         const authentication_object = account_status.authentication;
         const allow_poi_resubmission = account_status.status.some(s => s === 'allow_poi_resubmission');
 
-        const { attempts, document, identity } = authentication_object;
+        const { attempts, document, identity, income } = authentication_object;
         const is_idv_disallowed = account_status.status.some(ac => ac === 'idv_disallowed');
         const identity_status = identity.status;
         const identity_last_attempt = attempts.latest;
-        const is_fully_authenticated = identity.status === 'verified' && document.status === 'verified';
+        const is_fully_authenticated = identity.status === 'verified' && document.status === 'verified' && income.status === 'verified';
         const needs_verification = account_status.authentication.needs_verification;
         const needs_poa = needs_verification.length && needs_verification.includes('document');
+        const needs_edd = needs_verification.length && needs_verification.includes('income')
 
         if (identity_status === 'none' || allow_poi_resubmission) {
             handleCountrySelector();
@@ -1898,6 +1908,7 @@ const Authenticate = (() => {
                     if (is_idv_disallowed) {
                         $('#authentication_tab').setVisibility(1);
                         Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
+                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
                         TabSelector.updateTabDisplay();
                         $('#poa').setVisibility(1);
                     }
@@ -1927,7 +1938,7 @@ const Authenticate = (() => {
                     break;
             }
         }
-
+        
         if (!needs_poa) {
             switch (document.status) {
                 case 'none': {
@@ -1955,6 +1966,37 @@ const Authenticate = (() => {
         } else {
             init();
             $('#not_authenticated').setVisibility(1);
+        }
+
+        if(!needs_edd){
+            switch (income.status) {
+                case 'none': {
+                    console.log("Hi Edd")
+                    initEdd();
+                    $('#not_authenticated_edd').setVisibility(1);
+                    break;
+                }
+                case 'pending': {
+                    $('#pending_edd').setVisibility(1);
+                    break;
+                }
+                case 'suspected':
+                case 'rejected':
+                    $('#unverified_edd').setVisibility(1);
+                    break;
+                case 'verified':
+                    showCTAButton('income', 'verified');
+                    $('#verified_edd').setVisibility(1);
+                    break;
+                case 'expired':
+                    $('#expired_edd').setVisibility(1);
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            initEdd();
+            $('#not_authenticated_edd').setVisibility(1);
         }
 
         $('#authentication_loading').setVisibility(0);
