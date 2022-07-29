@@ -1785,6 +1785,7 @@ const Authenticate = (() => {
                 $('#upload_complete').setVisibility(1);
                 showCTAButton('document', 'pending');
                 break;
+            case 'locked':
             case 'suspected':
             case 'rejected':
                 if (Number(submissions_left) < 1) {
@@ -1968,10 +1969,9 @@ const Authenticate = (() => {
             $('#not_authenticated').setVisibility(1);
         }
 
-        if(!needs_edd){
+        if(needs_edd){
             switch (income.status) {
                 case 'none': {
-                    console.log("Hi Edd")
                     initEdd();
                     $('#not_authenticated_edd').setVisibility(1);
                     break;
@@ -1980,6 +1980,7 @@ const Authenticate = (() => {
                     $('#pending_edd').setVisibility(1);
                     break;
                 }
+                case 'locked':
                 case 'suspected':
                 case 'rejected':
                     $('#unverified_edd').setVisibility(1);

@@ -252,12 +252,12 @@ export const EddMessage = () => (
                 { name: it.L('Tax return'), value: 'tax_return' },
                 { name: it.L('Employment contract'), value: 'employment_contract' },
                 { name: it.L('Payslip'), value: 'payslip' },
-                { name: it.L('COI'), value: 'coi' },
-                { name: it.L('Business POA'), value: 'business_poa' },
-                { name: it.L('Article of association'), value: 'article_of_association' },
-                { name: it.L('Memorandum'), value: 'memorandum' },
-                { name: it.L('Authorize letter'), value: 'authorize_letter' },
-                { name: it.L('Declaration'), value: 'declaration' },
+                { name: it.L('COI'), value: 'edd_others' },
+                { name: it.L('Business POA'), value: 'edd_others' },
+                { name: it.L('Article of association'), value: 'edd_others' },
+                { name: it.L('Memorandum'), value: 'edd_others' },
+                { name: it.L('Authorize letter'), value: 'edd_others' },
+                { name: it.L('Declaration'), value: 'edd_others' },
             ]}
         />
 

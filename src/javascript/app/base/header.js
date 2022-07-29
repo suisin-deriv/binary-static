@@ -289,7 +289,7 @@ const Header = (() => {
                 ? Boolean(true) : Boolean(false);
             const hasVerification = (string) => {
                 const { prompt_client_to_authenticate } = get_account_status;
-                const { identity, document, needs_verification } = authentication;
+                const { identity, document, needs_verification, income } = authentication;
                 if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
                     return false;
                 }
@@ -298,7 +298,7 @@ const Header = (() => {
 
                 switch (string) {
                     case 'unsubmitted': {
-                        result = verification_length === 2 && identity.status === 'none' && document.status === 'none';
+                        result = verification_length === 2 && identity.status === 'none' && document.status === 'none' && income.status === 'none';
                         break;
                     }
                     case 'expired': {
@@ -313,6 +313,10 @@ const Header = (() => {
                         result = verification_length && document.status === 'expired';
                         break;
                     }
+                    case 'expired_income': {
+                        result = verification_length && income.status === 'expired';
+                        break;
+                    }
                     case 'rejected': {
                         result = verification_length === 2 && (identity.status !== 'none' || document.status !== 'none') && prompt_client_to_authenticate;
                         break;
@@ -325,6 +329,10 @@ const Header = (() => {
                         result = verification_length && (document.status === 'rejected' || document.status === 'suspected');
                         break;
                     }
+                    case 'rejected_income': {
+                        result = verification_length && (income.status === 'rejected' || income.status === 'suspected' || income.status === 'locked');
+                        break;
+                    }
                     case 'needs_identity_verification': {
                         result = verification_length === 1 && needs_verification.includes('identity');
                         break;
@@ -335,6 +343,10 @@ const Header = (() => {
                     }
                     case 'document': {
                         result = verification_length && document.status === 'none';
+                        break;
+                    }
+                    case 'income': {
+                        result = verification_length && income.status === 'none';
                         break;
                     }
                     default:
@@ -365,16 +377,19 @@ const Header = (() => {
                 system_maintenance: () => getSystemMaintenanceMessage(),
                 currency          : () => buildMessage(localizeKeepPlaceholders('Please set your [_1]account currency[_2] to enable deposits and withdrawals.'),                                                                                    'user/set-currency'),
                 unsubmitted       : () => buildMessage(get_account_status.risk_classification === 'high'
-                    ? localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity and proof of address[_2] to authenticate your account and request for withdrawals.', 'user/authenticate')
-                    : localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity and proof of address[_2] to authenticate your account and access your cashier.'), 'user/authenticate'),
+                    ? localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity, proof of address and proof of income[_2] to authenticate your account and request for withdrawals.', 'user/authenticate')
+                    : localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity, proof of address and proof of income[_2] to authenticate your account and access your cashier.'), 'user/authenticate'),
                 expired                   : () => localize('The identification documents you submitted have expired. Please submit valid identity documents to unlock Cashier.'),
                 expired_identity          : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'user/authenticate'),
                 expired_document          : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'user/authenticate', '?authentication_tab=poa'),
+                expired_income            : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of income[_2] has expired.'),                                                                                          'user/authenticate', '?authentication_tab=poa'),
                 rejected                  : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified.'),    [`<a href='${Url.urlFor('user/authenticate')}'>`, `<a href='${Url.urlFor('user/authenticate')}?authentication_tab=poa'>`, '</a>']),
                 rejected_identity         : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified.'),                                                                               'user/authenticate'),
-                rejected_document         : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified.'),                                                                                'user/authenticate', '?authentication_tab=poa'),
+                rejected_document         : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified.'),                                                                               'user/authenticate'),
+                rejected_income           : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of income[_2] has not been verified.'),                                                                                 'user/authenticate', '?authentication_tab=poa'),
                 identity                  : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of identity[_2].'),                                                                                       'user/authenticate'),
-                document                  : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                        'user/authenticate', '?authentication_tab=poa'),
+                document                  : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of address[_2].'),                                                                                       'user/authenticate'),
+                income                  : () => buildMessage(localizeKeepPlaceholders('Please submit your [_1]proof of income[_2].'),                                                                                        'user/authenticate', '?authentication_tab=poa'),
                 excluded_until            : () => localize('You have chosen to exclude yourself from trading on our website until [_1]. If you are unable to place a trade or deposit after your self-exclusion period, please contact us via live chat.', moment(+Client.get('excluded_until') * 1000).format('DD MMM YYYY')),
                 financial_limit           : () => buildMessage(localizeKeepPlaceholders('Your access to Cashier has been temporarily disabled as you have not set your 30-day turnover limit. Please go to [_1]Self-exclusion[_2] and set your 30-day turnover limit.'),                                                             'user/security/self_exclusionws'),
                 mt5_withdrawal_locked     : () => localize('MT5 withdrawals have been disabled on your account. Please check your email for more details.'),
@@ -405,11 +420,14 @@ const Header = (() => {
                 expired                    : () => hasStatus('documents_expired'),
                 expired_identity           : () => hasVerification('expired_identity'),
                 expired_document           : () => hasVerification('expired_document'),
+                expired_income           : () => hasVerification('expired_income'),
                 rejected                   : () => hasVerification('rejected'),
                 rejected_identity          : () => hasVerification('rejected_identity'),
                 rejected_document          : () => hasVerification('rejected_document'),
+                rejected_income          : () => hasVerification('rejected_income'),
                 identity                   : () => hasVerification('identity'),
                 document                   : () => hasVerification('document'),
+                income                   : () => hasVerification('income'),
                 excluded_until             : () => hasStatus('SelfExclusion'),
                 financial_limit            : () => hasStatus('ASK_SELF_EXCLUSION_MAX_TURNOVER_SET'),
                 mt5_withdrawal_locked      : () => hasStatus('mt5_withdrawal_locked'),
@@ -446,12 +464,15 @@ const Header = (() => {
                 'expired',
                 'expired_identity',
                 'expired_document',
+                'expired_income',
                 'rejected',
                 'rejected_identity',
                 'rejected_document',
+                'rejected_income',
                 'needs_identity_verification',
                 'identity',
                 'document',
+                'income',
                 'financial_risk_approval',
                 'unwelcome',
                 'no_withdrawal_or_trading',
