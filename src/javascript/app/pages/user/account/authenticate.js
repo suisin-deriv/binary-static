@@ -142,12 +142,9 @@ const Authenticate = (() => {
         });
         $('#not_authenticated_edd .file-picker').on('change', onFileSelectedEdd);
 
-        const language               = getLanguage();
-        const language_based_link    = ['ID', 'RU', 'PT'].includes(language) ? `_${language}` : '';
         const $not_authenticated_edd = $('#not_authenticated_edd');
-        const link = Url.urlForCurrentDomain(`https://marketing.binary.com/authentication/Authentication_Process${language_based_link}.pdf`);
 
-        $not_authenticated_edd.setVisibility(1)
+        $not_authenticated_edd.setVisibility(1);
 
         if (isIdentificationNoExpiry(Client.get('residence'))) {
             $('#expiry_datepicker_proofid').setVisibility(0);
@@ -1318,7 +1315,7 @@ const Authenticate = (() => {
             account_status = response.get_account_status;
             const { needs_verification } = account_status.authentication;
             
-            const type_required = type === 'identity' ? 'poi' : type === 'income'? 'edd' : 'poa';
+            const type_required = type === 'identity' ? 'poi' : type === 'income' ? 'edd' : 'poa';
             const type_pending = type === 'identity' ? 'poa' : type === 'income' ? 'poi' : 'edd';
             const description_status = status !== 'verified';
     
@@ -1682,8 +1679,7 @@ const Authenticate = (() => {
                         $('#edd').setVisibility(1);
                         TabSelector.updateTabDisplay();
                     });
-                }
-                else {
+                } else {
                     if (is_idv_disallowed) {
                         $('#authentication_tab').setVisibility(1);
                         Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
@@ -1727,7 +1723,7 @@ const Authenticate = (() => {
                         Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
                         TabSelector.updateTabDisplay();
                     });
-                } 
+                }
                 if (needs_edd) {
                     $('#authentication_tab').setVisibility(1);
                     Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
@@ -1882,7 +1878,7 @@ const Authenticate = (() => {
         const is_fully_authenticated = identity.status === 'verified' && document.status === 'verified' && income.status === 'verified';
         const needs_verification = account_status.authentication.needs_verification;
         const needs_poa = needs_verification.length && needs_verification.includes('document');
-        const needs_edd = needs_verification.length && needs_verification.includes('income')
+        const needs_edd = needs_verification.length && needs_verification.includes('income');
 
         if (identity_status === 'none' || allow_poi_resubmission) {
             handleCountrySelector();
@@ -1969,7 +1965,7 @@ const Authenticate = (() => {
             $('#not_authenticated').setVisibility(1);
         }
 
-        if(needs_edd){
+        if (needs_edd){
             switch (income.status) {
                 case 'none': {
                     initEdd();
