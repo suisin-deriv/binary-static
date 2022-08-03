@@ -361,10 +361,13 @@ const Header = (() => {
             };
 
             const messages = {
-                cashier_locked    : () => localize('Your cashier is currently locked. Please contact us via live chat to find out how to unlock it.'),
-                system_maintenance: () => getSystemMaintenanceMessage(),
-                currency          : () => buildMessage(localizeKeepPlaceholders('Please set your [_1]account currency[_2] to enable deposits and withdrawals.'),                                                                                    'user/set-currency'),
-                unsubmitted       : () => buildMessage(get_account_status.risk_classification === 'high'
+                cashier_locked        : () => localize('Your cashier is currently locked. Please contact us via live chat to find out how to unlock it.'),
+                system_maintenance    : () => getSystemMaintenanceMessage(),
+                currency              : () => buildMessage(localizeKeepPlaceholders('Please set your [_1]account currency[_2] to enable deposits and withdrawals.'),                                                                                    'user/set-currency'),
+                both_dob_name_mismatch: () => buildMessage(localizeKeepPlaceholders('It seems that your name and date of birth in the document is not the same as your Binary profile. Please update your name and date of birth in the [_1]Personal Details Page[_2] to solve this issue'),'user/settings/detailsws'),
+                dob_mismatch          : () => buildMessage(localizeKeepPlaceholders('It seems that your date of birth in the document is not the same as your Binary profile. Please update your date of birth in the [_1]Personal Details Page[_2] to solve this issue'),'user/settings/detailsws'),
+                name_mismatch         : () => buildMessage(localizeKeepPlaceholders('It seems that your name in the document is not the same as your Binary profile. Please update your name in the [_1]Personal Details Page[_2] to solve this issue'),'user/settings/detailsws'),
+                unsubmitted           : () => buildMessage(get_account_status.risk_classification === 'high'
                     ? localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity and proof of address[_2] to authenticate your account and request for withdrawals.', 'user/authenticate')
                     : localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity and proof of address[_2] to authenticate your account and access your cashier.'), 'user/authenticate'),
                 expired                   : () => localize('The identification documents you submitted have expired. Please submit valid identity documents to unlock Cashier.'),
@@ -402,6 +405,9 @@ const Header = (() => {
                 system_maintenance         : () => hasStatus('system_maintenance'),
                 currency                   : () => hasStatus('ASK_CURRENCY'),
                 unsubmitted                : () => hasStatus('ASK_AUTHENTICATE') && hasVerification('unsubmitted'),
+                both_dob_name_mismatch     : () => hasStatus('poi_dob_mismatch') && hasStatus('poi_name_mismatch'),
+                dob_mismatch               : () => hasStatus('poi_dob_mismatch'),
+                name_mismatch              : () => hasStatus('poi_name_mismatch'),
                 expired                    : () => hasStatus('documents_expired'),
                 expired_identity           : () => hasVerification('expired_identity'),
                 expired_document           : () => hasVerification('expired_document'),
@@ -443,6 +449,9 @@ const Header = (() => {
                 'risk',
                 'tax',
                 'unsubmitted',
+                'both_dob_name_mismatch',
+                'dob_mismatch',
+                'name_mismatch',
                 'expired',
                 'expired_identity',
                 'expired_document',
