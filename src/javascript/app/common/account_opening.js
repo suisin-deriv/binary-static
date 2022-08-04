@@ -78,10 +78,13 @@ const AccountOpening = (() => {
         getElementById('loading').setVisibility(0);
         getElementById('real_account_wrapper').setVisibility(1);
         const error_message = response.error.message;
-        const client_error_message = response.error.code.message_to_client;
+        let client_error_message = null;
+        if (response.error.code.message_to_client){
+            client_error_message = response.error.code.message_to_client;
+        }
         const $notice_box = $('#client_message').find('.notice-msg');
         $('#submit-message').empty();
-        $notice_box.text(response.msg_type === 'sanity_check' ? localize('There was some invalid character in an input field.') : error_message === null ? client_error_message : error_message).end()
+        $notice_box.text(response.msg_type === 'sanity_check' ? localize('There was some invalid character in an input field.') : (error_message || client_error_message)).end()
             .setVisibility(1);
         $.scrollTo($notice_box, 500, { offset: -150 });
     };
@@ -295,10 +298,13 @@ const AccountOpening = (() => {
     const handleNewAccount = (response, message_type) => {
         if (response.error) {
             const error_message = response.error.message;
-            const client_error_message = response.error.code.message_to_client;
+            let client_error_message = null;
+            if (response.error.code.message_to_client){
+                client_error_message = response.error.code.message_to_client;
+            }
             const $notice_box    = $('#client_message').find('.notice-msg');
             $('#submit-message').empty();
-            $notice_box.text(response.msg_type === 'sanity_check' ? localize('There was some invalid character in an input field.') : error_message === null ? client_error_message : error_message).end()
+            $notice_box.text(response.msg_type === 'sanity_check' ? localize('There was some invalid character in an input field.') : (error_message || client_error_message)).end()
                 .setVisibility(1);
             $.scrollTo($notice_box, 500, { offset: -150 });
         } else {
