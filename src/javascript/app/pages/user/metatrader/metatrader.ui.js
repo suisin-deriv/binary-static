@@ -213,7 +213,7 @@ const MetaTraderUI = (() => {
         const mt5_label =  isEuCountry() ? 'CFDs' : 'MT5';
         
         $trading_password_info.text(
-            localize('Use MT5 password to sign in to any of your [_1] accounts when using MT5 apps on your desktop, mobile or other devices.',
+            localize('Use MT5 password to sign in to any of your [_1] accounts when using MT5 apps on your desktop, mobile or other devices. ',
                 mt5_label
             )
         );
