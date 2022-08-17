@@ -173,7 +173,7 @@ const Purchase = (() => {
 
             CommonFunctions.elementInnerHtml(cost,   `${localize('Total Cost')} <p id="${'contract_purchase_cost--amount'}">${formatMoney(currency, cost_value)}</p>`);
             if (isLookback(contract_type)) {
-                CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p id="${'contract_purchase_payout--amount'}">${formula}</p>`);
+                CommonFunctions.elementInnerHtml(payout, `${localize('Potential Payout')} <p id="${'contract_purchase_payout--amount'}">${formula}</p> `);
                 profit.setVisibility(0);
             } else {
                 profit.setVisibility(1);
