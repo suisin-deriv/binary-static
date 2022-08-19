@@ -537,7 +537,7 @@
                 background-color: rgba(204, 0, 0, 0.1);
             }
         }
-        #contract_purchase_cost {
+        #contract_purchase_cost, #contract_purchase_payout, #contract_purchase_profit {
             @media screen and (max-width: 320px) {
                 &--amount {
                     font-size: 80%;
@@ -546,19 +546,9 @@
         }
         #contract_purchase_payout {
             border-right: 1px solid $COLOR_GRAY;
-            @media screen and (max-width: 320px) {
-                &--amount {
-                    font-size: 80%;
-                }
-            }
         }
         #contract_purchase_profit {
             border-left: 1px solid $COLOR_GRAY;
-            @media screen and (max-width: 320px) {
-                &--amount {
-                    font-size: 80%;
-                }
-            }
         }
         .contract_amount, .contract_payout, .payout, .stake {
             @include BIDIR_VALUE(padding, 3px, 3px);
