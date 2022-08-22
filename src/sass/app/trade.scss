@@ -538,7 +538,7 @@
             }
         }
         #contract_purchase_cost, #contract_purchase_payout, #contract_purchase_profit {
-            @media screen and (max-width: 320px) {
+            @media screen and (max-width: 375px) {
                 &--amount {
                     font-size: 4vw;
                 }
