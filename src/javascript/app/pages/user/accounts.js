@@ -189,6 +189,13 @@ const Accounts = (() => {
         switch: 'switch_account',
     };
 
+    const showWarningMessagePopUp = () => {
+        showPopup({
+            url       : urlFor('user/warning-scam-message'),
+            content_id: '#warning_scam_message',
+        });
+    };
+
     const showCurrencyPopUp = (action, redirect_to, all_fiat, all_crypto) => {
         showPopup({
             url               : urlFor('user/set-currency'),
@@ -335,6 +342,7 @@ const Accounts = (() => {
         onLoad,
         onUnload,
         showCurrencyPopUp,
+        showWarningMessagePopUp,
         populateMultiAccount,
     };
 })();

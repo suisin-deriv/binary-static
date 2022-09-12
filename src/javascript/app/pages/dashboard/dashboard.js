@@ -5,6 +5,7 @@ const BinarySocket = require('../../base/socket');
 const ServerTime   = require('../../../_common/base/server_time');
 const getLanguage  = require('../../../_common/language').get;
 const urlForStatic = require('../../../_common/url').urlForStatic;
+const Accounts               = require('../user/accounts');
 
 const Dashboard = (() => {
     let el_shadow_dom_dashboard;
@@ -14,6 +15,7 @@ const Dashboard = (() => {
     const onUnload = () => ReactDOM.unmountComponentAtNode(el_shadow_dom_dashboard);
 
     const renderDashboard = (module) => {
+        Accounts.showWarningMessagePopUp();
         const el_loading = document.getElementById('loading_dashboard');
         const el_dashboard_container = document.getElementById('binary_dashboard');
 

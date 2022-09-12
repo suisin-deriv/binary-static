@@ -329,7 +329,8 @@ const Cashier = (() => {
                         });
                     } else {
                         el_fiat_deposit.on('click', ()=>{
-                            Accounts.showCurrencyPopUp('create', 'deposit', true);
+                            Accounts.showWarningMessagePopUp()
+                            // Accounts.showCurrencyPopUp('create', 'deposit', true);
                             return false;
                         });
                         el_fiat_withdraw.on('click', ()=>{
