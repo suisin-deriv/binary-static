@@ -1,7 +1,7 @@
-const getElementById       = require('../../../../_common/common_functions').getElementById;
-const BinarySocket         = require('../../../base/socket');
-const Client               = require('../../../base/client');
-const State                = require('../../../../_common/storage').State;
+const getElementById       = require('../../../_common/common_functions').getElementById;
+const BinarySocket         = require('../../base/socket');
+const Client               = require('../../base/client');
+const State                = require('../../../_common/storage').State;
 
 const WarningScamMessage = (()=>{
     let warning_scam_message, warning_scam_message_button, warning_scam_message_checkbox;
