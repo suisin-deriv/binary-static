@@ -53,7 +53,6 @@ const SetCurrency             = require('../pages/user/set_currency');
 const TelegramBot             = require('../pages/user/telegram_bot');
 const TNCApproval             = require('../pages/user/tnc_approval');
 const VideoFacility           = require('../pages/user/video_facility');
-const WarningScamMessage      = require('../pages/user/warning_scam_message/warning_scam_message');
 
 // ==================== static ====================
 // const Charity            = require('../../static/pages/charity');
@@ -169,7 +168,6 @@ const pages_config = {
     'types-of-accounts'      : { module: TypesOfAccounts },
     'video-facility'         : { module: VideoFacility,              is_authenticated: true, only_real: true },
     'why-us'                 : { module: WhyUs },
-    'warning-scam-message'   : { module: WarningScamMessage },
 };
 /* eslint-enable max-len */
 

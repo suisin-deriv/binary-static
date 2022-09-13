@@ -72,7 +72,6 @@ module.exports = [
     ['explanation',                             'app/trade/explanation',                       null],
     ['logged_inws',                             'app/logged_in',                               null],
     ['redirect',                                'app/logged_in',                               null,         'Redirecting...'],
-    ['user/warning-scam-message',              'app/user/warning_scam_message/warning_scam_message',  null, 'Scam'],
 
     // ==================== Section: "static" ====================
     ['404',                                     'static/404',                                  'full_width', '404'],

@@ -843,7 +843,7 @@ body #not_authenticated_financial ul.checked > li {
     }
 }
 
-.lightbox #warning_scam_message {
+.lightbox #warning_scam_message_content {
     padding: 25px;
     padding-bottom: 20px;
 
@@ -853,7 +853,7 @@ body #not_authenticated_financial ul.checked > li {
     #warning_scam_message_text_secondary {
         font-size: 16px;
     }
-    .warning-scam-message--content__info--message {
+    .warning-scam-message-content-info-message {
         display: flex;
         margin-bottom: 24px;
     }
@@ -861,7 +861,7 @@ body #not_authenticated_financial ul.checked > li {
         font-weight: 300;
         margin-bottom: 0;
     }
-    .warning_scam_message_correct_content {
+    .warning-scam-message-correct-content {
         display: flex;
         border: solid $COLOR_GREEN;
         border-radius: 4px;
@@ -870,7 +870,7 @@ body #not_authenticated_financial ul.checked > li {
         flex-direction: column;
         justify-content: center;
     }
-    .warning_scam_message_wrong_content {
+    .warning-scam-message-wrong-content {
         display: flex;
         border: solid $COLOR_RED;
         border-radius: 4px;
@@ -879,7 +879,7 @@ body #not_authenticated_financial ul.checked > li {
         flex-direction: column;
         justify-content: center;
     }
-    .warning_scam_message_link_container {
+    .warning-scam-message-link-container {
         display: flex;
         margin: 0 8px 0 32px;
         border-radius: 4px;
@@ -888,11 +888,15 @@ body #not_authenticated_financial ul.checked > li {
         justify-content: center;
         align-items: center;
     }
-    #warning-scam-message-link {
+    #warning_scam_message_link {
         margin: 8px 0;
     }
-    .warning_scam_message_checkbox_container {
+    .warning-scam-message-checkbox-container {
         display: flex;
+    }
+    .warning-scam-message-button-icon-container {
+        padding: 24px;
+        justify-content: space-between;
     }
 }
 

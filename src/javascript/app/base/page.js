@@ -27,6 +27,7 @@ const Url              = require('../../_common/url');
 const createElement    = require('../../_common/utility').createElement;
 const isLoginPages     = require('../../_common/utility').isLoginPages;
 const isProduction     = require('../../config').isProduction;
+const WarningScamMessage = require('../pages/user/warning_scam_message/warning_scam_message');
 const ClosePopup = require('../common/game_close_popup');
 const EuClosePopup = require('../common/eu_close_popup');
 const EuCloseBanner = require('../common/eu_close_baner');
@@ -129,6 +130,8 @@ const Page = (() => {
             BinarySocket.wait('authorize', 'website_status', 'get_account_status').then(() => {
                 RealityCheck.onLoad();
                 Menu.init();
+                const is_at_brazil = State.getResponse('website_status.clients_country') === 'my';
+                const read_scam_message = localStorage.getItem('readScamMessage') || false;
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
                 const is_be_client = (Client.get('residence') === 'be' || State.getResponse('website_status.clients_country') === 'be') && Client.hasAccountType('gaming');
@@ -136,6 +139,7 @@ const Page = (() => {
                 const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';
                 const mf_check = ClientBase.get('landing_company_shortcode') === 'maltainvest';
                 const virtual_account = Client.get('landing_company_shortcode') === 'virtual';
+                if (is_at_brazil && !read_scam_message) { WarningScamMessage.has_read_warning_scam_message(); }
                 if (!is_iom_client || is_uk_residence && !Client.hasAccountType('gaming') || mf_check || mlt_check) RedirectBanner.loginOnLoad();
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
                     CloseBanner.onLoad();
