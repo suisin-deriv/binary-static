@@ -4,15 +4,22 @@ const Client               = require('../../base/client');
 const State                = require('../../../_common/storage').State;
 
 const WarningScamMessage = (()=>{
+    const urlParams = new URLSearchParams(window.location.search);
+    const actionParams = urlParams.get('action');
     let warning_scam_message, warning_scam_message_button, warning_scam_message_checkbox;
+
+    if (actionParams === 'signup') {
+        localStorage.setItem('isNewAccount', true);
+    }
 
     const has_read_warning_scam_message = () => {
         BinarySocket.wait('authorize', 'website_status').then(()=> {
             const is_logged_in = !!Client.isLoggedIn();
-            const is_brazil = State.getResponse('website_status.clients_country') === 'my';
+            const is_brazil = State.getResponse('website_status.clients_country') === 'br';
             const is_message_read = localStorage.getItem('readScamMessage') || false;
+            const is_new_account = localStorage.getItem('isNewAccount') || false;
 
-            if (is_logged_in && is_brazil && !is_message_read) {
+            if (is_logged_in && is_brazil && !is_message_read && !is_new_account) {
                 warning_scam_message = getElementById('warning_scam_message');
                 warning_scam_message_checkbox = getElementById('warning_scam_message_checkbox');
             }

@@ -867,10 +867,15 @@ body #not_authenticated_financial ul.checked > li {
     }
     #warning_scam_message_text_secondary {
         font-size: 16px;
+        margin-bottom: 24px;
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 14px;
-            margin-bottom: 24px;
         }
+    }
+    .warning-scam-message-info-message {
+        display: flex;
+        padding-left: 16px;
+        margin-bottom: 24px;
     }
     .warning-scam-message-content-info-message {
         display: flex;
@@ -952,7 +957,7 @@ body #not_authenticated_financial ul.checked > li {
     .icon-sm {
         height: 16px;
         width: 16px;
-        margin-right: 8px;
+        margin: 3px 8px 0 0;
     }
 }
 

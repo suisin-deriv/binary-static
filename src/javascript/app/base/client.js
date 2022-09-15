@@ -122,6 +122,7 @@ const Client = (() => {
         removeCookies('reality_check', 'affiliate_token', 'affiliate_tracking', 'onfido_token', 'hide_guide');
         // clear local storage
         localStorage.removeItem('readScamMessage');
+        localStorage.removeItem('isNewAccount');
         // clear elev.io session storage
         sessionStorage.removeItem('_elevaddon-6app');
         sessionStorage.removeItem('_elevaddon-6create');

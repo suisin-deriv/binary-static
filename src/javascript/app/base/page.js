@@ -130,7 +130,7 @@ const Page = (() => {
             BinarySocket.wait('authorize', 'website_status', 'get_account_status').then(() => {
                 RealityCheck.onLoad();
                 Menu.init();
-                const is_at_brazil = State.getResponse('website_status.clients_country') === 'my';
+                const is_at_brazil = State.getResponse('website_status.clients_country') === 'br';
                 const read_scam_message = localStorage.getItem('readScamMessage') || false;
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');

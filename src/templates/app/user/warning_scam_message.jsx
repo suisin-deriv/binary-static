@@ -8,7 +8,7 @@ const WarningScamMessage = () => (
                 <p id='warning_scam_message_subtitle'>{it.L('A link can contain the word "Binary" and still be fake.')}</p>
                 <h2 id='warning_scam_message_title_secondary'>{it.L('Do not get lured to fake "Binary" pages!')}</h2>
                 <p id='warning_scam_message_text_secondary'>{it.L('You may see links to websites with a fake Binary login page where you’ll get scammed for your money. ')}</p>
-                <div className='warning-scam-message-content-info-message'>
+                <div className='warning-scam-message-info-message'>
                     <img className='icon-sm margin-right-0' src={it.url_for('images/pages/warning_scam_message/ic-account-cross.svg')} />
                     <h3 id='warning_scam_message_scam_title_text'>{it.L('Do not trust and give away your credentials on fake websites, ads or emails.')}</h3>
                 </div>
