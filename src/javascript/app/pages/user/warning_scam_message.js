@@ -9,15 +9,15 @@ const WarningScamMessage = (()=>{
     let warning_scam_message, warning_scam_message_button, warning_scam_message_checkbox;
 
     if (actionParams === 'signup') {
-        localStorage.setItem('isNewAccount', true);
+        localStorage.setItem('new_user_account', true);
     }
 
     const has_read_warning_scam_message = () => {
         BinarySocket.wait('authorize', 'website_status').then(()=> {
             const is_logged_in = !!Client.isLoggedIn();
             const is_brazil = State.getResponse('website_status.clients_country') === 'br';
-            const is_message_read = localStorage.getItem('readScamMessage') || false;
-            const is_new_account = localStorage.getItem('isNewAccount') || false;
+            const is_message_read = localStorage.getItem('read_scam_message') || false;
+            const is_new_account = localStorage.getItem('new_user_account') || false;
 
             if (is_logged_in && is_brazil && !is_message_read && !is_new_account) {
                 warning_scam_message = getElementById('warning_scam_message');
@@ -40,7 +40,7 @@ const WarningScamMessage = (()=>{
     };
 
     const closePopup = () => {
-        localStorage.setItem('readScamMessage', true);
+        localStorage.setItem('read_scam_message', true);
         warning_scam_message.setVisibility(0);
     };
 
