@@ -868,6 +868,7 @@ body #not_authenticated_financial ul.checked > li {
     #warning_scam_message_text_secondary {
         font-size: 16px;
         margin-bottom: 24px;
+        
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 14px;
         }
