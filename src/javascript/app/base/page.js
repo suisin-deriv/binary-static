@@ -134,7 +134,7 @@ const Page = (() => {
                 }, 1000);
                 RealityCheck.onLoad();
                 Menu.init();
-                const is_at_brazil = State.getResponse('website_status.clients_country') === 'br';
+                const is_brazil_client = State.getResponse('website_status.clients_country') === 'br';
                 const read_scam_message = localStorage.getItem('read_scam_message') || false;
                 const is_uk_residence = (Client.get('residence') === 'gb' || State.getResponse('website_status.clients_country') === 'gb');
                 const is_iom_client = (Client.get('residence') === 'im' || State.getResponse('website_status.clients_country') === 'im');
@@ -143,7 +143,7 @@ const Page = (() => {
                 const mlt_check = ClientBase.get('landing_company_shortcode') === 'malta';
                 const mf_check = ClientBase.get('landing_company_shortcode') === 'maltainvest';
                 const virtual_account = Client.get('landing_company_shortcode') === 'virtual';
-                if (is_at_brazil && !read_scam_message) { WarningScamMessage.has_read_warning_scam_message(); }
+                if (is_brazil_client && !read_scam_message) { WarningScamMessage.has_read_warning_scam_message(); }
                 if (!is_iom_client || is_uk_residence && !Client.hasAccountType('gaming') || mf_check || mlt_check) RedirectBanner.loginOnLoad();
                 if (is_uk_residence && Client.hasAccountType('gaming')) {
                     CloseBanner.onLoad();
