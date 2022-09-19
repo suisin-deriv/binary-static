@@ -843,29 +843,29 @@ body #not_authenticated_financial ul.checked > li {
     }
 }
 
-.lightbox #warning_scam_message_content {
+.lightbox .warning-scam-message-content {
     padding: 25px;
     padding-bottom: 20px;
 
-    #warning_scam_message_title {
+    .warning-scam-message-title {
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 20px;
             margin-bottom: 8px;
         }
     }
-    #warning_scam_message_subtitle {
+    .warning-scam-message-subtitle {
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 14px;
         }
     }
-    #warning_scam_message_title_secondary {
+    .warning-scam-message-title-secondary {
         color: $COLOR_BLACK;
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 18px;
             margin-bottom: 8px;
         }
     }
-    #warning_scam_message_text_secondary {
+    .warning-scam-message-text-secondary {
         font-size: 16px;
         margin-bottom: 24px;
         @media (min-width: 320px) and (max-width: 767px) {
@@ -882,7 +882,7 @@ body #not_authenticated_financial ul.checked > li {
         padding-left: 8px;
         margin-bottom: 24px;
     }
-    #warning_scam_message_scam_title_text {
+    .warning-scam-message-scam-title-text {
         font-weight: 300;
         margin-bottom: 0;
         color: $COLOR_BLACK;
@@ -923,7 +923,7 @@ body #not_authenticated_financial ul.checked > li {
         justify-content: center;
         align-items: center;
     }
-    #warning_scam_message_link {
+    .warning-scam-message-link {
         margin: 8px 0;
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 16px;
@@ -949,7 +949,7 @@ body #not_authenticated_financial ul.checked > li {
             margin-bottom: 24px;
         }
     }
-    #warning_scam_message_acknowledge_message {
+    .warning-scam-message-acknowledge-message {
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 14px;
         }

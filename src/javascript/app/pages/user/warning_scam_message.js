@@ -16,8 +16,8 @@ const WarningScamMessage = (()=>{
         BinarySocket.wait('authorize', 'website_status').then(()=> {
             const is_logged_in = !!Client.isLoggedIn();
             const is_brazil = State.getResponse('website_status.clients_country') === 'br';
-            const is_message_read = localStorage.getItem('read_scam_message') || false;
-            const is_new_account = localStorage.getItem('new_user_account') || false;
+            const is_message_read = !!localStorage.getItem('read_scam_message');
+            const is_new_account = !!localStorage.getItem('new_user_account');
 
             if (is_logged_in && is_brazil && !is_message_read && !is_new_account) {
                 warning_scam_message = getElementById('warning_scam_message');
