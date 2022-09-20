@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-29 09:58\n"
+"PO-Revision-Date: 2022-09-20 06:11\n"
 "Last-Translator: \n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -537,9 +537,6 @@ msgstr "(d) Kemungkinan Penyelesaian"
 
 msgid "(e) Size and nature"
 msgstr "(e) Ukuran dan sifat"
-
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*Pasangan mata uang kripto tidak tersedia untuk akun DMT5 Finansial yang terdaftar di Deriv (V) Ltd."
 
 msgid "0 – 19.999%"
 msgstr "0 – 19,999%"
@@ -2809,8 +2806,8 @@ msgstr "Klien setuju untuk mematuhi permintaan wajar dari Perusahaan untuk memen
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "Klien juga dinasihati bahwa hak-hak mereka dapat dianggap buruk jika mereka memberikan informasi yang salah karena Perusahaan tidak akan berada dalam posisi untuk bertindak demi kepentingan terbaik mereka."
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "Pelanggan dari seluruh dunia (kecuali Amerika Serikat, Kanada, Hong Kong) akan mendaftar akun FX dan CFD Metatrader 5 dibawah Deriv (V) Ltd. Perusahaan ini tidak menawarkan CFD pada mata uang kripto. %1 tidak tersedia untuk warga Republik Vanuatu."
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "Klien dari seluruh dunia (kecuali Amerika Serikat, Kanada, dan Hong Kong) akan mendaftar akun mereka pada Deriv (SVG) LLC."
@@ -5143,6 +5140,9 @@ msgstr "Menindak lanjuti rekomendasi dan garis waktu untuk tindakan korektif den
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "Mengikuti, mematuhi, dan menerapkan semua arahan, kebijakan, dan prosedur yang terkait dengan bisnis Perusahaan sebagaimana telah diubah atau diberlakukan kembali atau diganti dari waktu ke waktu."
 
+msgid "Fondex Limited "
+msgstr ""
+
 msgid "Food Services"
 msgstr "Layanan Makanan"
 
@@ -5457,6 +5457,9 @@ msgstr "Penghargaan Global Brands Awards 2018"
 
 msgid "Global Brands Magazine"
 msgstr "Majalah Global Brands"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "Kamus"
@@ -9227,9 +9230,6 @@ msgstr "Harga/Data Penentuan Harga"
 msgid "Primary"
 msgstr "Primer"
 
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services Limited"
-
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "Sebelum melakukan Order, yang menghasilkan open posisi, klien mengakui bahwa mereka bertanggung jawab untuk memastikan bahwa Akun Bebas Margin mereka cukup untuk memenuhi Margin yang diperlukan sehubungan dengan open posisi (\"Persyaratan Margin\"), dan untuk terus memenuhi Persyaratan Margin."
 
@@ -11107,9 +11107,6 @@ msgstr "Terima kasih karena telah mendaftar! Silahkan cek email Anda untuk melen
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "Terima kasih atas minat Anda bermitra dengan kami. Sangatlah mudah untuk mendaftar online. Cukup isi %1formulir aplikasi online%2 dengan semua detail yang diperlukan. Jika Anda sudah terdaftar sebagai afiliasi %3, Anda dapat mengirim email kepada kami di %4. Kami akan menghubungi Anda secara langsung jika aplikasi Anda berhasil."
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "Terima kasih, kami akan menghubungi Anda dalam tempo 24 jam"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "Bertentangan dengan hukum, peraturan, instrumen, tata cara atau aturan yang mengatur pengoperasian bursa, pasar keuangan, atau lingkungan peraturan keuangan"
@@ -13151,9 +13148,6 @@ msgstr "Isi ulang error"
 
 msgid "Top-up successful"
 msgstr "Isi ulang sukses"
-
-msgid "TopFX Ltd"
-msgstr "TopFX Ltd"
 
 msgid "Total"
 msgstr "Total"

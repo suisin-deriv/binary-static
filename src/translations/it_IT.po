@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-09-15 06:35\n"
+"PO-Revision-Date: 2022-09-20 06:10\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -537,9 +537,6 @@ msgstr "(d) Probabilità di regolamento"
 
 msgid "(e) Size and nature"
 msgstr "(e) Dimensioni e tipologia"
-
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*Le coppie di criptovalute non sono disponibili per i conti finanziari DMT5 creati con Deriv (V) Ltd."
 
 msgid "0 – 19.999%"
 msgstr "0 – 19,999%"
@@ -2809,8 +2806,8 @@ msgstr "i clienti accettano di soddisfare le ragionevoli richieste effettuate da
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "Inoltre, fornendo informazioni inesatte, i diritti dei clienti potrebbero essere compromessi poiché la Società non sarebbe nella posizione di agire nel suo reale interesse."
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "I clienti nel resto del mondo (esclusi alcuni paesi come USA, Canada e Hong Kong) apriranno il loro conto Metatrader 5 FX e CFD con Deriv (V) Ltd. Questa società non offre CFD su criptovalute. %1 non è disponibile nella Repubblica di Vanuatu."
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "I clienti provenienti dagli altri Paesi (esclusi alcuni come USA, Canada e Hong Kong) potranno aprire il proprio conto con Deriv (SVG) LLC."
@@ -5143,6 +5140,9 @@ msgstr "Follow up su raccomandazioni e calendario per azioni correttive con i re
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "Seguire, rispettare e implementare le direttive, politiche e procedure della Società legate al business in base alle modifiche, sostituzioni o nuove attuazioni realizzate di volta in volta."
 
+msgid "Fondex Limited "
+msgstr ""
+
 msgid "Food Services"
 msgstr "Servizi di ristorazione"
 
@@ -5457,6 +5457,9 @@ msgstr "Global Brands Awards 2018"
 
 msgid "Global Brands Magazine"
 msgstr "Global Brands Magazine"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "Glossario"
@@ -9226,9 +9229,6 @@ msgstr "Prezzo/i / Dati relativi ai prezzi"
 msgid "Primary"
 msgstr "Primario"
 
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services Limited"
-
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "Prima di effettuare un Ordine che si traduce nell'apertura di una posizione, il cliente riconosce che è propria responsabilità assicurarsi che il Margine Libero del proprio conto sia sufficiente a coprire il Margine richiesto in relazione all'apertura della posizione (il \"Requisito di Margine\") e che continui a soddisfare il Requisito di Margine."
 
@@ -11106,9 +11106,6 @@ msgstr "Grazie per esserti registrato! Controlla la tua email per completare la 
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "Ti ringraziamo per l'interesse dimostrato per collaborare con noi. La candidatura online è semplice: basta compilare il %1modulo di iscrizione online%2 con tutte le informazioni richieste. Se invece sei già iscritto come associato di %3, puoi scriverci all'indirizzo e-mail %4. Ti contatteremo direttamente in caso di accettazione della candidatura."
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "Grazie, ti invieremo una risposta entro 24 ore"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "trasgrediscano qualsiasi legge, regolamento, strumento, ordinanza o norma relativa al funzionamento di qualsiasi mercato di scambio, finanziario o contesto normativo finanziario; o"
@@ -13149,9 +13146,6 @@ msgstr "Errore di caricamento"
 
 msgid "Top-up successful"
 msgstr "Caricamento avvenuto con successo"
-
-msgid "TopFX Ltd"
-msgstr "TopFX Ltd"
 
 msgid "Total"
 msgstr "Totale"

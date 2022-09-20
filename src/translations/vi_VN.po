@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-09-01 08:08\n"
+"PO-Revision-Date: 2022-09-20 06:11\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -537,9 +537,6 @@ msgstr "(d) khả năng thanh toán"
 
 msgid "(e) Size and nature"
 msgstr "(e) Kích thước và tính chất"
-
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*Cặp tiền cryptocurrency không khả dụng cho tài khoản Tài chính DMT5 đăng ký với Deriv (V) Ltd."
 
 msgid "0 – 19.999%"
 msgstr "0 – 19.999%"
@@ -2810,8 +2807,8 @@ msgstr "Khách hàng đồng ý tuân thủ với các yêu cầu hợp lý củ
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "Khách hàng cũng được khuyên rằng các quyền của họ có thể sẽ bị giới hạn nếu họ cung cấp thông tin sai sự thật và khi đó Công Ty sẽ không ở vị trí để có thể hành động vì lợi ích tốt nhất cho họ."
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "Khách hàng từ những nơi khác (không bao gồm một số quốc gia như Hoa Kỳ, Canada, Hồng Kông) sẽ mở tài khoản FX và CFD Metatrader 5 của họ với Deriv (V) Ltd. Công ty này không cung cấp CFD trên tiền điện tử. %1 không khả dụng ở Cộng hòa Vanuatu."
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "Các khách hàng đến từ các khu vực còn lại trên thế giới (trừ một số quốc gia như Mỹ, Canada, và Hồng Kông) thì tài khoản của họ sẽ được mở với Công ty TNHH Deriv (SVG)."
@@ -5144,6 +5141,9 @@ msgstr "Theo dõi trên các khuyến nghị và thời gian cho các hành đ�
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "Theo dõi, tuân thủ và thực hiện tất cả các hướng dẫn, chính sách và thủ tục liên quan đến kinh doanh của Công ty như được sửa đổi hoặc ban hành lại hoặc thay thế theo thời gian."
 
+msgid "Fondex Limited "
+msgstr ""
+
 msgid "Food Services"
 msgstr "Dịch vụ ăn uống"
 
@@ -5458,6 +5458,9 @@ msgstr "Global Brands Awards 2018"
 
 msgid "Global Brands Magazine"
 msgstr "Tạp chí Global Brands"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "Thuật ngữ"
@@ -9228,9 +9231,6 @@ msgstr "Giá / Dữ liệu giá"
 msgid "Primary"
 msgstr "Chủ yếu"
 
-msgid "Prime Brokerage Services Limited"
-msgstr "Dịch vụ Hữu hạn Môi giới Cao cấp"
-
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "Trước khi đặt một Lệnh mà kết quả trong việc mở một phiên giao dịch, khách hàng thừa nhận rằng họ có trách nhiệm đảm bảo rằng tài khoản Biên Tự Do của mình có thể trang trải các Biên yêu cầu liên quan đến các giao dịch mở (\"Điều Kiện Biên\"), và liên tục đáp ứng Điều Kiện Biên."
 
@@ -11108,9 +11108,6 @@ msgstr "Cảm ơn bạn đã đăng ký! Vui lòng kiểm tra email của bạn 
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "Cảm ơn bạn đã quan tâm đến việc hợp tác với chúng tôi. Chúng tôi sẽ giúp cho bạn có thể dễ dàng đăng ký trực tuyến. Chỉ cần điền các thông tin cần thiết vào %1oHồ Sơ Đăng Ký Trực Tuyến%2. Nếu bạn đã được đăng ký như là một liên kết %3, bạn có thể gửi email cho chúng tôi tại %4. Chúng tôi sẽ liên lạc với bạn trực tiếp nếu đơn đăng kí của bạn thành công."
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "Cảm ơn bạn, chúng tôi sẽ liên hệ lại với bạn trong vòng 24 giờ"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "Việc vi phạm bất kỳ điều luật, quy định, công cụ, pháp lệnh hoặc quy tắc nào chi phối hoạt động của bất kỳ giao dịch, thị trường tài chính, hoặc môi trường quy định tài chính; hoặc"
@@ -13152,9 +13149,6 @@ msgstr "Lỗi nạp"
 
 msgid "Top-up successful"
 msgstr "Nạp thành công"
-
-msgid "TopFX Ltd"
-msgstr "TopFX Ltd"
 
 msgid "Total"
 msgstr "Tổng"

@@ -523,9 +523,6 @@ msgstr ""
 msgid "(e) Size and nature"
 msgstr ""
 
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr ""
-
 msgid "0 – 19.999%"
 msgstr ""
 
@@ -2794,7 +2791,7 @@ msgstr ""
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr ""
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
 msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
@@ -5128,6 +5125,9 @@ msgstr ""
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr ""
 
+msgid "Fondex Limited "
+msgstr ""
+
 msgid "Food Services"
 msgstr ""
 
@@ -5441,6 +5441,9 @@ msgid "Global Brands Awards 2018"
 msgstr ""
 
 msgid "Global Brands Magazine"
+msgstr ""
+
+msgid "Global Pop Liquidity Solutions Ltd"
 msgstr ""
 
 msgid "Glossary"
@@ -9211,9 +9214,6 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-msgid "Prime Brokerage Services Limited"
-msgstr ""
-
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr ""
 
@@ -11090,9 +11090,6 @@ msgid "Thank you for signing up! Please check your email to complete the registr
 msgstr ""
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
-msgstr ""
-
-msgid "Thank you, we'll get back to you within 24 hours"
 msgstr ""
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
@@ -13133,9 +13130,6 @@ msgid "Top up error"
 msgstr ""
 
 msgid "Top-up successful"
-msgstr ""
-
-msgid "TopFX Ltd"
 msgstr ""
 
 msgid "Total"
