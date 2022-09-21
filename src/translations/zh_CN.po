@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-22 07:15\n"
+"PO-Revision-Date: 2022-09-21 02:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -538,9 +538,6 @@ msgstr "（四）结算的可能性"
 msgid "(e) Size and nature"
 msgstr "（五）大小和性质"
 
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*加密货币对不适用于在 Deriv (V) 有限公司注册的 DMT5 金融账户。"
-
 msgid "0 – 19.999%"
 msgstr "0 – 19.999%"
 
@@ -822,6 +819,9 @@ msgstr "具敏锐眼光, 可确定营销的新趋势, 评估新技术, 并确保
 
 msgid "A lifelong interest in accounting, and an aptitude for numbers"
 msgstr "对会计极感兴趣，愿意终身投入其中，以及对数字具备高敏感性"
+
+msgid "A link can contain the word \"Binary\" and still be fake."
+msgstr ""
 
 msgid "A list of accepted payment methods"
 msgstr "可接受的付款方式列表"
@@ -2152,6 +2152,9 @@ msgstr "BetOnMarkets.com 于1999年推出，目前营业额达10亿美元"
 msgid "Betting system and method"
 msgstr "博彩系统和方法"
 
+msgid "Beware of the fake links."
+msgstr ""
+
 msgid "Bid"
 msgstr "出价"
 
@@ -2809,8 +2812,8 @@ msgstr "客户同意遵守本公司为验证此条款是否合规而提出的合
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "客户也被告知，如果客户提供错误的信息，其权利可能会受到损害，因为公司无法以客户的最佳利益行事。"
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "全球其他地区的客户 (不包括某些国家如美国、加拿大、香港) 可在 Deriv (V) 有限公司开设外汇和差价合约 Metatrader 5 账户。公司不提供加密货币的差价合约。%1在瓦努阿图不能使用。"
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "全球其他地区的客户 (不包括某些国家如美国、加拿大和香港) 可在 Deriv (SVG) 有限责任公司开设账户。"
@@ -3881,8 +3884,8 @@ msgstr "Deriv (V) 有限公司"
 msgid "Deriv (V) Ltd,"
 msgstr "Deriv (V) 有限公司，"
 
-msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission."
-msgstr "Deriv (V) 有限公司, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu。由瓦努阿图金融服务委员会授予许可证和监管。"
+msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission - %1view licence%2."
+msgstr "Deriv (V) 有限公司，Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu。由瓦努阿图金融服务委员会授权和管理- %1查看许可证%2。"
 
 msgid "Deriv (V) Ltd: Vanuatu"
 msgstr "Deriv (V) 有限公司: 瓦努阿图"
@@ -4055,8 +4058,14 @@ msgstr "多样化"
 msgid "Divorce Settlement"
 msgstr "离婚协议"
 
+msgid "Do not get lured to fake \"Binary\" pages!"
+msgstr ""
+
 msgid "Do not trade when you are tired or are under the influence of alcohol."
 msgstr "疲惫或受酒精影响时不要交易。"
+
+msgid "Do not trust and give away your credentials on fake websites, ads or emails."
+msgstr ""
 
 msgid "Do you manage a social media page that's dedicated to online trading? Partner with us and convert your audience into potential profit."
 msgstr "是否在管理专门用于网上交易的社交媒体页面？请与我们合作，将您的受众转成潜在利润。"
@@ -4625,6 +4634,9 @@ msgstr "例如:"
 msgid "Example: XAU/USD (Gold vs US dollar) symbol pair"
 msgstr "例如：黄金/美元（黄金兑美元）符号对"
 
+msgid "Examples"
+msgstr ""
+
 msgid "Excellent English language skills, both oral and written"
 msgstr "优秀的英语口语和书写技能"
 
@@ -4943,6 +4955,9 @@ msgstr "以透明的方式向客户公平准确地描述Binary的业务和服务
 msgid "Fairly and accurately describe the Agent's services to the clients."
 msgstr "公正准确地向客户描述代理的服务."
 
+msgid "Fake links often contain the word that looks like \"Binary\" but look out for these differences."
+msgstr ""
+
 msgid "Familiarity with Git"
 msgstr "熟悉 Git"
 
@@ -5143,6 +5158,9 @@ msgstr "与部门主管一起跟进纠正措施的建议和时间表"
 
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "跟踪、遵守和执行经修订或重新制订或随时更换的公司所有与业务有关的指示、政策和程序."
+
+msgid "Fondex Limited "
+msgstr ""
 
 msgid "Food Services"
 msgstr "饮食服务"
@@ -5458,6 +5476,9 @@ msgstr "2018年全球品牌大奖"
 
 msgid "Global Brands Magazine"
 msgstr "全球品牌杂志"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "术语表"
@@ -5842,6 +5863,9 @@ msgstr "我很感兴趣"
 
 msgid "I'm no longer interested in trading."
 msgstr "我对交易不再感兴趣。"
+
+msgid "I've read the above carefully."
+msgstr ""
 
 msgid "I. Trading"
 msgstr "九、交易"
@@ -8019,6 +8043,9 @@ msgstr "未找到人脸"
 msgid "No fiduciary duty"
 msgstr "无诚信责任"
 
+msgid "No further trading is allowed on this contract type for the current trading session. For more info, refer to our %1terms and conditions%2."
+msgstr "当前交易时段内不允许对该合约类型进一步交易。有关详细信息，请参阅%1条款和条件%2."
+
 msgid "No hidden fees"
 msgstr "没隐藏费用"
 
@@ -8166,6 +8193,9 @@ msgstr "OAuth 应用程序 ID"
 msgid "OK"
 msgstr "确定"
 
+msgid "OK, got it"
+msgstr ""
+
 msgid "OMG/USD"
 msgstr "嫩模币/美元"
 
@@ -8291,6 +8321,9 @@ msgstr "ID 号(%1) 只允许字母、数字、空格、下划线和连字符。"
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "只允许字母、空格、连字符、句号和省略号。"
+
+msgid "Only log in to your account at this secure link, never elsewhere."
+msgstr ""
 
 msgid "Only one account is allowed per person. No withdrawals and/or refunds may be collected on accounts opened in false names or on multiple accounts opened by the same person."
 msgstr "每人只能开立一个账户。使用假名开立账户或属于同一客户的多个账户不能提取款项和/或退款。"
@@ -8508,8 +8541,8 @@ msgstr "我们的价值观"
 msgid "Our website uses cookies to give you the best user experience. For more information, %1view our policy%2."
 msgstr "网站使用 cookie 提供最佳的用户体验。请%1参阅我们的政策%2。"
 
-msgid "Outside the EU, financial products are offered by Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission; Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission (%3licence no. SIBA/L/18/1114%4); and Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business (%5licence no. MB/18/0024%6)."
-msgstr "欧盟以外地区，金融产品由 Deriv (SVG) 有限责任公司, Hinds Building, Kingstown, St. Vincent and the Grenadines提供服务; Deriv (V) 有限公司, Govant Building, Port Vila, PO Box 1276, Vanuatu提供服务，受瓦努阿图金融服务委员会监管，或由 Deriv (BVI) 有限公司, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands 提供服务，受英属维尔京群岛金融服务委员会监管（%3许可证编号SIBA/L/18/1114%4），以及由Deriv (FX) 有限公司, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia提供服务，受纳闽金融服务管理局监管，并开展货币经纪业务（%5许可证编号MB/18/0024%6）。"
+msgid "Outside the EU, financial products are offered by Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission (%1view licence%2); Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission (%3licence no. SIBA/L/18/1114%4); and Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business (%5licence no. MB/18/0024%6)."
+msgstr "欧盟以外地区，金融产品由 Deriv (SVG) 有限责任公司，Hinds Building, Kingstown, St. Vincent and the Grenadines提供服务; Deriv (V) 有限公司，Govant Building, Port Vila, PO Box 1276, Vanuatu提供服务，受瓦努阿图金融服务委员会监管（%1查看许可证%2），或由 Deriv (BVI) 有限公司，Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands 提供服务，受英属维尔京群岛金融服务委员会监管（%3许可证编号SIBA/L/18/1114%4），以及由Deriv (FX) 有限公司，Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia提供服务，受纳闽金融服务管理局监管，并开展货币经纪业务（%5许可证编号MB/18/0024%6）。"
 
 msgid "Outstanding written and verbal communication skills and excellent command of English"
 msgstr "出色的书面和口头交流能力以及杰出的英语水平"
@@ -9224,9 +9257,6 @@ msgstr "价格/定价数据"
 
 msgid "Primary"
 msgstr "小学"
-
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services 有限公司"
 
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "下单开盘交易前，客户确认确保其账户可用保证金足以支付开盘交易所须的保证金（\"要求保证金\"），并持续满足保证金要求是客户的责任。"
@@ -11073,6 +11103,18 @@ msgstr "泰达 Omni"
 msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
 msgstr "泰达 Omni (USDT) 是建立在比特币区块链上，与美元挂钩的泰达币版本。"
 
+msgid "Tether TRC20"
+msgstr "泰达 TRC20"
+
+msgid "Tether as a TRC20 token (tUSDT) is a version of Tether that is hosted on Tron."
+msgstr "泰达作为 TRC20 代币（tUSDT）是在 Tron 托管的泰达币版本。"
+
+msgid "Tether as an ERC20 token (eUSDT) is a version of Tether that is hosted on Ethereum."
+msgstr "泰达作为 ERC20 代币（eUSDT）是在以太坊托管的泰达币版本。"
+
+msgid "Tether as an Omni token (USDT) is a version of Tether that is hosted on the Omni layer on the Bitcoin blockchain."
+msgstr "泰达作为 Omni 代币（USDT）是在比特币区块链 Omni 层托管的泰达币版本。"
+
 msgid "Tether is a blockchain-based cryptocurrency whose cryptocoins in circulation are backed by an equivalent amount of traditional fiat currencies. For more information, please visit %1."
 msgstr "Tether是基于区块链的加密货币, 其流通由同等数量的传统法定货币提供支持。欲了解更多信息, 请访问 %1。"
 
@@ -11093,9 +11135,6 @@ msgstr "谢谢您的注册！请查看邮件以完成注册程序。"
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "谢谢您对我们的合作感兴趣。可以轻松在网上申请。只需填写 %1在线申请表%2 并输入所有必要的细节。如果已经注册为 %3 联盟会员，可以给我们发送电子邮件到 %4 。申请批准后，我们将直接与您联系。"
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "谢谢，我们会在24小时内回复"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "违反任何管制任何交易所、金融市场或金融监管环境运作的法律、规例、文书、条例或规则"
@@ -13138,9 +13177,6 @@ msgstr "充值错误"
 msgid "Top-up successful"
 msgstr "充值成功"
 
-msgid "TopFX Ltd"
-msgstr "TopFX 有限公司"
-
 msgid "Total"
 msgstr "总计"
 
@@ -14941,6 +14977,9 @@ msgstr "资金只可在法定账户和加密货币账户之间转移."
 msgid "You may open one account for each supported cryptocurrency."
 msgstr "可以为每种受支持的加密货币开立专用账户。"
 
+msgid "You may see links to websites with a fake Binary login page where you’ll get scammed for your money. "
+msgstr ""
+
 msgid "You must also submit a proof of address."
 msgstr "还必须提交地址证明。"
 
@@ -15182,7 +15221,7 @@ msgid "Your computer may take a few seconds to update"
 msgstr "电脑更新可能需要数秒钟"
 
 msgid "Your date of birth in the document doesn't match your Binary profile name. Please update your name in the %1Personal details page%2."
-msgstr ""
+msgstr "文档中的出生日期与 Binary 个人资料不匹配。请在%1个人详细信息页面%2更新姓名。"
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "演示账户余额当前为 %1 或更低。可以添加 %2补充账户资金。"
@@ -15197,7 +15236,7 @@ msgid "Your document is being reviewed, please check back in 1-3 days. You must 
 msgstr "文件正在审查中，请于1-3天后再查看。还必须提交身份证明。"
 
 msgid "Your document name doesn't match your Binary profile name. Please update your name in the %1Personal details page%2."
-msgstr ""
+msgstr "文档中的姓名与 Binary 个人资料不匹配。请在%1个人详细信息页面%2更新姓名。"
 
 msgid "Your document number has been verified"
 msgstr "文件号已验证"
@@ -15221,7 +15260,7 @@ msgid "Your mobile link will expire in one hour"
 msgstr "手机链接将于一小时后失效"
 
 msgid "Your name and date of birth in the document doesn't match your Binary profile name. Please update your name in the %1Personal details page%2."
-msgstr ""
+msgstr "文档中的姓名和出生日期与 Binary 个人资料不匹配。请在%1个人详细信息页面%2更新姓名。"
 
 msgid "Your name, email address and contact number"
 msgstr "名字、 电子邮件和电话"

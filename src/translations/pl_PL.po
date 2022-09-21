@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-22 07:15\n"
+"PO-Revision-Date: 2022-09-21 02:11\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -538,9 +538,6 @@ msgstr "(d) Prawdopodobieństwo rozliczenia"
 msgid "(e) Size and nature"
 msgstr "(e) Rozmiar i charakter"
 
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*Pary kryptowalut nie są dostępne dla kont finansowych DMT5 zarejestrowanych przez Deriv (V) Ltd."
-
 msgid "0 – 19.999%"
 msgstr "0 – 19.999%"
 
@@ -822,6 +819,9 @@ msgstr "Identyfikowanie nowych trendów w marketingu, ocenianie nowych technolog
 
 msgid "A lifelong interest in accounting, and an aptitude for numbers"
 msgstr "Zainteresowanie księgowością i umiejętność pracy z liczbami"
+
+msgid "A link can contain the word \"Binary\" and still be fake."
+msgstr ""
 
 msgid "A list of accepted payment methods"
 msgstr "Lista akceptowanych metod płatności"
@@ -2152,6 +2152,9 @@ msgstr "BetOnMarkets.com osiąga obrót w wysokości miliarda dolarów od rozpoc
 msgid "Betting system and method"
 msgstr "System i metody zawierania zakładów"
 
+msgid "Beware of the fake links."
+msgstr ""
+
 msgid "Bid"
 msgstr "Oferta kupna"
 
@@ -2809,8 +2812,8 @@ msgstr "Klienci zgadzają się stosować się do uzasadnionych próśb Firmy zwi
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "Informuje się również Klientów, że ich prawa mogą zostać naruszone, jeśli przekażą niepoprawne informacje, gdyż wówczas Firma nie będzie mogła działać w ich najlepszym interesie."
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "W przypadku klientów z pozostałych krajów (za wyjątkiem niektórych krajów, takich jak Stany Zjednoczone, Kanada czy Hongkong) konta FX i CFD Metatrader 5 zostaną otwarte przez Deriv (V) Ltd. Ta firma nie oferuje kontraktów CFD na kryptowaluty. Usługi %1 są niedostępne w Republice Vanuatu."
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "Klienci z pozostałych części świata (wyłączając niektóre państwa, takich jak USA, Kanada, Hongkong) będą mieli założone konta przez Deriv (SVG) LLC."
@@ -3880,8 +3883,8 @@ msgstr "Deriv (V) Ltd"
 msgid "Deriv (V) Ltd,"
 msgstr "Deriv (V) Ltd,"
 
-msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission."
-msgstr "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republika Vanuatu. Za licencję i regulację odpowiada Komisja ds. usług finansowych Vanuatu (Vanuatu Financial Services Commission)."
+msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission - %1view licence%2."
+msgstr "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republika Vanuatu. Za licencję i regulację odpowiada Komisja ds. usług finansowych Vanuatu (Vanuatu Financial Services Commission) – %1zobacz licencję%2."
 
 msgid "Deriv (V) Ltd: Vanuatu"
 msgstr "Deriv (V) Ltd: Vanuatu"
@@ -4054,8 +4057,14 @@ msgstr "Wielokulturowość"
 msgid "Divorce Settlement"
 msgstr "Orzeczenie rozwodowe"
 
+msgid "Do not get lured to fake \"Binary\" pages!"
+msgstr ""
+
 msgid "Do not trade when you are tired or are under the influence of alcohol."
 msgstr "Nie graj, gdy jesteś zmęczony(a) lub pod wpływem alkoholu."
+
+msgid "Do not trust and give away your credentials on fake websites, ads or emails."
+msgstr ""
 
 msgid "Do you manage a social media page that's dedicated to online trading? Partner with us and convert your audience into potential profit."
 msgstr "Zarządzasz stroną mediów społecznościowych dedykowaną handlowi on-line? Zostań naszym partnerem i uzyskaj potencjalny zysk dzięki Twoim odbiorcom."
@@ -4624,6 +4633,9 @@ msgstr "Przykład:"
 msgid "Example: XAU/USD (Gold vs US dollar) symbol pair"
 msgstr "Przykład: symbol pary XAU/USD (złoto vs dolar amerykański)"
 
+msgid "Examples"
+msgstr ""
+
 msgid "Excellent English language skills, both oral and written"
 msgstr "Doskonała znajomość języka angielskiego w mowie i w piśmie"
 
@@ -4942,6 +4954,9 @@ msgstr "Sprawiedliwie, dokładnie i w przejrzysty sposób opisuje klientom dzia�
 msgid "Fairly and accurately describe the Agent's services to the clients."
 msgstr "Uczciwie i dokładnie przedstawia usługi Pośrednika swoim klientom."
 
+msgid "Fake links often contain the word that looks like \"Binary\" but look out for these differences."
+msgstr ""
+
 msgid "Familiarity with Git"
 msgstr "Znajomość Git"
 
@@ -5142,6 +5157,9 @@ msgstr "Stosowanie się do zaleceń kierowników działu i harmonogramu podejmow
 
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "Przestrzega wszelkich instrukcji biznesowych, polityk, procedur Firmy, w tym do ich zmienionej lub nowej wersji, stosuje się do nich i wprowadza je w życie."
+
+msgid "Fondex Limited "
+msgstr ""
 
 msgid "Food Services"
 msgstr "Usługi gastronomiczne"
@@ -5457,6 +5475,9 @@ msgstr "Nagroda Global Brands Awards 2018"
 
 msgid "Global Brands Magazine"
 msgstr "Global Brands Magazine"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "Słowniczek"
@@ -5841,6 +5862,9 @@ msgstr "Jestem zainteresowany"
 
 msgid "I'm no longer interested in trading."
 msgstr "Nie interesuje mnie już inwestowanie."
+
+msgid "I've read the above carefully."
+msgstr ""
 
 msgid "I. Trading"
 msgstr "I. Handel"
@@ -8017,6 +8041,9 @@ msgstr "Nie rozpoznano twarzy"
 msgid "No fiduciary duty"
 msgstr "Brak obowiązku powierniczego"
 
+msgid "No further trading is allowed on this contract type for the current trading session. For more info, refer to our %1terms and conditions%2."
+msgstr "Nie jest dozwolone dalsze inwestowanie w ten kontrakt w obecnej sesji. Aby uzyskać więcej informacji, zapoznaj się z naszym %1regulaminem%2."
+
 msgid "No hidden fees"
 msgstr "Brak ukrytych kosztów"
 
@@ -8164,6 +8191,9 @@ msgstr "Identyfikator aplikacji OAuth"
 msgid "OK"
 msgstr "OK"
 
+msgid "OK, got it"
+msgstr ""
+
 msgid "OMG/USD"
 msgstr "OMG/USD"
 
@@ -8289,6 +8319,9 @@ msgstr "W przypadku numeru ID (%1) akceptowane są wyłącznie litery, cyfry, zn
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "Dozwolone są tylko litery, spacja, myślniki, kropki i apostrof."
+
+msgid "Only log in to your account at this secure link, never elsewhere."
+msgstr ""
 
 msgid "Only one account is allowed per person. No withdrawals and/or refunds may be collected on accounts opened in false names or on multiple accounts opened by the same person."
 msgstr "Dozwolone jest tylko jedno konto na osobę. Wypłaty i/lub zwroty nie mogą być gromadzone na kontach otwartych pod fałszywym nazwiskiem ani na wielu kontach otwartych przez tę samą osobę."
@@ -8506,8 +8539,8 @@ msgstr "Nasze wartości"
 msgid "Our website uses cookies to give you the best user experience. For more information, %1view our policy%2."
 msgstr "Aby zapewnić jak najlepsze doświadczenie, używamy plików cookie. Aby uzyskać więcej informacji, %1zapoznaj się z naszą polityką%2."
 
-msgid "Outside the EU, financial products are offered by Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission; Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission (%3licence no. SIBA/L/18/1114%4); and Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business (%5licence no. MB/18/0024%6)."
-msgstr "Poza terytorium UE produkty finansowe są oferowane przez spółkę Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, za której regulacje odpowiada Komisja ds. usług finansowych Vanuatu (Vanuatu Financial Services Commission); Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Brytyjskie Wyspy Dziewicze, za której regulacje odpowiada Komisja Brytyjskich Wysp Dziewiczych ds. Usług Finansowych (British Virgin Islands Financial Services Commission) – (%3licencja o numerze SIBA/L/18/1114%4), oraz Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malezja, za regulacje w zakresie prowadzenia usług brokerskich odpowiada Urząd ds. Usług Finansowych na Labuanie (Labuan Financial Services Authority) – %5licencja o numerze MB/18/0024%6."
+msgid "Outside the EU, financial products are offered by Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission (%1view licence%2); Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission (%3licence no. SIBA/L/18/1114%4); and Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business (%5licence no. MB/18/0024%6)."
+msgstr "Poza terytorium UE produkty finansowe są oferowane przez spółkę Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, za której regulacje odpowiada Komisja ds. usług finansowych Vanuatu (Vanuatu Financial Services Commission) – %1zobacz licencję%2 Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Brytyjskie Wyspy Dziewicze, za której regulacje odpowiada Komisja Brytyjskich Wysp Dziewiczych ds. Usług Finansowych (British Virgin Islands Financial Services Commission) – (%3licencja o numerze SIBA/L/18/1114%4), oraz Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malezja, za regulacje w zakresie prowadzenia usług brokerskich odpowiada Urząd ds. Usług Finansowych na Labuanie (Labuan Financial Services Authority) – %5licencja o numerze MB/18/0024%6."
 
 msgid "Outstanding written and verbal communication skills and excellent command of English"
 msgstr "Doskonałe umiejętności komunikacji pisemnej i ustnej oraz doskonała znajomość języka angielskiego"
@@ -9222,9 +9255,6 @@ msgstr "Ceny/dane dot. wyceny"
 
 msgid "Primary"
 msgstr "Podstawowy"
-
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services Limited"
 
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "Przed złożeniem zlecenia otwarcia transakcji klient przyjmuje do wiadomości, że to jego obowiązkiem jest zapewnienie, by na koncie bez depozytu zabezpieczającego znajdowały się środki wystarczające na pokrycie depozytu wymaganego w odniesieniu do otwieranej transakcji („Wymogi dot. depozytu zabezpieczającego”) i stałe spełnianie tych wymogów."
@@ -11072,6 +11102,18 @@ msgstr "Tether Omni"
 msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is built on the Bitcoin blockchain."
 msgstr "Tether Omni (USDT) to wersja Tether powiązana z dolarem amerykańskim (USD) i zbudowana w oparciu o technologię blockchain Bitcoin."
 
+msgid "Tether TRC20"
+msgstr "Tether TRC20"
+
+msgid "Tether as a TRC20 token (tUSDT) is a version of Tether that is hosted on Tron."
+msgstr "Tether jako token TRC20 (tUSDT) to wersja Tether hostowana na Tron."
+
+msgid "Tether as an ERC20 token (eUSDT) is a version of Tether that is hosted on Ethereum."
+msgstr "Tether jako token ERC20 (EUSDT) to wersja Tether hostowana na Ethereum."
+
+msgid "Tether as an Omni token (USDT) is a version of Tether that is hosted on the Omni layer on the Bitcoin blockchain."
+msgstr "Tether jako token Omni (USDT) to wersja Tether hostowana na poziomie Omni w oparciu o technologię blockchain Bitcoin."
+
 msgid "Tether is a blockchain-based cryptocurrency whose cryptocoins in circulation are backed by an equivalent amount of traditional fiat currencies. For more information, please visit %1."
 msgstr "Tether to kryptowaluta oparta na blockchain, której kryptomonety będące w obiegu mają pokrycie w odpowiadającej im wartości tradycyjnych walutach fiducjarnych. Aby uzyskać więcej informacji, odwiedź %1."
 
@@ -11092,9 +11134,6 @@ msgstr "Dziękujemy za rejestrację! Sprawdź swoją skrzynkę e-mailową, aby u
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "Dziękujemy za zainteresowanie naszym programem partnerskim. Możesz w prosty sposób aplikować online. Wystarczy wypełnić formularz aplikacyjny online%2, podając niezbędne dane. Jeśli jesteś już zarejestrowanym partnerem %3, możesz zamiast tego wysłać nam wiadomość e-mail na adres: %4. Skontaktujemy się z Tobą bezpośrednio, jeśli Twoja aplikacja zostanie zaakceptowana."
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "Dziękujemy, skontaktujemy się w ciągu 24 godzin"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "transakcje te łamią jakiekolwiek prawo, regulacje, instrumenty prawne, ordynacje lub przepisy, które regulują funkcjonowanie wszelkich rynków finansowych i rynków wymiany walut, bądź środowiska regulacji finansowych, lub"
@@ -13136,9 +13175,6 @@ msgstr "Błąd doładowania"
 msgid "Top-up successful"
 msgstr "Doładowanie powiodło się"
 
-msgid "TopFX Ltd"
-msgstr "TopFX Ltd"
-
 msgid "Total"
 msgstr "Całkowity"
 
@@ -14939,6 +14975,9 @@ msgstr "Możesz przesyłać środki wyłącznie między kontem prowadzonym w wal
 msgid "You may open one account for each supported cryptocurrency."
 msgstr "Dla każdej obsługiwanej waluty można utworzyć jedno konto."
 
+msgid "You may see links to websites with a fake Binary login page where you’ll get scammed for your money. "
+msgstr ""
+
 msgid "You must also submit a proof of address."
 msgstr "Musisz dostarczyć również dokument potwierdzający adres."
 
@@ -15180,7 +15219,7 @@ msgid "Your computer may take a few seconds to update"
 msgstr "Aktualizacja może zająć komputerowi kilka sekund"
 
 msgid "Your date of birth in the document doesn't match your Binary profile name. Please update your name in the %1Personal details page%2."
-msgstr ""
+msgstr "Twoja data urodzenia w dokumencie nie pasuje do Twojego imienia i nazwiska na profilu Binary. Zaktualizuj swoje imię i nazwisko w sekcji %1Dane osobowe%2."
 
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr "Saldo Twojego konta demo wynosi obecnie %1 lub mniej. Możesz zasilić swoje konto dodatkową kwotą %2."
@@ -15195,7 +15234,7 @@ msgid "Your document is being reviewed, please check back in 1-3 days. You must 
 msgstr "Twój dokument jest weryfikowany, sprawdź ponownie za 1-3 dni. Musisz dostarczyć również dokument potwierdzający tożsamość."
 
 msgid "Your document name doesn't match your Binary profile name. Please update your name in the %1Personal details page%2."
-msgstr ""
+msgstr "Twoje imię i nazwidko widoczne na dokumencie nie pasuje do Twojego imienia i nazwiska na profilu Binary. Zaktualizuj swoje imię i nazwisko w sekcji %1Dane osobowe%2."
 
 msgid "Your document number has been verified"
 msgstr "Numer Twojego dokumentu został zweryfikowany"
@@ -15219,7 +15258,7 @@ msgid "Your mobile link will expire in one hour"
 msgstr "Twój link mobilny wygaśnie za godzinę"
 
 msgid "Your name and date of birth in the document doesn't match your Binary profile name. Please update your name in the %1Personal details page%2."
-msgstr ""
+msgstr "Twoje imię i nazwisko oraz data urodzenia w dokumencie nie pasuje do Twojego imienia i nazwiska na profilu Binary. Zaktualizuj swoje imię i nazwisko w sekcji %1Dane osobowe%2."
 
 msgid "Your name, email address and contact number"
 msgstr "Twoje imię i nazwisko, adres e-mail i numer telefonu"
