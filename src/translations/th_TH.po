@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-25 03:44\n"
+"PO-Revision-Date: 2022-09-20 06:11\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -537,9 +537,6 @@ msgstr "(ง) ความเป็นไปได้ในการทำข้
 
 msgid "(e) Size and nature"
 msgstr "(จ) ขนาดและลักษณะ"
-
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*คู่สกุลเงินดิจิทัลไม่สามารถใช้ได้กับบัญชีการเงิน DMT5 ที่ลงทะเบียนกับ Deriv (V) Ltd."
 
 msgid "0 – 19.999%"
 msgstr "0 – 19.999%"
@@ -1973,7 +1970,7 @@ msgid "Award-winning trading excellence"
 msgstr "รางวัลความเป็นเลิศในการซื้อขาย"
 
 msgid "Awards and orders"
-msgstr ""
+msgstr "รางวัลและคําสั่ง"
 
 msgid "B. Commencement"
 msgstr "ข. การเริ่มต้น"
@@ -2809,8 +2806,8 @@ msgstr "ลูกค้ายินยอมที่จะดำเนินต
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "ลูกค้าพึงทราบว่า อาจเกิดความลำเอียงในสิทธิ์ที่ได้รับ หากลูกค้าให้ข้อมูลที่ไม่ถูกต้อง ทำให้บริษัทฯ ไม่อยู่ในสถานะที่จะดำเนินการเพื่อประโยชน์สูงสุดของลูกค้าได้"
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "ลูกค้าจากประเทศอื่นๆ ทั่วโลก (ยกเว้นบางประเทศ เช่น สหรัฐอเมริกา แคนาดา ฮ่องกง) จะมีบัญชี FX และบัญชี CFD Metatrader 5 ที่เปิดบัญชีกับ Deriv (V) Ltd หากแต่ บริษัทนี้ไม่มี CFD ในคริปโตเคอเรนซี่ %1 จะไม่ได้ให้บริการในสาธารณรัฐวานูอาตู"
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "ลูกค้าอื่นๆ ทั่วโลก (ที่ไม่ได้อยู่ในประเทศเหล่านี้ ได้แก่ สหรัฐอเมริกา แคนาดาและฮ่องกง) จะเปิดบัญชีกับ Deriv (SVG) LLC"
@@ -2828,7 +2825,7 @@ msgid "Clients in the European Union who wish to trade gambling products will ha
 msgstr "ลูกค้าในสหภาพยุโรปที่ต้องการซื้อขายผลิตภัณฑ์การพนันจะมีบัญชีเปิดกับ Deriv (Europe) จํากัด"
 
 msgid "Clients in the rest of the world (except for certain countries such as the USA, Canada, and Hong Kong) who wish to trade CFDs on financial instruments (via DMT5 Financial account or DMT5 Financial STP account) and synthetic indices (via DMT5 Synthetic account) can have MetaTrader 5 accounts under Deriv (BVI) Ltd."
-msgstr ""
+msgstr "ลูกค้าในประเทศอื่นๆ ทั่วโลก (ยกเว้นบางประเทศ เช่น สหรัฐอเมริกา แคนาดา และฮ่องกง) ที่ต้องการซื้อขาย CFD ในตราสารทางการเงิน (ผ่านบัญชีการเงิน DMT5 หรือบัญชี DMT5 Financial STP) และดัชนีสังเคราะห์ (ผ่านบัญชี DMT5 Synthetic) สามารถมีบัญชี MetaTrader 5 ภายใต้ Deriv (BVI) Ltd"
 
 msgid "Clients may trade on our platforms only when they are using their own money and are drawing on funds that have been acquired honestly. If you have any suspicion that clients are using money that has been acquired dishonestly, you must inform %1.  In such cases, we may decide to conduct checks on the client’s status and background. %2 management will decide what information needs to be reported to government officials and through what channels."
 msgstr "ลูกค้าสามารถซื้อขายบนแพลตฟอร์มของเราได้ก็ต่อเมื่อพวกเขาใช้เงินของตัวเองและกำลังดึงเงินที่ได้มาโดยสุจริต หากคุณมีข้อสงสัยว่าลูกค้าใช้เงินที่ได้มาโดยไม่สุจริตคุณต้องแจ้ง %1 ในกรณีดังกล่าวเราอาจตัดสินใจที่จะดำเนินการตรวจสอบสถานะและภูมิหลังของลูกค้า การจัดการ %2 จะตัดสินใจว่าจะต้องรายงานข้อมูลใดต่อเจ้าหน้าที่ของรัฐและผ่านช่องทางใด"
@@ -3855,7 +3852,7 @@ msgid "Deriv (FX) Ltd,"
 msgstr "Deriv (FX) Ltd,"
 
 msgid "Deriv (FX) Ltd, Deriv BVI (Ltd), or"
-msgstr ""
+msgstr "Deriv (FX) จำกัด, Deriv BVI (จำกัด) หรือ"
 
 msgid "Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia. Licensed and regulated by the Labuan Financial Services Authority to carry on a money-broking business %1(licence no. MB/18/0024)%2."
 msgstr "Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 สหพันธ์ลาบวนประเทศมาเลเซีย ได้รับการควบคุมโดย Labuan Financial Services Authority เพื่อดำเนินธุรกิจการรับฝากเงิน %1(ใบอนุญาตหมายเลข MB/18/0024)%2"
@@ -3882,7 +3879,7 @@ msgid "Deriv (V) Ltd,"
 msgstr "Deriv (V) Ltd,"
 
 msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission - %1view licence%2."
-msgstr ""
+msgstr "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276 ในส่วนของประเทศวานูอาตู ได้รับการควบคุมโดย วานูอาตู Financial Services Commission - %1ดูใบอนุญาต%2"
 
 msgid "Deriv (V) Ltd: Vanuatu"
 msgstr "Deriv (V) Ltd: วานูอาตู"
@@ -3954,7 +3951,7 @@ msgid "Details of the applicant's current level of remuneration, including entit
 msgstr "รายละเอียดของค่าตอบแทนปัจจุบันของผู้สมัครรวมถึงการได้รับสิทธิประโยชน์ เช่น สวัสดิการ หรือ ประกันสุขภาพ ถ้ามี"
 
 msgid "Determination phase"
-msgstr ""
+msgstr "ระยะการกำหนด"
 
 msgid "DevOps Engineer"
 msgstr "วิศวกร DevOps"
@@ -5144,6 +5141,9 @@ msgstr "ติดตามผลในคำแนะนำและระยะ
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "ปฏิบัติตาม เป็นไปตามหลักการ และการนำไปใช้เพื่อเป็นแนวทางที่เกี่ยวข้องกับการดำเนินธุรกิจทั้งหมด นโยบายต่างๆ และกระบวนการของบริษัทฯ ตามที่ได้แก้ไข หรือ ทำซ้ำ หรือ แทนที่ แล้วแต่กรณี"
 
+msgid "Fondex Limited "
+msgstr ""
+
 msgid "Food Services"
 msgstr "งานบริการเกี่ยวกับอาหาร"
 
@@ -5458,6 +5458,9 @@ msgstr "รางวัล Global Brands ปี 2018"
 
 msgid "Global Brands Magazine"
 msgstr "นิตยสาร Global Brands"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "อภิธานศัพท์"
@@ -9228,9 +9231,6 @@ msgstr "ราคา / ข้อมูลราคา"
 msgid "Primary"
 msgstr "หลัก"
 
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services Limited"
-
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "ก่อนการส่งคำสั่งซื้อที่จะทำให้เกิดการเปิดธุรกรรม ลูกค้าทราบว่า ถือเป็นความรับผิดชอบของลูกค้าที่จะตรวจสอบให้แน่ใจว่า บัญชีมีมาร์จินฟรีเพียงพอสำหรับจำนวนมาร์จินที่กำหนดไว้เพื่อการเปิดธุรกรรม (\"ข้อกำหนดของมาร์จิน\") และเพื่อให้คงสภาพตามข้อกำหนดของมาร์จินนี้อย่างต่อเนื่อง"
 
@@ -11108,9 +11108,6 @@ msgstr "ขอขอบคุณสำหรับการลงทะเบี
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "ขอขอบคุณที่ท่านสนใจร่วมเป็นพันธมิตรกับเรา เราทำให้การสมัครออนไลน์นั้นง่ายสำหรับท่าน เพียงแค่กรอก %1 แบบฟอร์มออนไลน์%2 โดยบันทึกข้อมูลของท่าน ถ้าท่านได้ลงทะเบียนเป็น %3พันธมิตรแล้ว ท่านสามารถส่งอีเมล์หาเราที่ %4 เราจะติดต่อกับท่านโดยตรง หากท่านมีใบสมัครของท่านผ่านการพิจารณา"
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "ขอบคุณ เราจะติดต่อกลับภายใน 24 ชั่วโมง"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "ซึ่งโต้แย้งกับกฎหมายใดๆ หลักเกณฑ์ใดๆ เครื่องมือใดๆ กฤษฎีกา หรือ กฎที่กำกับการปฏิบัติการใดๆ ในการแลกเปลี่ยน ตลาดการเงิน หรือ องค์ภาวะที่บังคับทางการเงิน"
@@ -13153,9 +13150,6 @@ msgstr "มีข้อผิดพลาดในการเติมเงิ
 
 msgid "Top-up successful"
 msgstr "การเติมเงินสำเร็จ"
-
-msgid "TopFX Ltd"
-msgstr "TopFX Ltd"
 
 msgid "Total"
 msgstr "ผลรวม"

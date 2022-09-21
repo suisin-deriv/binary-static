@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-25 03:44\n"
+"PO-Revision-Date: 2022-09-20 06:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -537,9 +537,6 @@ msgstr "(四) 結算的可能性"
 
 msgid "(e) Size and nature"
 msgstr "(五) 大小和性質"
-
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*加密貨幣對不適用於在 Deriv (V) 有限公司註冊的 DMT5 金融帳戶。"
 
 msgid "0 – 19.999%"
 msgstr "0 – 19.999%"
@@ -2809,8 +2806,8 @@ msgstr "客戶同意遵守本公司提出的合理要求以確保符合此條款
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "客戶也被告知，如果客戶提供錯誤的資訊，其權利可能會受到損害，因為公司無法以客戶的最佳利益行事。"
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "全球其他地區的客戶(不包括某些國家如美國、加拿大、香港) 可在 Deriv (V) 有限公司開設外匯和差價合約 Metatrader 5 帳戶。公司不提供加密貨幣的差價合約。%1在萬那杜不能使用。"
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "全球其他地區的客戶(不包括某些國家如美國、加拿大和香港) 可在 Deriv (SVG) 有限責任公司開設帳戶。"
@@ -3881,7 +3878,7 @@ msgid "Deriv (V) Ltd,"
 msgstr "Deriv (V) 有限公司"
 
 msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission - %1view licence%2."
-msgstr ""
+msgstr "Deriv (V) 有限公司, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu。由瓦努阿圖金融服務委員會授權和管理- %1查看許可證%2。"
 
 msgid "Deriv (V) Ltd: Vanuatu"
 msgstr "Deriv (V) 有限公司: 萬那杜"
@@ -5143,6 +5140,9 @@ msgstr "與部門主管一起跟進糾正措施的建議和時程表"
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "追蹤、遵守和執行經修訂或重新制訂或隨時更換的公司所有與業務有關的指示、政策和程序."
 
+msgid "Fondex Limited "
+msgstr ""
+
 msgid "Food Services"
 msgstr "飲食服務"
 
@@ -5457,6 +5457,9 @@ msgstr "2018年全球品牌大獎"
 
 msgid "Global Brands Magazine"
 msgstr "全球品牌雜誌"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "術語表"
@@ -8018,7 +8021,7 @@ msgid "No fiduciary duty"
 msgstr "無誠信責任"
 
 msgid "No further trading is allowed on this contract type for the current trading session. For more info, refer to our %1terms and conditions%2."
-msgstr ""
+msgstr "目前交易時段內不允許對該合約類型進一步交易。有關詳細資訊，請參閱%1條款和條件%2."
 
 msgid "No hidden fees"
 msgstr "沒隱藏費用"
@@ -8510,7 +8513,7 @@ msgid "Our website uses cookies to give you the best user experience. For more i
 msgstr "網站使用 cookie 提供最佳的使用者體驗。請%1參閱我們的政策 %2。"
 
 msgid "Outside the EU, financial products are offered by Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission (%1view licence%2); Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission (%3licence no. SIBA/L/18/1114%4); and Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business (%5licence no. MB/18/0024%6)."
-msgstr ""
+msgstr "歐盟以外地區，金融產品由 Deriv (SVG) 有限責任公司, Hinds Building, Kingstown, St. Vincent and the Grenadines 提供服務。Deriv (V) 有限公司, Govant Building, Port Vila, PO Box 1276, Vanuatu提供服務，受瓦努阿圖金融服務委員會監管（%1查看執照%2），或由Deriv (BVI) 有限公司, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands 提供服務，受英屬維爾京群島金融服務委員會監管（%3執照編號SIBA/L/18/1114%4）以及由Deriv (FX) 有限公司, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia提供服務，受納閩金融服務管理局監管，並開展貨幣經紀業務（%5執照編號MB/18/0024%6）。"
 
 msgid "Outstanding written and verbal communication skills and excellent command of English"
 msgstr "出色的書面和口頭交流能力以及傑出的英語水平"
@@ -9225,9 +9228,6 @@ msgstr "價格/定價資料"
 
 msgid "Primary"
 msgstr "主要"
-
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services 有限公司"
 
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "下單開盤交易前，客戶確認確保其帳戶可用保證金足以支付開盤交易所須的保證金（「要求保證金」），並持續滿足保證金要求是客戶的責任。"
@@ -11075,16 +11075,16 @@ msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is bui
 msgstr "泰達 Omni (USDT) 是建立在比特幣區塊鏈上，與美元掛鉤的泰達幣版本。"
 
 msgid "Tether TRC20"
-msgstr ""
+msgstr "泰達 TRC20"
 
 msgid "Tether as a TRC20 token (tUSDT) is a version of Tether that is hosted on Tron."
-msgstr ""
+msgstr "泰達作為 TRC20 代幣（tUSDT）是在 Tron 託管的泰達幣版本。"
 
 msgid "Tether as an ERC20 token (eUSDT) is a version of Tether that is hosted on Ethereum."
-msgstr ""
+msgstr "泰達作為 ERC20 代幣（eUSDT）是在以太坊託管的泰達幣版本。"
 
 msgid "Tether as an Omni token (USDT) is a version of Tether that is hosted on the Omni layer on the Bitcoin blockchain."
-msgstr ""
+msgstr "泰達作為 Omni 代幣（USDT）是在比特幣區塊鏈 Omni 層託管的泰達幣版本。"
 
 msgid "Tether is a blockchain-based cryptocurrency whose cryptocoins in circulation are backed by an equivalent amount of traditional fiat currencies. For more information, please visit %1."
 msgstr "泰達幣是基於區塊鏈的加密貨幣，其流通由同等數量的傳統法定貨幣提供支援。欲瞭解更多資訊，請瀏覽 %1。"
@@ -11106,9 +11106,6 @@ msgstr "謝謝您的註冊！請檢視郵件以完成註冊程序。"
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "謝謝您對合作感興趣。可以輕鬆在網上申請。只需填寫 %1線上申請表%2 並輸入所有必要的資料。如果已經註冊為 %3 聯盟會員，可以給我們傳送電子郵件到 %4 。申請批准後，我們將直接與您聯繫。"
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "謝謝，會在24小時內回覆"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "違反任何管制任何交易所、金融市場或金融監管環境運作的法律、規例、文書、條例或規則"
@@ -13149,9 +13146,6 @@ msgstr "充值錯誤"
 
 msgid "Top-up successful"
 msgstr "充值成功"
-
-msgid "TopFX Ltd"
-msgstr "TopFX 有限公司"
 
 msgid "Total"
 msgstr "總計"

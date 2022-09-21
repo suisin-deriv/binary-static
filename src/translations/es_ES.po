@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-25 03:44\n"
+"PO-Revision-Date: 2022-09-20 06:10\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -537,9 +537,6 @@ msgstr "(d) Probabilidad de liquidación"
 
 msgid "(e) Size and nature"
 msgstr "(e) Tamaño y naturaleza"
-
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "* Los pares de criptomonedas no están disponibles para las cuentas financieras DMT5 registradas con Deriv (V) Ltd."
 
 msgid "0 – 19.999%"
 msgstr "0 – 19.999%"
@@ -2810,8 +2807,8 @@ msgstr "Los clientes se comprometen a cumplir con peticiones razonables presenta
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "Se les aconseja además a los clientes que sus derechos pueden verse perjudicados si proporcionan información incorrecta, ya que la Empresa no estará en condiciones de actuar en el mejor interés de los clientes."
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "Los clientes del resto del mundo (excluyendo ciertos países como EEUU, Canadá, Hong Kong) abrirán su cuenta Metatrader 5 de FX y CFD en Deriv (V) Ltd. Esta empresa no ofrece CFD en criptomonedas. %1 no está disponible en la República de Vanuatu."
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "Los clientes del resto del mundo (excluyendo ciertos países como EEUU, Canadá y Hong Kong) abrirán sus cuentas con Deriv (SVG) LLC."
@@ -3882,7 +3879,7 @@ msgid "Deriv (V) Ltd,"
 msgstr "Deriv (V) Ltd,"
 
 msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission - %1view licence%2."
-msgstr ""
+msgstr "Deriv (V) Ltd, Edificio Govant, Port Vila, PO Box 1276, Vanuatu, República de Vanuatu. Autorizada y regulada por la Comisión de Servicios Financieros de Vanuatu - %1ver licencia%2."
 
 msgid "Deriv (V) Ltd: Vanuatu"
 msgstr "Deriv (V) Ltd: Vanuatu"
@@ -5144,6 +5141,9 @@ msgstr "Hacer un seguimiento de las recomendaciones y el plazo para las acciones
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "Seguir, cumplir, e implementar todas las directivas, políticas, y procedimientos de la Empresa relacionados con el negocio, y todas sus modificaciones, reconstrucciones u ocasionales reemplazos."
 
+msgid "Fondex Limited "
+msgstr ""
+
 msgid "Food Services"
 msgstr "Servicios de comida"
 
@@ -5458,6 +5458,9 @@ msgstr "Global Brands Awards 2018"
 
 msgid "Global Brands Magazine"
 msgstr "Global Brands Magazine"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "Glosario"
@@ -8019,7 +8022,7 @@ msgid "No fiduciary duty"
 msgstr "Sin deber fiduciario"
 
 msgid "No further trading is allowed on this contract type for the current trading session. For more info, refer to our %1terms and conditions%2."
-msgstr ""
+msgstr "No se permiten más operaciones en este tipo de contrato durante la actual sesión de operaciones. Para más información, diríjase a nuestros %1términos y condiciones%2."
 
 msgid "No hidden fees"
 msgstr "Sin costos escondidos"
@@ -8511,7 +8514,7 @@ msgid "Our website uses cookies to give you the best user experience. For more i
 msgstr "Nuestro sitio web utiliza cookies para proporcionarle la mejor experiencia de usuario. Para obtener más información, %1 consulte nuestra política%2."
 
 msgid "Outside the EU, financial products are offered by Deriv (SVG) LLC, Hinds Building, Kingstown, St. Vincent and the Grenadines; Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, regulated by the Vanuatu Financial Services Commission (%1view licence%2); Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands, regulated by the British Virgin Islands Financial Services Commission (%3licence no. SIBA/L/18/1114%4); and Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malaysia, regulated by the Labuan Financial Services Authority to carry on a money-broking business (%5licence no. MB/18/0024%6)."
-msgstr ""
+msgstr "Fuera de la UE, los productos financieros son ofrecidos por Deriv (SVG) LLC, Edificio Hinds, Kingstown, San Vicente y las Granadinas; Deriv (V) Ltd, Edificio Govant, Port Vila, PO Box 1276, Vanuatu, regulada por la Comisión de Servicios Financieros de Vanuatu (%1ver licencia%2); Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, Islas Vírgenes Británicas, regulada por la Comisión de Servicios Financieros de las Islas Vírgenes Británicas (%3licencia núm. SIBA/L/18/1114%4); y Deriv (FX) Ltd, Lote Núm. F16, Primer Piso, Paragon Labuan, Jalan Tun Mustapha, 87000 Labuan, Malasia, regulada por la Autoridad de Servicios Financieros de Labuan para actividades comerciales de corretaje de cambios (%5licencia núm. MB/18/0024%6)."
 
 msgid "Outstanding written and verbal communication skills and excellent command of English"
 msgstr "Habilidades sobresalientes de comunicación escrita y verbal y un excelente dominio del inglés."
@@ -9226,9 +9229,6 @@ msgstr "Precio(s)/Datos de precios"
 
 msgid "Primary"
 msgstr "Primario"
-
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services Limited"
 
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "Antes de realizar una Orden que resulte en la apertura de una posición, el cliente reconoce que es su responsabilidad garantizar que el Margen Libre de su cuenta sea suficiente para cubrir el Margen requerido en relación a la apertura de la posición (el \"Requisito de Margen\"), y para cumplir continuamente con el Requisito de Margen."
@@ -11076,16 +11076,16 @@ msgid "Tether Omni (USDT) is a version of Tether that's pegged to USD and is bui
 msgstr "Tether Omni (USDT) es una versión de Tether vinculada al USD y desarrollada en el blockchain de Bitcoin."
 
 msgid "Tether TRC20"
-msgstr ""
+msgstr "Tether TRC20"
 
 msgid "Tether as a TRC20 token (tUSDT) is a version of Tether that is hosted on Tron."
-msgstr ""
+msgstr "Tether como token TRC20 (tUSDT) es una versión de Tether que está alojada en Tron."
 
 msgid "Tether as an ERC20 token (eUSDT) is a version of Tether that is hosted on Ethereum."
-msgstr ""
+msgstr "Tether como token ERC20 (eUSDT) es una versión de Tether que está alojada en Ethereum."
 
 msgid "Tether as an Omni token (USDT) is a version of Tether that is hosted on the Omni layer on the Bitcoin blockchain."
-msgstr ""
+msgstr "Tether como token Omni (USDT) es una versión de Tether que está alojada en la capa Omni de la cadena de bloques de Bitcoin."
 
 msgid "Tether is a blockchain-based cryptocurrency whose cryptocoins in circulation are backed by an equivalent amount of traditional fiat currencies. For more information, please visit %1."
 msgstr "Tether es una criptomoneda basada en una cadena de bloques cuyas criptomonedas en circulación están respaldadas por una cantidad equivalente de monedas fiduciarias tradicionales. Para más información, visite %1."
@@ -11107,9 +11107,6 @@ msgstr "¡Gracias por registrarse! Compruebe su correo electrónico completar el
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "Gracias por su interés en asociarse con nosotros. Hemos facilitado el proceso de registro en línea para usted. Simplemente rellene el %1formulario de solicitud en línea%2 con todos los datos necesarios. Si ya está registrado como afiliado de %3, puede enviarnos un correo electrónico a %4. Entraremos en contacto directamente con usted si su solicitud fue aceptada."
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "Gracias, le responderemos en 24 horas"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "Contravenga las leyes, regulaciones, instrumentos, ordenanzas o reglas que rigen el funcionamiento de cualquier intercambio, mercado financiero, o ambiente regulador financiero; o"
@@ -13150,9 +13147,6 @@ msgstr "Error de recarga"
 
 msgid "Top-up successful"
 msgstr "Recarga exitosa"
-
-msgid "TopFX Ltd"
-msgstr "TopFX Ltd"
 
 msgid "Total"
 msgstr "Total"
