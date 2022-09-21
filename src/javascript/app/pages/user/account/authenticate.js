@@ -143,10 +143,8 @@ const Authenticate = (() => {
         $('#not_authenticated_edd .file-picker').on('change', onFileSelectedEdd);
 
         const $not_authenticated_edd = $('#not_authenticated_edd');
-        const $edd_tab_display = $('#edd');
 
         $not_authenticated_edd.setVisibility(1);
-        $edd_tab_display.setVisibility(1);
 
         if (isIdentificationNoExpiry(Client.get('residence'))) {
             $('#expiry_datepicker_proofid').setVisibility(0);
@@ -1968,6 +1966,7 @@ const Authenticate = (() => {
         }
 
         if (needs_edd){
+            $('#edd').setVisibility(1);
             switch (income.status) {
                 case 'none': {
                     initEdd();
