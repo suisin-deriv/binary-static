@@ -1159,7 +1159,7 @@ const Authenticate = (() => {
             $('.submit-status-edd').setVisibility(0);
             $('#not_authenticated_edd').setVisibility(0);
             showCTAButton('income', 'pending');
-            $('pending_edd').setVisibility(1);
+            $('#pending_edd').setVisibility(1);
         });
     };
 
@@ -1671,7 +1671,8 @@ const Authenticate = (() => {
                         $('#poa').setVisibility(1);
                         TabSelector.updateTabDisplay();
                     });
-                } else if (needs_edd){
+                }
+                if (needs_edd){
                     $('#authentication_tab').setVisibility(1);
                     $('#idv_submit_pending_need_edd').setVisibility(1);
                     $('#idv_pending_submit_edd_btn').on('click', () => {
