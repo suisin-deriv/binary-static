@@ -1158,10 +1158,8 @@ const Authenticate = (() => {
             $button_edd.setVisibility(0);
             $('.submit-status-edd').setVisibility(0);
             $('#not_authenticated_edd').setVisibility(0);
-
             showCTAButton('income', 'pending');
-            $('#upload_complete').setVisibility(1);
-            $('#msg_personal_details').setVisibility(0);
+            $('pending_edd').setVisibility(1);
         });
     };
 
@@ -1183,7 +1181,7 @@ const Authenticate = (() => {
         if ($button_edd) {
             $button_edd.setVisibility(1);
         }
-        $('#upload_complete').setVisibility(0);
+        $('#pending_edd').setVisibility(0);
     };
 
     const onResponse = (response, is_last_upload) => {
@@ -1669,8 +1667,7 @@ const Authenticate = (() => {
                         $('#poa').setVisibility(1);
                         TabSelector.updateTabDisplay();
                     });
-                }
-                if (needs_edd){
+                } else if (needs_edd){
                     $('#authentication_tab').setVisibility(1);
                     $('#idv_submit_pending_need_edd').setVisibility(1);
                     $('#idv_pending_submit_edd_btn').on('click', () => {
