@@ -1989,10 +1989,6 @@ const Authenticate = (() => {
                     break;
             }
         }
-        // else {
-        //     initEdd();
-        //     $('#not_authenticated_edd').setVisibility(1);
-        // }
 
         $('#authentication_loading').setVisibility(0);
         TabSelector.updateTabDisplay();
