@@ -133,13 +133,6 @@ const Authenticate = (() => {
             collapsible: true,
             active     : false,
         });
-        // Setup Date picker
-        $('#not_authenticated_edd .date-picker').datepicker({
-            dateFormat : 'yy-mm-dd',
-            changeMonth: true,
-            changeYear : true,
-            minDate    : '+6m',
-        });
         $('#not_authenticated_edd .file-picker').on('change', onFileSelectedEdd);
 
         const $not_authenticated_edd = $('#not_authenticated_edd');

@@ -298,11 +298,11 @@ const Header = (() => {
 
                 switch (string) {
                     case 'unsubmitted': {
-                        result = verification_length === 2 && identity.status === 'none' && document.status === 'none' && income.status === 'none';
+                        result = verification_length === 3 && identity.status === 'none' && document.status === 'none' && income.status === 'none';
                         break;
                     }
                     case 'expired': {
-                        result = verification_length === 2 && (identity.status === 'expired' && document.status === 'expired');
+                        result = verification_length === 3 && (identity.status === 'expired' && document.status === 'expired' && income.status === 'expired');
                         break;
                     }
                     case 'expired_identity': {
@@ -318,7 +318,7 @@ const Header = (() => {
                         break;
                     }
                     case 'rejected': {
-                        result = verification_length === 2 && (identity.status !== 'none' || document.status !== 'none') && prompt_client_to_authenticate;
+                        result = verification_length === 3 && (identity.status !== 'none' || document.status !== 'none' || income.status !== 'none') && prompt_client_to_authenticate;
                         break;
                     }
                     case 'rejected_identity': {
