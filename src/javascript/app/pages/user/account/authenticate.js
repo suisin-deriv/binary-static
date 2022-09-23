@@ -1886,6 +1886,7 @@ const Authenticate = (() => {
             switch (identity_status) {
                 case 'pending':
                     showCTAButton('document', 'pending');
+                    showCTAButton('income','pending');
                     $('#upload_complete').setVisibility(1);
                     break;
                 case 'suspected':
