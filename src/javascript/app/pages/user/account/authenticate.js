@@ -138,11 +138,6 @@ const Authenticate = (() => {
         const $not_authenticated_edd = $('#not_authenticated_edd');
 
         $not_authenticated_edd.setVisibility(1);
-
-        if (isIdentificationNoExpiry(Client.get('residence'))) {
-            $('#expiry_datepicker_proofid').setVisibility(0);
-            $('#exp_date_2').datepicker('setDate', '2099-12-31');
-        }
     };
 
     /**

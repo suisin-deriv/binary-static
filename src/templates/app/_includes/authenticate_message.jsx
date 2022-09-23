@@ -256,8 +256,8 @@ export const EddMessage = () => (
                 { name: it.L('Business POA'), value: 'business_poa' },
                 { name: it.L('Article of association'), value: 'article_of_association' },
                 { name: it.L('Memorandum'), value: 'memorandum' },
-                { name: it.L('Authorize letter'), value: 'authorisation_letter' },
-                { name: it.L('Declaration'), value: 'declarations' },
+                { name: it.L('Authorization letter'), value: 'authorisation_letter' },
+                { name: it.L('Declarations'), value: 'declarations' },
             ]}
         />
 

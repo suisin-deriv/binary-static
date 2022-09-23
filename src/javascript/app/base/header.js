@@ -302,7 +302,7 @@ const Header = (() => {
                         break;
                     }
                     case 'expired': {
-                        result = verification_length === 3 && (identity.status === 'expired' && document.status === 'expired' && income.status === 'expired');
+                        result = verification_length >= 2 && (identity.status === 'expired' && document.status === 'expired');
                         break;
                     }
                     case 'expired_identity': {
@@ -311,10 +311,6 @@ const Header = (() => {
                     }
                     case 'expired_document': {
                         result = verification_length && document.status === 'expired';
-                        break;
-                    }
-                    case 'expired_income': {
-                        result = verification_length && income.status === 'expired';
                         break;
                     }
                     case 'rejected': {
@@ -330,7 +326,7 @@ const Header = (() => {
                         break;
                     }
                     case 'rejected_income': {
-                        result = verification_length && (income.status === 'rejected' || income.status === 'suspected' || income.status === 'locked');
+                        result = verification_length && (income.status === 'rejected' || income.status === 'locked');
                         break;
                     }
                     case 'needs_identity_verification': {
@@ -382,7 +378,6 @@ const Header = (() => {
                 expired                   : () => localize('The identification documents you submitted have expired. Please submit valid identity documents to unlock Cashier.'),
                 expired_identity          : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has expired.'),                                                                                         'user/authenticate'),
                 expired_document          : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has expired.'),                                                                                          'user/authenticate', '?authentication_tab=poa'),
-                expired_income            : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of income[_2] has expired.'),                                                                                          'user/authenticate', '?authentication_tab=edd'),
                 rejected                  : () => buildSpecificMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_3] and [_2]proof of address[_3] have not been verified.'),    [`<a href='${Url.urlFor('user/authenticate')}'>`, `<a href='${Url.urlFor('user/authenticate')}?authentication_tab=poa'>`, '</a>']),
                 rejected_identity         : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of identity[_2] has not been verified.'),                                                                               'user/authenticate'),
                 rejected_document         : () => buildMessage(localizeKeepPlaceholders('Your [_1]proof of address[_2] has not been verified.'),                                                                               'user/authenticate'),
@@ -426,7 +421,6 @@ const Header = (() => {
                 expired                    : () => hasStatus('documents_expired'),
                 expired_identity           : () => hasVerification('expired_identity'),
                 expired_document           : () => hasVerification('expired_document'),
-                expired_income             : () => hasVerification('expired_income'),
                 rejected                   : () => hasVerification('rejected'),
                 rejected_identity          : () => hasVerification('rejected_identity'),
                 rejected_document          : () => hasVerification('rejected_document'),
@@ -473,7 +467,6 @@ const Header = (() => {
                 'expired',
                 'expired_identity',
                 'expired_document',
-                'expired_income',
                 'rejected',
                 'rejected_identity',
                 'rejected_document',
