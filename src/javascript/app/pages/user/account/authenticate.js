@@ -1146,7 +1146,6 @@ const Authenticate = (() => {
             $button_edd.setVisibility(0);
             $('.submit-status-edd').setVisibility(0);
             $('#not_authenticated_edd').setVisibility(0);
-            showCTAButton('income', 'pending');
             $('#pending_edd').setVisibility(1);
         });
     };
@@ -1596,7 +1595,6 @@ const Authenticate = (() => {
                             account_status = res.get_account_status;
                             const needs_verification = account_status.authentication.needs_verification;
                             const needs_poa = needs_verification.length && needs_verification.includes('document');
-                            const needs_edd = needs_verification.length && needs_verification.includes('income');
 
                             $('#idv_document_submit').setVisibility(0);
                             if (needs_poa) {
@@ -1609,22 +1607,6 @@ const Authenticate = (() => {
                                     init();
                                     $('#not_authenticated').setVisibility(1);
                                     Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
-                                    TabSelector.updateTabDisplay();
-                                });
-                            } else {
-                                $('#idv_submit_pending').setVisibility(1);
-                            }
-
-                            if (needs_edd) {
-                                $('#authentication_tab').setVisibility(1);
-                                $('#idv_submit_pending_need_edd').setVisibility(1);
-                                Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
-                                Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
-                                TabSelector.updateTabDisplay();
-                                $('#idv_pending_submit_edd_btn').on('click', () => {
-                                    initEdd();
-                                    $('#not_authenticated_edd').setVisibility(1);
-                                    Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
                                     TabSelector.updateTabDisplay();
                                 });
                             } else {
@@ -1645,7 +1627,6 @@ const Authenticate = (() => {
         const { status, submissions_left: idv_submissions_left } = idv;
         const { submissions_left: onfido_submissions_left } = onfido;
         const needs_poa = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('document');
-        const needs_edd = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('income');
         $('#idv-container').setVisibility(1);
 
         switch (status) {
@@ -1657,16 +1638,6 @@ const Authenticate = (() => {
                         $('#not_authenticated').setVisibility(1);
                         Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
                         $('#poa').setVisibility(1);
-                        TabSelector.updateTabDisplay();
-                    });
-                }
-                if (needs_edd){
-                    $('#authentication_tab').setVisibility(1);
-                    $('#idv_submit_pending_need_edd').setVisibility(1);
-                    $('#idv_pending_submit_edd_btn').on('click', () => {
-                        $('#not_authenticated_edd').setVisibility(1);
-                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
-                        $('#edd').setVisibility(1);
                         TabSelector.updateTabDisplay();
                     });
                 } else {
@@ -1713,17 +1684,6 @@ const Authenticate = (() => {
                         Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
                         TabSelector.updateTabDisplay();
                     });
-                }
-                if (needs_edd) {
-                    $('#authentication_tab').setVisibility(1);
-                    Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
-                    TabSelector.updateTabDisplay();
-                    $('#idv_document_verified_need_edd').setVisibility(1);
-                    $('#idv_verified_edd_btn').on('click', () => {
-                        $('#edd').setVisibility(1);
-                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
-                        TabSelector.updateTabDisplay();
-                    });
                 } else {
                     const is_visible = 1;
                     if (is_idv_disallowed) {
@@ -1754,7 +1714,6 @@ const Authenticate = (() => {
         $('#idv-container').setVisibility(0);
         account_status = await getAccountStatus();
         const needs_poa = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('document');
-        const needs_edd = account_status.authentication.needs_verification.length && account_status.authentication.needs_verification.includes('income');
         const {
             status,
             submissions_left,
@@ -1822,11 +1781,6 @@ const Authenticate = (() => {
                     $('#poa').setVisibility(1);
                     TabSelector.updateTabDisplay();
                 }
-                if (needs_edd || is_idv_disallowed) {
-                    Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
-                    $('#edd').setVisibility(1);
-                    TabSelector.updateTabDisplay();
-                }
                 showCTAButton('document', 'verified');
                 $('#verified').setVisibility(1);
                 break;
@@ -1881,7 +1835,6 @@ const Authenticate = (() => {
             switch (identity_status) {
                 case 'pending':
                     showCTAButton('document', 'pending');
-                    showCTAButton('income','pending');
                     $('#upload_complete').setVisibility(1);
                     break;
                 case 'suspected':
@@ -1969,16 +1922,11 @@ const Authenticate = (() => {
                     break;
                 }
                 case 'locked':
-                case 'suspected':
                 case 'rejected':
                     $('#unverified_edd').setVisibility(1);
                     break;
                 case 'verified':
-                    showCTAButton('income', 'verified');
                     $('#verified_edd').setVisibility(1);
-                    break;
-                case 'expired':
-                    $('#expired_edd').setVisibility(1);
                     break;
                 default:
                     break;
