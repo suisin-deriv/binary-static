@@ -369,10 +369,10 @@ const Header = (() => {
             };
 
             const messages = {
-                cashier_locked            : () => localize('Your cashier is currently locked. Please contact us via live chat to find out how to unlock it.'),
-                system_maintenance        : () => getSystemMaintenanceMessage(),
-                currency                  : () => buildMessage(localizeKeepPlaceholders('Please set your [_1]account currency[_2] to enable deposits and withdrawals.'),                                                                                    'user/set-currency'),
-                unsubmitted               : () => buildMessage(get_account_status.risk_classification === 'high'
+                cashier_locked    : () => localize('Your cashier is currently locked. Please contact us via live chat to find out how to unlock it.'),
+                system_maintenance: () => getSystemMaintenanceMessage(),
+                currency          : () => buildMessage(localizeKeepPlaceholders('Please set your [_1]account currency[_2] to enable deposits and withdrawals.'),                                                                                    'user/set-currency'),
+                unsubmitted       : () => buildMessage(get_account_status.risk_classification === 'high'
                     ? localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity, proof of address and proof of income[_2] to authenticate your account and request for withdrawals.', 'user/authenticate')
                     : localizeKeepPlaceholders('Your account has not been authenticated. Please submit your [_1]proof of identity, proof of address and proof of income[_2] to authenticate your account and access your cashier.'), 'user/authenticate'),
                 expired                   : () => localize('The identification documents you submitted have expired. Please submit valid identity documents to unlock Cashier.'),
