@@ -349,10 +349,10 @@ const Authenticate = (() => {
         const $files             = $not_authenticated.find('input[type="file"]');
         $button_edd = $not_authenticated.find('#btn_submit_edd');
 
-        const file_selected  = $('label[class~="selected"]').length;
+        const is_file_selected  = $('label[class~="selected"]').length;
         const has_file_error = $('label[class~="error"]').length;
 
-        if (file_selected && !has_file_error) {
+        if (is_file_selected && !has_file_error) {
             if ($button_edd.hasClass('button')) return;
             $('#resolve_error').setVisibility(0);
             $button_edd.removeClass('button-disabled')
