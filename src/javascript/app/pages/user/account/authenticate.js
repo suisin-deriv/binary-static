@@ -28,10 +28,10 @@ const Authenticate = (() => {
     let is_any_upload_failed     = false;
     let is_any_upload_failed_uns = false;
     let is_any_upload_failed_edd = false;
-    let account_status    = {};
-    let file_checks          = {};
-    let file_checks_uns      = {};
-    let file_checks_edd      = {};
+    let account_status           = {};
+    let file_checks              = {};
+    let file_checks_uns          = {};
+    let file_checks_edd          = {};
     let onfido_sdk,
         available_document_list,
         residence_list,
@@ -44,7 +44,8 @@ const Authenticate = (() => {
         $submit_table_uns,
         $button_edd,
         $submit_status_edd,
-        $submit_table_edd;
+        $submit_table_edd,
+        $not_authenticated_edd;
 
     const init = () => {
         file_checks    = {};
@@ -126,6 +127,7 @@ const Authenticate = (() => {
         file_checks_edd    = {};
         $submit_status_edd = $('.submit-status-edd');
         $submit_table_edd  = $submit_status_edd.find('table tbody');
+        $not_authenticated_edd = $('#not_authenticated_edd');
 
         // Setup accordion
         $('#not_authenticated_edd .files').accordion({
@@ -134,8 +136,6 @@ const Authenticate = (() => {
             active     : false,
         });
         $('#not_authenticated_edd .file-picker').on('change', onFileSelectedEdd);
-
-        const $not_authenticated_edd = $('#not_authenticated_edd');
 
         $not_authenticated_edd.setVisibility(1);
     };
@@ -345,9 +345,8 @@ const Authenticate = (() => {
      * Disables the button if it no files are selected.
      */
     const enableDisableSubmitEdd = () => {
-        const $not_authenticated = $('#not_authenticated_edd');
-        const $files             = $not_authenticated.find('input[type="file"]');
-        $button_edd = $not_authenticated.find('#btn_submit_edd');
+        const $files = $not_authenticated_edd.find('input[type="file"]');
+        $button_edd  = $not_authenticated_edd.find('#btn_submit_edd');
 
         const is_file_selected  = $('label[class~="selected"]').length;
         const has_file_error = $('label[class~="error"]').length;
@@ -1145,7 +1144,7 @@ const Authenticate = (() => {
             removeButtonLoadingEdd();
             $button_edd.setVisibility(0);
             $('.submit-status-edd').setVisibility(0);
-            $('#not_authenticated_edd').setVisibility(0);
+            $not_authenticated_edd.setVisibility(0);
             $('#pending_edd').setVisibility(1);
         });
     };
@@ -1879,7 +1878,7 @@ const Authenticate = (() => {
                     break;
             }
         }
-        
+
         if (!needs_poa) {
             switch (document.status) {
                 case 'none': {
@@ -1914,7 +1913,7 @@ const Authenticate = (() => {
             switch (income.status) {
                 case 'none': {
                     initEdd();
-                    $('#not_authenticated_edd').setVisibility(1);
+                    $not_authenticated_edd.setVisibility(1);
                     break;
                 }
                 case 'pending': {
