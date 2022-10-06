@@ -1,7 +1,7 @@
 import React             from 'react';
 import {
     AuthenticateMessage,
-    EddMessage,
+    POIncMessage,
     UnsupportedMessage } from '../_includes/authenticate_message.jsx';
 import { Button }        from '../../_common/components/elements.jsx';
 import Loading           from '../../_common/components/loading.jsx';
@@ -166,7 +166,7 @@ const Authenticate = () => (
                     items={[
                         { id: 'poi',      text: it.L('Proof of identity') },
                         { id: 'poa',      text: it.L('Proof of address') },
-                        { id: 'edd',      text: it.L('Proof of income'), className: 'invisible' },
+                        { id: 'poinc',      text: it.L('Proof of income'), className: 'invisible' },
                         { id: 'authentication_tab_selector', className: 'tab-selector' },
                     ]}
                 />
@@ -352,24 +352,24 @@ const Authenticate = () => (
                             </div>
                         </div>
                     </TabContent>
-                    <TabContent id='edd'>
+                    <TabContent id='poinc'>
                         {/* proof of income content */}
-                        <div id='not_authenticated_edd' className='invisible'>
-                            <EddMessage />
+                        <div id='not_authenticated_poinc' className='invisible'>
+                            <POIncMessage />
                         </div>
 
-                        <div id='verified_edd' className='center-text gr-gutter gr-padding-20 invisible'>
+                        <div id='verified_poinc' className='center-text gr-gutter gr-padding-20 invisible'>
                             <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/valid.svg')} />
                             <h1>{it.L('Your proof of income has been verified successfully')}</h1>
                         </div>
 
-                        <div id='pending_edd' className='center-text gr-gutter gr-padding-20 invisible'>
+                        <div id='pending_poinc' className='center-text gr-gutter gr-padding-20 invisible'>
                             <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/valid.svg')} />
                             <h1 className='gr-padding-10'>{it.L('Your proof of income was submitted successfully')}</h1>
                             <p>{it.L('Your document is being reviewed, please check back in 1-3 days.')}</p>
                         </div>
 
-                        <div id='unverified_edd' className='center-text gr-gutter gr-padding-20 invisible'>
+                        <div id='unverified_poinc' className='center-text gr-gutter gr-padding-20 invisible'>
                             <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/invalid.svg')} />
                             <h1 className='gr-padding-10'>{it.L('Proof of income verification failed')}</h1>
                             <p>{it.L('Please check your email for details')}</p>

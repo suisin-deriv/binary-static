@@ -85,11 +85,11 @@ const FileSelector = ({
                                                     </div>
                                                 </div>
                                             )}
-                                            { type === 'edd' && (
+                                            { type === 'poinc' && (
                                                 <div className='gr-row form-row gr-centered'>
                                                     <div className='gr-12'>
-                                                        <input id={`add_file_edd${j}`} className='file-picker' type='file' accept='.jpg, .jpeg, .gif, .png, .pdf' data-type={document.value} data-name={document.name} />
-                                                        <label htmlFor={`add_file_edd${j}`} className='button'>{it.L('Add')} <span className='add' /></label>
+                                                        <input id={`add_file_poinc${j}`} className='file-picker' type='file' accept='.jpg, .jpeg, .gif, .png, .pdf' data-type={document.value} data-name={document.name} />
+                                                        <label htmlFor={`add_file_poinc${j}`} className='button'>{it.L('Add')} <span className='add' /></label>
                                                     </div>
                                                 </div>
                                             )}
@@ -238,7 +238,7 @@ export const AuthenticateMessage = () => (
     </React.Fragment>
 );
 
-export const EddMessage = () => (
+export const POIncMessage = () => (
     <React.Fragment>
         <FileSelector
             instructions={[
@@ -247,7 +247,7 @@ export const EddMessage = () => (
                 it.L('Only JPG, JPEG, GIF, PNG and PDF formats are accepted'),
                 it.L('Maximum upload size for each file is [_1]', '8MB'),
             ]}
-            type='edd'
+            type='poinc'
             accepted_documents={[
                 { name: it.L('Tax return'), value: 'tax_return' },
                 { name: it.L('Employment contract'), value: 'employment_contract' },
@@ -261,7 +261,7 @@ export const EddMessage = () => (
             ]}
         />
 
-        <div className='submit-status-edd gr-centered gr-padding-30 invisible'>
+        <div className='submit-status-poinc gr-centered gr-padding-30 invisible'>
             <h2 className='center-text'>{it.L('Document submission status')}</h2>
             <Table
                 scroll
@@ -278,10 +278,10 @@ export const EddMessage = () => (
         </div>
 
         <div className='center-text'>
-            <div id='resolve_error_edd' className='invisible center-text'>{it.L('Please resolve all pending issues to continue')}</div>
-            <div id='msg_form_edd' className='error-msg invisible center-text' />
+            <div id='resolve_error_poinc' className='invisible center-text'>{it.L('Please resolve all pending issues to continue')}</div>
+            <div id='msg_form_poinc' className='error-msg invisible center-text' />
             <div className='gr-padding-10'>
-                <a className='button-disabled' id='btn_submit_edd' type='submit'>
+                <a className='button-disabled' id='btn_submit_poinc' type='submit'>
                     <span>{it.L('Submit for review')}</span>
                 </a>
             </div>

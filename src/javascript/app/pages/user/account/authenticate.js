@@ -27,11 +27,11 @@ const getRegex                = require('../../../../_common/utility').getRegex;
 const Authenticate = (() => {
     let is_any_upload_failed     = false;
     let is_any_upload_failed_uns = false;
-    let is_any_upload_failed_edd = false;
+    let is_any_upload_failed_poinc = false;
     let account_status           = {};
     let file_checks              = {};
     let file_checks_uns          = {};
-    let file_checks_edd          = {};
+    let file_checks_poinc          = {};
     let onfido_sdk,
         available_document_list,
         residence_list,
@@ -42,10 +42,10 @@ const Authenticate = (() => {
         $button_uns,
         $submit_status_uns,
         $submit_table_uns,
-        $button_edd,
-        $submit_status_edd,
-        $submit_table_edd,
-        $not_authenticated_edd;
+        $button_poinc,
+        $submit_status_poinc,
+        $submit_table_poinc,
+        $not_authenticated_poinc;
 
     const init = () => {
         file_checks    = {};
@@ -123,21 +123,21 @@ const Authenticate = (() => {
         }
     };
 
-    const initEdd = () => {
-        file_checks_edd    = {};
-        $submit_status_edd = $('.submit-status-edd');
-        $submit_table_edd  = $submit_status_edd.find('table tbody');
-        $not_authenticated_edd = $('#not_authenticated_edd');
+    const initPOInc = () => {
+        file_checks_poinc    = {};
+        $submit_status_poinc = $('.submit-status-poinc');
+        $submit_table_poinc  = $submit_status_poinc.find('table tbody');
+        $not_authenticated_poinc = $('#not_authenticated_poinc');
 
         // Setup accordion
-        $('#not_authenticated_edd .files').accordion({
+        $not_authenticated_poinc.find('.files').accordion({
             heightStyle: 'content',
             collapsible: true,
             active     : false,
         });
-        $('#not_authenticated_edd .file-picker').on('change', onFileSelectedEdd);
+        $not_authenticated_poinc.find('.file-picker').on('change', onFileSelectedPOInc);
 
-        $not_authenticated_edd.setVisibility(1);
+        $not_authenticated_poinc.setVisibility(1);
     };
 
     /**
@@ -211,9 +211,9 @@ const Authenticate = (() => {
         enableDisableSubmitUns();
     };
 
-    const onFileSelectedEdd = (event) => {
+    const onFileSelectedPOInc = (event) => {
         if (!event.target.files || !event.target.files.length) {
-            resetLabelEdd(event);
+            resetLabelPOInc(event);
             return;
         }
         const $target      = $(event.target);
@@ -232,13 +232,13 @@ const Authenticate = (() => {
             .append($('<span/>', { class: 'remove' }))
             .find('.remove')
             .click((e) => {
-                if ($(e.target).is('span.remove')) resetLabelEdd(event);
+                if ($(e.target).is('span.remove')) resetLabelPOInc(event);
             });
 
         // Hide success message on another file selected
-        hideSuccessEdd();
+        hideSuccessPOInc();
         // Change submit button state
-        enableDisableSubmitEdd();
+        enableDisableSubmitPOInc();
     };
 
     // Reset file-selector label
@@ -272,7 +272,7 @@ const Authenticate = (() => {
     };
 
     // Reset file-selector label
-    const resetLabelEdd = (event) => {
+    const resetLabelPOInc = (event) => {
         const $target = $(event.target);
         let default_text = toTitleCase($target.attr('id').split('_')[0]);
         if (default_text !== 'Add') {
@@ -283,7 +283,7 @@ const Authenticate = (() => {
         $target.val('').parent().find('label').text(default_text).removeClass('selected error')
             .append($('<span/>', { class: 'add' }));
         // Change submit button state
-        enableDisableSubmitEdd();
+        enableDisableSubmitPOInc();
     };
 
     /**
@@ -344,23 +344,23 @@ const Authenticate = (() => {
      * Enables the submit button if any file is selected, also adds the event handler for the button.
      * Disables the button if it no files are selected.
      */
-    const enableDisableSubmitEdd = () => {
-        const $files = $not_authenticated_edd.find('input[type="file"]');
-        $button_edd  = $not_authenticated_edd.find('#btn_submit_edd');
+    const enableDisableSubmitPOInc = () => {
+        const $files = $not_authenticated_poinc.find('input[type="file"]');
+        $button_poinc  = $not_authenticated_poinc.find('#btn_submit_poinc');
 
         const is_file_selected  = $('label[class~="selected"]').length;
         const has_file_error = $('label[class~="error"]').length;
 
         if (is_file_selected && !has_file_error) {
-            if ($button_edd.hasClass('button')) return;
+            if ($button_poinc.hasClass('button')) return;
             $('#resolve_error').setVisibility(0);
-            $button_edd.removeClass('button-disabled')
+            $button_poinc.removeClass('button-disabled')
                 .addClass('button')
                 .off('click') // To avoid binding multiple click events
-                .click(() => submitFilesEdd($files));
+                .click(() => submitFilesPOInc($files));
         } else {
-            if ($button_edd.hasClass('button-disabled')) return;
-            $button_edd.removeClass('button')
+            if ($button_poinc.hasClass('button-disabled')) return;
+            $button_poinc.removeClass('button')
                 .addClass('button-disabled')
                 .off('click');
         }
@@ -382,11 +382,11 @@ const Authenticate = (() => {
         }
     };
 
-    const showButtonLoadingEdd = () => {
-        if ($button_edd.length && !$button_edd.find('.barspinner').length) {
-            const $btn_text = $('<span/>', { text: $button_edd.find('span').text(), class: 'invisible' });
-            showLoadingImage($button_edd.find('span'), 'white');
-            $button_edd.find('span').append($btn_text);
+    const showButtonLoadingPOInc = () => {
+        if ($button_poinc.length && !$button_poinc.find('.barspinner').length) {
+            const $btn_text = $('<span/>', { text: $button_poinc.find('span').text(), class: 'invisible' });
+            showLoadingImage($button_poinc.find('span'), 'white');
+            $button_poinc.find('span').append($btn_text);
         }
     };
 
@@ -402,9 +402,9 @@ const Authenticate = (() => {
         }
     };
 
-    const removeButtonLoadingEdd = () => {
-        if ($button_edd.length && $button_edd.find('.barspinner').length) {
-            $button_edd.find('>span').html($button_edd.find('>span>span').text());
+    const removeButtonLoadingPOInc = () => {
+        if ($button_poinc.length && $button_poinc.find('.barspinner').length) {
+            $button_poinc.find('>span').html($button_poinc.find('>span>span').text());
         }
     };
 
@@ -513,15 +513,15 @@ const Authenticate = (() => {
     /**
      * On submit button click
      */
-    const submitFilesEdd = ($files) => {
-        if ($button_edd.length && $button_edd.find('.barspinner').length) { // it's still in submit process
+    const submitFilesPOInc = ($files) => {
+        if ($button_poinc.length && $button_poinc.find('.barspinner').length) { // it's still in submit process
             return;
         }
         // Disable submit button
-        showButtonLoadingEdd();
+        showButtonLoadingPOInc();
         const files = [];
-        is_any_upload_failed_edd = false;
-        $submit_table_edd.children().remove();
+        is_any_upload_failed_poinc = false;
+        $submit_table_poinc.children().remove();
         $files.each((i, e) => {
             if (e.files && e.files.length) {
                 const $e        = $(e);
@@ -542,7 +542,7 @@ const Authenticate = (() => {
                     file_obj.id_number = $($inputs[0]).val();
                     file_obj.exp_date  = $($inputs[1]).val();
                 }
-                fileTrackerEdd($e, true);
+                fileTrackerPOInc($e, true);
                 files.push(file_obj);
 
                 let display_name = name;
@@ -550,15 +550,15 @@ const Authenticate = (() => {
                     display_name += ` - ${/front/.test(id) ? localize('Front Side') : localize('Reverse Side')}`;
                 }
 
-                $submit_table_edd.append($('<tr/>', { id: file_obj.type, class: id })
+                $submit_table_poinc.append($('<tr/>', { id: file_obj.type, class: id })
                     .append($('<td/>', { text: display_name }))                           // document type, e.g. Passport - Front Side
                     .append($('<td/>', { text: e.files[0].name, class: 'filename' }))     // file name, e.g. sample.pdf
                     .append($('<td/>', { text: localize('Pending'), class: 'status' }))   // status of uploading file, first set to Pending
                 );
             }
         });
-        $submit_status_edd.setVisibility(1);
-        processFilesEdd(files);
+        $submit_status_poinc.setVisibility(1);
+        processFilesPOInc(files);
     };
 
     const cancelUpload = () => {
@@ -679,13 +679,13 @@ const Authenticate = (() => {
         });
     };
 
-    const processFilesEdd = (files) => {
+    const processFilesPOInc = (files) => {
         const uploader = new DocumentUploader({ connection: BinarySocket.get() }); // send 'debug: true' here for debugging
         let idx_to_upload     = 0;
         let is_any_file_error = false;
 
-        compressImageFilesEdd(files).then((files_to_process) => {
-            readFilesEdd(files_to_process).then((processed_files) => {
+        compressImageFilesPOInc(files).then((files_to_process) => {
+            readFilesPOInc(files_to_process).then((processed_files) => {
                 processed_files.forEach((file) => {
                     if (file.message) {
                         is_any_file_error = true;
@@ -694,18 +694,18 @@ const Authenticate = (() => {
                 });
                 const total_to_upload = processed_files.length;
                 if (is_any_file_error || !total_to_upload) {
-                    removeButtonLoadingEdd();
-                    enableDisableSubmitEdd();
+                    removeButtonLoadingPOInc();
+                    enableDisableSubmitPOInc();
                     return; // don't start submitting files until all front-end validation checks pass
                 }
 
                 const isLastUpload = () => total_to_upload === idx_to_upload + 1;
                 // sequentially send files
                 const uploadFile = () => {
-                    const $status = $submit_table_edd.find(`.${processed_files[idx_to_upload].passthrough.class} .status`);
+                    const $status = $submit_table_poinc.find(`.${processed_files[idx_to_upload].passthrough.class} .status`);
                     $status.text(`${localize('Submitting')}...`);
                     uploader.upload(processed_files[idx_to_upload]).then((api_response) => {
-                        onResponseEdd(api_response, isLastUpload());
+                        onResponsePOInc(api_response, isLastUpload());
                         if (!api_response.error && !api_response.warning) {
                             $status.text(localize('Submitted')).append($('<span/>', { class: 'checked' }));
                             $(`#${api_response.passthrough.class}`).attr('type', 'hidden'); // don't allow users to change submitted files
@@ -713,8 +713,8 @@ const Authenticate = (() => {
                         }
                         uploadNextFile();
                     }).catch((error) => {
-                        is_any_upload_failed_edd = true;
-                        showErrorEdd({
+                        is_any_upload_failed_poinc = true;
+                        showErrorPOInc({
                             message: error.message || localize('Failed'),
                             class  : error.passthrough ? error.passthrough.class : '',
                         });
@@ -786,13 +786,13 @@ const Authenticate = (() => {
         return Promise.all(promises);
     };
 
-    const compressImageFilesEdd = (files) => {
+    const compressImageFilesPOInc = (files) => {
         const promises = [];
         files.forEach((f) => {
             const promise = new Promise((resolve) => {
                 if (isImageType(f.file.name)) {
-                    const $status = $submit_table_edd.find(`.${f.class} .status`);
-                    const $filename = $submit_table_edd.find(`.${f.class} .filename`);
+                    const $status = $submit_table_poinc.find(`.${f.class} .status`);
+                    const $filename = $submit_table_poinc.find(`.${f.class} .filename`);
                     $status.text(`${localize('Compressing Image')}...`);
 
                     ConvertToBase64(f.file).then((img) => {
@@ -927,13 +927,13 @@ const Authenticate = (() => {
     };
 
     // Returns file promise.
-    const readFilesEdd = (files) => {
+    const readFilesPOInc = (files) => {
         const promises = [];
         files.forEach((f) => {
             const fr      = new FileReader();
             const promise = new Promise((resolve) => {
                 fr.onload = () => {
-                    const $status = $submit_table_edd.find(`.${f.class} .status`);
+                    const $status = $submit_table_poinc.find(`.${f.class} .status`);
                     $status.text(`${localize('Checking')}...`);
 
                     const format = (f.file.type.split('/')[1] || (f.file.name.match(/\.([\w\d]+)$/) || [])[1] || '').toUpperCase();
@@ -1006,15 +1006,15 @@ const Authenticate = (() => {
         }
     };
 
-    const fileTrackerEdd = ($e, selected) => {
+    const fileTrackerPOInc = ($e, selected) => {
         const doc_type = ($e.attr('data-type') || '').replace(/\s/g, '_').toLowerCase();
         const file_type = ($e.attr('id').match(/\D+/g) || [])[0];
         // Keep track of front and back sides of files.
         if (selected) {
-            file_checks_edd[doc_type] = file_checks_edd[doc_type] || {};
-            file_checks_edd[doc_type][file_type] = true;
-        } else if (file_checks_edd[doc_type]) {
-            file_checks_edd[doc_type][file_type] = false;
+            file_checks_poinc[doc_type] = file_checks_poinc[doc_type] || {};
+            file_checks_poinc[doc_type][file_type] = true;
+        } else if (file_checks_poinc[doc_type]) {
+            file_checks_poinc[doc_type][file_type] = false;
         }
     };
 
@@ -1094,10 +1094,10 @@ const Authenticate = (() => {
         enableDisableSubmitUns();
     };
 
-    const showErrorEdd = (obj_error) => {
-        removeButtonLoadingEdd();
-        const $error      = $('#msg_form_edd');
-        const $file_error = $submit_table_edd.find(`.${obj_error.class} .status`);
+    const showErrorPOInc = (obj_error) => {
+        removeButtonLoadingPOInc();
+        const $error      = $('#msg_form_poinc');
+        const $file_error = $submit_table_poinc.find(`.${obj_error.class} .status`);
         const message     = obj_error.message;
         if ($file_error.length) {
             $file_error.text(message).addClass('error-msg');
@@ -1106,7 +1106,7 @@ const Authenticate = (() => {
         } else {
             $error.text(message).setVisibility(1);
         }
-        enableDisableSubmitEdd();
+        enableDisableSubmitPOInc();
     };
 
     const showSuccess = () => {
@@ -1137,15 +1137,15 @@ const Authenticate = (() => {
         });
     };
 
-    const showSuccessEdd = () => {
+    const showSuccessPOInc = () => {
         BinarySocket.send({ get_account_status: 1 }, { forced: true }).then(response => {
             account_status = response.get_account_status;
             Header.displayAccountStatus();
-            removeButtonLoadingEdd();
-            $button_edd.setVisibility(0);
-            $('.submit-status-edd').setVisibility(0);
-            $not_authenticated_edd.setVisibility(0);
-            $('#pending_edd').setVisibility(1);
+            removeButtonLoadingPOInc();
+            $button_poinc.setVisibility(0);
+            $('.submit-status-poinc').setVisibility(0);
+            $not_authenticated_poinc.setVisibility(0);
+            $('#pending_poinc').setVisibility(1);
         });
     };
 
@@ -1163,11 +1163,11 @@ const Authenticate = (() => {
         $('#upload_complete').setVisibility(0);
     };
 
-    const hideSuccessEdd = () => {
-        if ($button_edd) {
-            $button_edd.setVisibility(1);
+    const hideSuccessPOInc = () => {
+        if ($button_poinc) {
+            $button_poinc.setVisibility(1);
         }
-        $('#pending_edd').setVisibility(0);
+        $('#pending_poinc').setVisibility(0);
     };
 
     const onResponse = (response, is_last_upload) => {
@@ -1194,15 +1194,15 @@ const Authenticate = (() => {
         }
     };
 
-    const onResponseEdd = (response, is_last_upload) => {
+    const onResponsePOInc = (response, is_last_upload) => {
         if (response.warning || response.error) {
-            is_any_upload_failed_edd = true;
-            showErrorEdd({
+            is_any_upload_failed_poinc = true;
+            showErrorPOInc({
                 message: response.message || (response.error ? response.error.message : localize('Failed')),
                 class  : response.passthrough.class,
             });
-        } else if (is_last_upload && !is_any_upload_failed_edd) {
-            showSuccessEdd();
+        } else if (is_last_upload && !is_any_upload_failed_poinc) {
+            showSuccessPOInc();
         }
     };
 
@@ -1594,13 +1594,12 @@ const Authenticate = (() => {
                             account_status = res.get_account_status;
                             const needs_verification = account_status.authentication.needs_verification;
                             const needs_poa = needs_verification.length && needs_verification.includes('document');
-
                             $('#idv_document_submit').setVisibility(0);
                             if (needs_poa) {
                                 $('#authentication_tab').setVisibility(1);
                                 $('#idv_submit_pending_need_poa').setVisibility(1);
                                 Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
-                                Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
+                                Url.updateParamsWithoutReload({ authentication_tab: 'poinc' }, true);
                                 TabSelector.updateTabDisplay();
                                 $('#idv_pending_submit_poa_btn').on('click', () => {
                                     init();
@@ -1688,7 +1687,7 @@ const Authenticate = (() => {
                     if (is_idv_disallowed) {
                         $('#authentication_tab').setVisibility(is_visible);
                         Url.updateParamsWithoutReload({ authentication_tab: 'poa' }, true);
-                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
+                        Url.updateParamsWithoutReload({ authentication_tab: 'poinc' }, true);
                         TabSelector.updateTabDisplay();
                         $('#poa').setVisibility(is_visible);
                         $('#idv_document_verified_poi').setVisibility(is_visible);
@@ -1821,7 +1820,7 @@ const Authenticate = (() => {
         const is_fully_authenticated = identity.status === 'verified' && document.status === 'verified' && income.status === 'verified';
         const needs_verification = account_status.authentication.needs_verification;
         const needs_poa = needs_verification.length && needs_verification.includes('document');
-        const needs_edd = needs_verification.length && needs_verification.includes('income');
+        const needs_poinc = needs_verification.length && needs_verification.includes('income');
 
         if (identity_status === 'none' || allow_poi_resubmission) {
             handleCountrySelector();
@@ -1848,7 +1847,6 @@ const Authenticate = (() => {
                     if (is_idv_disallowed) {
                         $('#authentication_tab').setVisibility(1);
                         Url.updateParamsWithoutReload({ authentication_tab: 'poi' }, true);
-                        Url.updateParamsWithoutReload({ authentication_tab: 'edd' }, true);
                         TabSelector.updateTabDisplay();
                         $('#poa').setVisibility(1);
                     }
@@ -1908,24 +1906,24 @@ const Authenticate = (() => {
             $('#not_authenticated').setVisibility(1);
         }
 
-        if (needs_edd){
-            $('#edd').setVisibility(1);
+        if (needs_poinc){
+            $('#poinc').setVisibility(1);
             switch (income.status) {
                 case 'none': {
-                    initEdd();
-                    $not_authenticated_edd.setVisibility(1);
+                    initPOInc();
+                    $not_authenticated_poinc.setVisibility(1);
                     break;
                 }
                 case 'pending': {
-                    $('#pending_edd').setVisibility(1);
+                    $('#pending_poinc').setVisibility(1);
                     break;
                 }
                 case 'locked':
                 case 'rejected':
-                    $('#unverified_edd').setVisibility(1);
+                    $('#unverified_poinc').setVisibility(1);
                     break;
                 case 'verified':
-                    $('#verified_edd').setVisibility(1);
+                    $('#verified_poinc').setVisibility(1);
                     break;
                 default:
                     break;
