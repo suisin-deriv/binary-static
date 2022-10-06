@@ -1300,8 +1300,8 @@ const Authenticate = (() => {
             account_status = response.get_account_status;
             const { needs_verification } = account_status.authentication;
             
-            const type_required = type === 'identity' ? 'poi' : type === 'income' ? 'edd' : 'poa';
-            const type_pending = type === 'identity' ? 'poa' : type === 'income' ? 'poi' : 'edd';
+            const type_required = type === 'identity' ? 'poi' : 'poa';
+            const type_pending = type === 'identity' ? 'poa' : 'poi';
             const description_status = status !== 'verified';
     
             $(`#text_verified_${type_pending}_required, #text_pending_${type_pending}_required`).setVisibility(0);
