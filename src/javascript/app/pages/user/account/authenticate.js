@@ -1376,7 +1376,7 @@ const Authenticate = (() => {
             case 'suspected':
             case 'rejected':
                 if (Number(submissions_left) < 1) {
-                    $('#limited_poi').setVisibility(1);
+                    handleManual();
                 } else {
                     const maximum_reasons = rejected_reasons.slice(0, 3);
                     const has_minimum_reasons = rejected_reasons.length > 3;
