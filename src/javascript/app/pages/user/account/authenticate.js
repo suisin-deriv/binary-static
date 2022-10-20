@@ -1438,13 +1438,31 @@ const Authenticate = (() => {
         }
     };
 
-    const handleManual = () => {
-        $('#idv-container').setVisibility(0);
-        $('#authentication_tab').setVisibility(1);
-        $('#msg_personal_details').setVisibility(1);
-        TabSelector.updateTabDisplay();
-        $('#not_authenticated_uns').setVisibility(1);
-        initUnsupported();
+    const handleManual = async () => {
+        account_status = await getAccountStatus();
+        const { manual } = account_status.authentication.identity.services;
+        const { status } = manual;
+        switch (status){
+            case 'none':
+                $('#idv-container').setVisibility(0);
+                $('#authentication_tab').setVisibility(1);
+                $('#msg_personal_details').setVisibility(1);
+                TabSelector.updateTabDisplay();
+                $('#not_authenticated_uns').setVisibility(1);
+                initUnsupported();
+                break;
+            case 'pending':
+                $('#idv-container').setVisibility(0);
+                $('#upload_complete').setVisibility(1);
+                break;
+            case 'rejected':
+            case 'suspected':
+                $('#idv-container').setVisibility(0);
+                $('#limited_poi').setVisibility(1);
+                break;
+            default:
+                break;
+        }
     };
 
     const initAuthentication = async () => {
