@@ -1442,12 +1442,13 @@ const Authenticate = (() => {
         account_status = await getAccountStatus();
         const { manual } = account_status.authentication.identity.services;
         const { status } = manual;
+        $('#authentication_tab').setVisibility(1);
+        TabSelector.updateTabDisplay();
+
         switch (status){
             case 'none':
                 $('#idv-container').setVisibility(0);
-                $('#authentication_tab').setVisibility(1);
                 $('#msg_personal_details').setVisibility(1);
-                TabSelector.updateTabDisplay();
                 $('#not_authenticated_uns').setVisibility(1);
                 initUnsupported();
                 break;
