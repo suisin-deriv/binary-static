@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-10-06 03:31\n"
+"PO-Revision-Date: 2022-11-15 14:13\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1168,9 +1168,6 @@ msgstr "附加商业风险："
 msgid "Additional income stream from monthly subscriptions."
 msgstr "每月订阅产生的额外收入。"
 
-msgid "Additional processing time may be required by your bank or money transfer services for the funds to be credited to your payment account."
-msgstr "银行或资金转汇服务可能需要额外的处理时间来把资金存入支付账户。"
-
 msgid "Address"
 msgstr "地址"
 
@@ -1284,9 +1281,6 @@ msgstr "农业、林业和渔业工人"
 
 msgid "Agriculture"
 msgstr "农业"
-
-msgid "Airtm is a global e-wallet service for money transfers and online payments. For more information, please visit %1."
-msgstr "Airtm是用于汇款和在线支付的全球性电子钱包服务。欲了解详细信息, 请访问 %1。"
 
 msgid "Alerting clients of a potential trading opportunity"
 msgstr "出现潜在的交易机会时提醒客户"
@@ -1663,9 +1657,6 @@ msgstr "赛柏再也是高科技知识中心, 这里有多家跨国公司和私�
 msgid "As a result, the client's trades are executed at market as follows:"
 msgstr "因此, 客户的交易在市场上的执行方式如下:"
 
-msgid "As a strong proponent of open source, we encourage publication of findings, methods, and tools via GitHub and our technical blog at %1 You will also assist our developers in understanding and patching the bugs that you find."
-msgstr "我们是开源的坚定支持者，鼓励通过 GitHub 和%1 的技术博客发布各项新发现、方法和工具。您也会帮助我们的开发员了解和修补您发现的程序漏洞。"
-
 msgid "As an example, Expert Advisors might be able to be programmed for"
 msgstr "例如, 可提供智能交易系统编程给"
 
@@ -1936,9 +1927,6 @@ msgstr "可用的市场"
 msgid "Available markets"
 msgstr "可用的市场"
 
-msgid "Available payment methods"
-msgstr "可用支付方式"
-
 msgid "Available trade types:"
 msgstr "可用的交易类型:"
 
@@ -2043,9 +2031,6 @@ msgstr "余额："
 
 msgid "Bank statement"
 msgstr "银行月结单"
-
-msgid "Bank wire/Money transfer"
-msgstr "银行电汇/转账"
 
 msgid "Bank your way"
 msgstr "支持各种存取款方式"
@@ -2268,9 +2253,6 @@ msgstr "比特币"
 
 msgid "Bitcoin Cash vs US dollar"
 msgstr "比特币现金兑美元"
-
-msgid "Bitcoin is the world's first decentralised cryptocurrency, created in 2009. For more information, please visit %1."
-msgstr "比特币是创建于2009年的全球第一个去中心化加密货币。欲了解详情, 请访问 %1。"
 
 msgid "Bitcoin vs US dollar"
 msgstr "比特币兑美元"
@@ -3491,9 +3473,6 @@ msgstr "客户账户中记入或扣除金额"
 msgid "Credit/Debit"
 msgstr "借方/贷方"
 
-msgid "Credit/Debit Card"
-msgstr "信用卡/借记卡"
-
 msgid "Crypto"
 msgstr "加密"
 
@@ -3526,9 +3505,6 @@ msgstr "加密货币/区块链开发员"
 
 msgid "Cultural diversity"
 msgstr "多元文化"
-
-msgid "Currencies"
-msgstr "货币"
 
 msgid "Currency"
 msgstr "货币"
@@ -3791,9 +3767,6 @@ msgstr "可根据经纪商或交易平台的规定，从周一早上悉尼市场
 msgid "Deposit"
 msgstr "存款"
 
-msgid "Deposit and withdraw your funds via international bank wire transfer."
-msgstr "通过国际银行电汇存入和提取资金。"
-
 msgid "Deposit as little as 5 USD to start trading."
 msgstr "存款最低仅需5美元即可开始交易."
 
@@ -3817,15 +3790,6 @@ msgstr "通过银行电汇、信用卡、和电子钱包存入资金."
 
 msgid "Deposit via payment agents"
 msgstr "通过支付代理存款"
-
-msgid "Deposit: %1 blockchain confirmations"
-msgstr "存款： %1区块链确认"
-
-msgid "Deposit: %1 day"
-msgstr "存款：%1天"
-
-msgid "Deposit: Instant"
-msgstr "存款：实时"
 
 msgid "Deposits and withdrawals for your MT5 account always pass through your binary options account."
 msgstr "MT5 账户总是通过二元期权账户存款和提款 。"
@@ -3863,8 +3827,8 @@ msgstr "Deriv (FX) 有限公司，"
 msgid "Deriv (FX) Ltd, Deriv BVI (Ltd), or"
 msgstr "Deriv (FX) 有限公司、Deriv BVI (有限公司) 或"
 
-msgid "Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia. Licensed and regulated by the Labuan Financial Services Authority to carry on a money-broking business %1(licence no. MB/18/0024)%2."
-msgstr "Deriv (FX) 有限公司, 地址是 Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia。由纳闽金融服务管理局授予许可证执行资金经纪业务%1(许可证编号MB/18/0024)%2和监管。"
+msgid "Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia. Licensed and regulated by the Labuan Financial Services Authority to carry on a money-broking business %1(licence no. MB/18/0024)%2. A member of the %3Labuan Fintech Association%4."
+msgstr "Deriv (FX) 有限公司，地址是 Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia。由纳闽金融服务管理局授予许可证执行资金经纪业务%1(许可证编号MB/18/0024)%2和监管。是%3纳闽 Fintech 协会%4的成员。"
 
 msgid "Deriv (FX) Ltd: Labuan, Territory of Malaysia"
 msgstr "Deriv (FX) 有限公司: 纳闽，马来西亚直辖区"
@@ -4175,17 +4139,11 @@ msgstr "Windows版MT5下载"
 msgid "Download MT5 for your desktop or laptop to access the powerful tools and features enjoyed by millions of traders."
 msgstr "MT5是强大的多功能交易工具，备受百万多名交易员的爱载，请下载到台式电脑或笔记本电脑上使用。"
 
-msgid "Download Tick Trade App"
-msgstr "下载 Tick Trade 应用程序"
-
 msgid "Download the %1desktop app%2 for the most secure way to access the %3 website."
 msgstr "下载 %1桌面应用程序%2 以获得 %3 网站最安全的访问方式。"
 
 msgid "Download your statement"
 msgstr "下载月结单"
-
-msgid "DragonPhoenix is a payment facility that allows online bank transfers for clients across Southeast Asia."
-msgstr "DragonPhoenix 是允许东南亚各地客户进行网上银行转账的支付工具 。"
 
 msgid "Drive rapid growth and business development to support the company's sales and marketing objectives"
 msgstr "推动快速增长和业务发展，以支持公司的销售和市场营销目标"
@@ -4261,9 +4219,6 @@ msgstr "本协议有效期内，程序员将其所拥有的所有知识产权免
 
 msgid "During volatile markets, the Company's trading platform runs across a high number of concurrent online users, high volumes of client orders, and a high number of imported price ticks.  As part of the Company's best execution delivery to its clients, the Company ensures that its platform runs smoothly under such stressed conditions and takes all reasonable steps to safeguard the continuity and regularity in the performance of investment activities."
 msgstr "公司的交易平台在波动市场中会遇到大量并发的在线用户、大量客户订单以及大量买入价格。 作为公司向客户提供最佳执行方案的一部分，公司确保其平台在如此紧张的条件下顺利运行，并将采取一切合理措施确保投资活动的连续性和规律性。"
-
-msgid "E-wallet"
-msgstr "电子钱包"
 
 msgid "E. Best execution obligation"
 msgstr "五、最佳执行义务"
@@ -4481,9 +4436,6 @@ msgstr "享受交易条件对新手和有经验的交易者非常适合、屡获
 msgid "Enjoy exciting opportunities to trade stock indices with the benefit of real-time charts and pricing."
 msgstr "享受令人兴奋的机会和实时图表和定价的优势，进行股票指数交易。"
 
-msgid "Enjoy our fastest type of trading with our Tick Trade app, wherever you are."
-msgstr "随时随地使用Tick Trade应用程序，享受我们速度最快的交易。"
-
 msgid "Enlarge image"
 msgstr "放大图像"
 
@@ -4543,9 +4495,6 @@ msgstr "估计净值"
 
 msgid "Ether Classic"
 msgstr "古典以太币"
-
-msgid "Ether is a cryptocurrency that is used to pay for transactions on the Ethereum platform. For more information, please visit %1."
-msgstr "以太币是在以太坊平台交易时使用的一种加密货币。欲了解详情, 请访问 %1。"
 
 msgid "Ethereum"
 msgstr "以太坊"
@@ -4991,9 +4940,6 @@ msgstr "熟悉测试和调试过程, 包括单元测试和UI测试"
 msgid "Familiarity with various JavaScript standards, libraries, frameworks, compilers, and transpilers including ES6, TypeScript, Babel, SystemJS, Web Workers, jQuery, React, and Angular"
 msgstr "熟悉各种 JavaScript 标准、数据库、框架、编译器和转换器, 包括 ES6、TypeScript、Babel、SystemJS、Web Workers、jQuery、React和Angular"
 
-msgid "FasaPay enables electronic money transfers for individuals and payment gateways for merchants. For more information, please visit %1."
-msgstr "FasaPay 为个人提供电子汇款服务，也为商家提供支付网关。欲了解详情, 请访问 %1。"
-
 msgid "Fascinating culture"
 msgstr "迷人的文化"
 
@@ -5029,9 +4975,6 @@ msgstr "法定货币"
 
 msgid "Fifteen years on, and we're still innovating, growing and working on new ways to serve our customers better. For the first time, we offer short-term touch/no-touch trades and introduce a new charting application. We believe we have the most competitive and comprehensive digital options platform available to the retail public."
 msgstr "十五年过去了，我们仍在不断地创新、成长，寻求新的方式为客户提供更好的服务。我们首次提供短期“触及/未触及”交易，并推出新的图表应用程序。我们认为，对于散户投资者而言，我们提供了最有竞争力、最全面的数字期权平台。"
-
-msgid "Figures have been rounded."
-msgstr "数字已舍入。"
 
 msgid "File (%1) size exceeds the permitted limit. Maximum allowed file size: %2"
 msgstr "文件 (%1) 大小超过允许限额。允许的最大文件大小: %2"
@@ -5245,9 +5188,6 @@ msgstr "有关外汇杠杆的信息, 请参阅我们的 %1保证金政策%2。"
 
 msgid "For more information about counselling and support services, please visit %1."
 msgstr "有关咨询和支持服务的更多信息，请访问%1。"
-
-msgid "For more information, please visit %1."
-msgstr "有关更多信息，请访问％1。"
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category."
 msgstr "连续第三年，BetOnMarkets.com被英国财经杂志《Shares Magazine》评为“最佳固定赔率金融交易提供商”。这是我们最后一次获奖，因为该杂志已停止颁发这一类奖项。"
@@ -5623,9 +5563,6 @@ msgstr "对冲"
 
 msgid "Help in developing advanced risk management tools for various markets (forex, equities, commodities)"
 msgstr "为各种市场（外汇、股票、商品）开发先进的风险管理工具"
-
-msgid "Help2Pay is a payment facility that allows online bank transfers for clients across Southeast Asia."
-msgstr "Help2Pay 是允许东南亚各地客户进行网上银行转账的支付工具 。"
 
 msgid "Hence, your withdrawable balance is only up to %1%2, subject to your account’s available funds."
 msgstr "因此，取决于账户的可用资金，可支取余额最多为％1％2。"
@@ -6789,9 +6726,6 @@ msgstr "一月"
 msgid "January"
 msgstr "一月"
 
-msgid "Jeton is an international e-wallet for money transfers and online payments. For more information, please visit %1."
-msgstr "Jeton 是用于汇款和在线支付的国际电子钱包。欲了解详细信息, 请访问 %1。"
-
 msgid "Job Applicant Privacy Policy"
 msgstr "求职者隐私政策"
 
@@ -7143,9 +7077,6 @@ msgstr "Linux 或 MacOs"
 msgid "Litecoin"
 msgstr "莱特币"
 
-msgid "Litecoin is a cryptocurrency similar to Bitcoin, but capable of a higher transaction volume and faster confirmation times. For more information, please visit %1."
-msgstr "莱特币是类似于比特币的加密货币, 但能达到更高的交易量和更快的确认时间。欲知详情, 请访问 %1。"
-
 msgid "Litecoin vs US dollar"
 msgstr "莱特币兑美元"
 
@@ -7334,9 +7265,6 @@ msgstr "MacOs 或 Windows"
 
 msgid "Made an impression in the first interview? We'll invite you to a second interview with our CEO and/or hiring manager."
 msgstr "第一次面试留下了深刻印象？我们将邀请您与首席执行官和/或招聘经理进行第二次面谈。"
-
-msgid "Maestro is an international debit card service by Mastercard. For more information, please visit %1."
-msgstr "Maestro是万事达卡的国际借记卡服务。欲了解详细信息, 请访问 %1。"
 
 msgid "Maintain accurate system pricing parameters"
 msgstr "保持准确的系统定价参数"
@@ -7578,12 +7506,6 @@ msgstr "营销材料"
 msgid "Marketing and promotion"
 msgstr "营销和推广"
 
-msgid "Mastercard and Maestro withdrawals are only available for UK Clients."
-msgstr "透过Mastercard和Maestro的提款方式只适用于英国客户。"
-
-msgid "Mastercard is an international company that processes payments made with Mastercard-branded credit and debit cards. For more information, please visit %1."
-msgstr "万事达卡是国际公司, 专门处理使用万事达卡品牌的信用卡和借记卡支付的款项。欲知详情, 请访问 %1。"
-
 msgid "Matches/Differs"
 msgstr "相符/差异"
 
@@ -7677,9 +7599,6 @@ msgstr "金属交易保证金政策"
 msgid "Metals trading lets you speculate on the price movement of a particular metal asset in order to profit from the price difference when the asset value rises or falls."
 msgstr "金属交易让您推测特定金属资产的价格变动，以便在资产价值上涨或下跌时从价格差异中获利。"
 
-msgid "Method"
-msgstr "方式"
-
 msgid "Meticulous English language skills, with keen eye for detail when it comes to punctuation, spelling, grammar, and syntax"
 msgstr "熟练的英语语言技能, 特别注重关于标点、拼写、语法和句法方面的细节"
 
@@ -7688,18 +7607,6 @@ msgstr "最小"
 
 msgid "Min / Max withdrawal"
 msgstr "最小/最大取款金额"
-
-msgid "Min Deposit"
-msgstr "最小存款金额"
-
-msgid "Min Withdrawal"
-msgstr "最小提款额"
-
-msgid "Min-Max Deposit"
-msgstr "存款金额范围"
-
-msgid "Min-Max Withdrawal"
-msgstr "取款金额范围"
 
 msgid "Minimise trading risk by copying from expert traders."
 msgstr "通过从专业交易者处复制以尽量降低交易风险。"
@@ -7880,9 +7787,6 @@ msgstr "需要帮助？"
 
 msgid "NEO/USD"
 msgstr "小蚁币/美元"
-
-msgid "NETELLER provides businesses and individuals with a fast, simple, and secure way to transfer money online. For more information, please visit %1."
-msgstr "NETELLER 为企业和个人提供快速、简单、安全的在线汇款。欲知详情, 请访问 %1。"
 
 msgid "Name"
 msgstr "姓名"
@@ -8382,9 +8286,6 @@ msgstr "开账户、设置管理、令牌用法管理等。"
 msgid "Open an account and start trading in minutes."
 msgstr "开立账户，并于数分钟内开始交易。"
 
-msgid "Open an account now"
-msgstr "立即开设帐户"
-
 msgid "Open contracts"
 msgstr "订立合约"
 
@@ -8640,8 +8541,8 @@ msgstr "合作伙伴的收入"
 msgid "Partners"
 msgstr "合作伙伴"
 
-msgid "Parts of this clause may not apply to Synthetic Indices."
-msgstr "本条款的一些部分不适用于综合指数。"
+msgid "Parts of this clause may not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr "本条款的部分内容不适用于综合指数、篮子指数和衍生外汇。"
 
 msgid "Passion for Linux and other open-source platforms"
 msgstr "对使用Linux和其它开源平台充满热忱"
@@ -8742,9 +8643,6 @@ msgstr "赔付"
 msgid "Payout Range"
 msgstr "赔付范围"
 
-msgid "Paytrust88 is a payment facility that allows online bank transfers for clients across Southeast Asia. For more information, please visit %1."
-msgstr "Paytras88 是允许东南亚各地客户进行网上银行转账的支付工具, 。欲了解详细信息, 请访问 %1。"
-
 msgid "Pending"
 msgstr "待定"
 
@@ -8759,9 +8657,6 @@ msgstr "养老金领取人"
 
 msgid "Percentage"
 msgstr "百分比"
-
-msgid "Perfect Money allows individuals to make instant payments and money transfers securely on the Internet. For more information, please visit %1."
-msgstr "Perfect Money 允许个人安全地在互联网上即时支付和汇款。欲知详情, 请访问 %1。"
 
 msgid "Perform IB services and other obligations mentioned here at their own cost and risk"
 msgstr "自费和自负风险责任履行IB服务和其他义务"
@@ -8824,10 +8719,10 @@ msgid "Photo of your face"
 msgstr "脸部的照片"
 
 msgid "Pip"
-msgstr "点"
+msgstr "点差"
 
 msgid "Pip stands for 'percentage in point' which is generally the fourth decimal place (i.e. 0.0001)."
-msgstr "点（percentage in point，缩写为pip）一般来说是指小数点后第4位数（如0.0001）。"
+msgstr "点差（percentage in point，缩写为pip）一般来说是指小数点后第4位数（如0.0001）。"
 
 msgid "Place of birth"
 msgstr "出生地点"
@@ -9297,9 +9192,6 @@ msgstr "使用各种第三方支付服务（包括银行电汇，信用卡和电
 msgid "Processing"
 msgstr "处理中"
 
-msgid "Processing Time"
-msgstr "处理时间"
-
 msgid "Produce coding standards, training manuals, and other technical documents for our Back-end, Front-end, Quants, Business Intelligence, and Quality Assurance teams as well as for the third-party developers who use our API"
 msgstr "为我们的后端、前端、定量、商业智能和质量保证团队以及使用我们的API的第三方开发人员制作编码标准，培训手册和其他技术文档"
 
@@ -9516,9 +9408,6 @@ msgstr "2019年第4季度"
 msgid "Q4 2020"
 msgstr "2020年第4季度"
 
-msgid "Qiwi is a payment service provider that was founded in 2007. It provides individuals with a simple way to transfer money, receive payments, and pay online. For more information, please visit %1."
-msgstr "Qiwi 是支付服务提供商, 成立于2007年。它为个人提供简单的在线转移资金、接收付款和支付。欲知详情, 请访问 %1。"
-
 msgid "Quality Assurance"
 msgstr "质量保证"
 
@@ -9572,9 +9461,6 @@ msgstr "阅读我们对这个流行衍生工具的简单介绍，了解可以使
 
 msgid "Read the %1 company blog"
 msgstr "阅读%1公司博客"
-
-msgid "Read the %1 tech blog"
-msgstr "阅读%1技术博客"
 
 msgid "Ready to trade?"
 msgstr "已经准备好开始交易了吗？"
@@ -9689,9 +9575,6 @@ msgstr "请将我们的 MetaTrader 5 平台介绍给新客户, 并在其进行�
 
 msgid "Refer new clients to trade with us. Receive commissions based on your chosen partnership programme."
 msgstr "推荐新客户与我们交易。根据选择的合作伙伴计划获得佣金。"
-
-msgid "Reference"
-msgstr "参考"
 
 msgid "Reference ID"
 msgstr "参考编号"
@@ -10467,9 +10350,6 @@ msgstr "新元兑日元"
 msgid "Size - the size of client order determined by the volume (number of lots)"
 msgstr "大小 - 客户的订单大小根据数量 （手数） 而定"
 
-msgid "Skrill offers global payment solutions for individuals who wish to deposit funds, shop online, and transfer money to family and friends. For more information, please visit %1."
-msgstr "Skrill 为想存款、在线购物和将资金转给家人和朋友的个人提供全球支付解决方案。欲知详情, 请访问 %1。"
-
 msgid "Small island charm"
 msgstr "小岛的魅力"
 
@@ -10685,9 +10565,6 @@ msgstr "踏出户外，在Labuan的原始海滩上享受日光浴。还有沉船
 
 msgid "Steps required to continue verification on your mobile"
 msgstr "手机继续验证所需的步骤"
-
-msgid "Sticpay is a global e-wallet service for money transfers and online payments. For more information, please visit %1."
-msgstr "Sticpay是用于汇款和在线支付的全球性电子钱包服务。欲了解详细信息, 请访问 %1。"
 
 msgid "Stock Indices"
 msgstr "股票指数"
@@ -11136,9 +11013,6 @@ msgstr "泰达作为 ERC20 代币（eUSDT）是在以太坊托管的泰达币版
 msgid "Tether as an Omni token (USDT) is a version of Tether that is hosted on the Omni layer on the Bitcoin blockchain."
 msgstr "泰达作为 Omni 代币（USDT）是在比特币区块链 Omni 层托管的泰达币版本。"
 
-msgid "Tether is a blockchain-based cryptocurrency whose cryptocoins in circulation are backed by an equivalent amount of traditional fiat currencies. For more information, please visit %1."
-msgstr "Tether是基于区块链的加密货币, 其流通由同等数量的传统法定货币提供支持。欲了解更多信息, 请访问 %1。"
-
 msgid "Th"
 msgstr "星期四"
 
@@ -11361,8 +11235,8 @@ msgstr "平均"
 msgid "The Commencement Date of this agreement shall mean the date on which the Agent's account is approved by the Company."
 msgstr "本协议的生效日期是指公司批准代理账户的日期。"
 
-msgid "The Company Prices are determined by reference to the price of the Underlying Instrument which is quoted on external exchanges or dealing facilities that %1 selects at the Company's discretion. The Company's IT infrastructure and price aggregator system facilitate the reception of quotes from shortlisted prime brokers, who act as liquidity providers for the Company and the delivery of the quotes, derived with reference against relevant benchmark and markets, to the client. The client acknowledges that the Company Prices may differ from the Bids and Asks made available by external exchanges or dealing facilities and the Company is not liable for any losses that the client might incur arising from such differences. This clause does not apply to Synthetic Indices."
-msgstr "公司在参考了由公司自主经%1选定的外部交易所或交易设施所报的基础工具价格之后决定价格。公司拥有信息技术基础设施和价格聚合器系统，便于向充当公司流动性提供商，经过挑选的主要经纪商收集报价，并将经过参考有关基准和市场得来的价格提供给客户。客户确认公司的价格可能与外部交易所或交易设施所提供的买入和卖出价格不相同，以及公司不对客户因所述差异所引起的任何损失承担赔偿责任。本条款不适用于综合指数。"
+msgid "The Company Prices are determined by reference to the price of the Underlying Instrument which is quoted on external exchanges or dealing facilities that %1 selects at the Company's discretion. The Company's IT infrastructure and price aggregator system facilitate the reception of quotes from shortlisted prime brokers, who act as liquidity providers for the Company and the delivery of the quotes, derived with reference against relevant benchmark and markets, to the client. The client acknowledges that the Company Prices may differ from the Bids and Asks made available by external exchanges or dealing facilities and the Company is not liable for any losses that the client might incur arising from such differences. This clause does not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr "公司在参考了由公司自主经%1选定的外部交易所或交易设施所报的基础工具价格之后决定价格。公司拥有信息技术基础设施和价格聚合器系统，便于向充当公司流动性提供商，经过挑选的主要经纪商收集报价，并将经过参考有关基准和市场得来的价格提供给客户。客户确认公司的价格可能与外部交易所或交易设施所提供的买入和卖出价格不相同，以及公司不对客户因所述差异所引起的任何损失承担赔偿责任。本条款不适用于综合指数、篮子指数和衍生外汇。"
 
 msgid "The Company aims to keep a record of the kinds of activity that the Company carries on in which a material conflict could arise or has arisen. The Company also maintains procedures to manage actual or potential conflicts. This includes procedures to maintain appropriate independence among members of the Company's staff who are involved in potentially conflicting activities. Such independence-upholding procedures can be followed, for example, through the operation of information barriers, physical separation of staff, the segregation of duties and responsibilities, and the maintenance of a policy of independence, which requires the Company's staff, when providing services to a client, to act in the best interests of the client and to disregard any conflicts of interest, or in some circumstances, to decline to act for a client or potential client in order to avoid conflicts of interest."
 msgstr "公司希望记录持续运行并可能发生利益冲突的活动。公司也持续管理实际或潜在冲突，包括让与潜在冲突活动相关的员工保持适当的独立性，例如：通过信息障碍、员工隔离、责任分离制度和保持政策独立性。这需要公司的员工在服务时以客户的最佳利益为主，忽略利益冲突，并在某些情况下拒绝为客户或潜在客户采取行动。"
@@ -11685,8 +11559,8 @@ msgstr "公司通过电子系统提供各种报表，详细说明由联盟会员
 msgid "The Company shall, in its absolute discretion, determine whether the application of the Introducing Broker has been successful. The Company's decision is final and is not subject to any appeal."
 msgstr "公司将自行确定推介经纪的申请是否成功。公司的决定具有最终性，不能提出申诉。"
 
-msgid "The Company sources market data from prime brokers who act as liquidity providers, thus executing the client's transactions through a pool of aggregated liquidity from top tier banks. The services offered by the Company do not include physical delivery of foreign currency by the Company or the prime brokers to the client. The client acknowledges and agrees that such data is proprietary to the Company and any such provider, and the client will not retransmit, redistribute, publish, disclose, or display in whole or in part such data to third parties. The client represents and warrants that they will only use such data for purposes of facilitating their entry into transactions with the Company on the client's MT5 Real Account in accordance with this agreement and not for any other purpose. This clause does not apply to Synthetic Indices."
-msgstr "公司市场数据源自充当流动性提供商的主要经纪人，因此通过从顶级银行获取的聚合流动性池为客户执行交易。公司提供的服务不包括由公司或主要经纪人向客户递送实物外币。客户确认并同意，此类数据由公司和任何此类提供商专有，以及客户不会重传、重新分配、发布、披露、或显示此类数据的全部或部分给第三方。客户陈述并保证客户将仅按照本协议的目的而不是为了任何其他目的使用此类数据，为了便于在MT5真实账户进行交易。本条款不适用于综合指数。"
+msgid "The Company sources market data from prime brokers who act as liquidity providers, thus executing the client's transactions through a pool of aggregated liquidity from top tier banks. The services offered by the Company do not include physical delivery of foreign currency by the Company or the prime brokers to the client. The client acknowledges and agrees that such data is proprietary to the Company and any such provider, and the client will not retransmit, redistribute, publish, disclose, or display in whole or in part such data to third parties. The client represents and warrants that they will only use such data for purposes of facilitating their entry into transactions with the Company on the client's MT5 Real Account in accordance with this agreement and not for any other purpose. This clause does not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr "公司市场数据源自充当流动性提供商的主要经纪人，因此通过从顶级银行获取的聚合流动性池为客户执行交易。公司提供的服务不包括由公司或主要经纪人向客户递送实物外币。客户确认并同意，此类数据由公司和任何此类提供商专有，以及客户不会重传、重新分配、发布、披露、或显示此类数据的全部或部分给第三方。客户陈述并保证客户将仅按照本协议的目的而不是为了任何其他目的使用此类数据，为了便于在MT5真实账户进行交易。本条款不适用于综合指数、篮子指数和衍生外汇。"
 
 msgid "The Company strives to ensure that all the orders placed are executed; however, this is not always possible due to material difficulty or unusual circumstances. In any instance that the Company is aware of any material difficulty relevant to the proper execution of an order, it promptly informs the client of the issue."
 msgstr "公司努力确保所有订单都能执行。然而, 有时会碰到重大困难或不寻常的情况, 因此并不一定每次都能够办到。一旦公司意识到与正确执行订单有关的任何重大困难的任何情况, 公司会迅速将问题通知客户。"
@@ -12463,9 +12337,6 @@ msgstr "客户可能蒙受的最大损失就是其向本公司支付的金额。
 msgid "The maximum number of tokens (%1) has been reached."
 msgstr "已达令牌 (%1) 最大限数。"
 
-msgid "The minimum amount for withdrawal will vary depending on the latest exchange rates."
-msgstr "取款最小金额会随着最新兑换率改变。"
-
 msgid "The minimum required amount for using the account transfer facility is %1."
 msgstr "使用账户资金转移设施的最小金额为 %1。"
 
@@ -12895,9 +12766,6 @@ msgstr "这包括关于推出新市场的决定，以及可能提供的价差和
 msgid "This interest adjustment (or swap rate) is based on interbank lending rates, on top of a 2% fee."
 msgstr "此利率调整 (或掉期利率) 是基于银行间借贷利率，再加上2%费用。"
 
-msgid "This is a complete list of supported payment methods. We'll show you which payment methods are available in your location on the deposit page."
-msgstr "这是受支持的付款方式的完整列表。存款页面会显示所在位置可用的付款方式。"
-
 msgid "This is a continuation of the same point. %1 offers clients a variety of ways of learning how to trade responsibly. Affiliates should make sure that they do learn, for example by encouraging them to build up their expertise with a demo account rather than trading with real funds straightaway."
 msgstr "此文继续以上的说明。％1为客户提供多种学习负责任交易的方式。联盟会员须确保自己确实有在利用此资源，例如，通过演示账户建立自己的专业知识，而不是直接使用真实资金交易。"
 
@@ -12973,8 +12841,8 @@ msgstr "此要求由《统一报告标准》 (CRS) 和《外国账户税收遵�
 msgid "This risk disclosure statement is not exhaustive and is not intended to constitute a comprehensive statement of all the risks to which the client might be exposed and does not describe all the risks inherent to forex and contracts for differences that exist now or which may arise in the future. Its objective is rather to provide the client with information, so that the client can reasonably understand the risks associated with forex and contracts for differences offered by %1, as it is the Company's intention to provide the client with the best possible trading experience."
 msgstr "此风险披露声明并非详尽无遗，也并非包含客户可能会接触到的所有风险的全面声明。此声明也并不能描述外汇交易和合约现存的固有风险或将来可能发生的所有风险差异。其目的在于为客户提供及让客户合理理解%1在符合公司利益的同时为客户提供的最佳外汇与差价合约交易经验相关的风险信息。"
 
-msgid "This section on force majeure events does not apply to Synthetic Indices."
-msgstr "此不可抗力事件章节不适用于综合指数。"
+msgid "This section on force majeure events does not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr "此不可抗力事件章节不适用于综合指数、篮子指数和衍生外汇。"
 
 msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
 msgstr "某些国家如美国、加拿大、香港或18岁以下人士无法使用本网站的服务。"
@@ -12999,9 +12867,6 @@ msgstr "跳动点"
 
 msgid "Tick Prediction"
 msgstr "跳动点预测"
-
-msgid "Tick Trade Android App"
-msgstr "Tick Trade Android版应用程序"
 
 msgid "Ticks"
 msgstr "跳动点"
@@ -13681,9 +13546,6 @@ msgstr "美元指数 - 衡量美元相对于一篮子五种全球货币（欧元
 msgid "USDK"
 msgstr "USDK"
 
-msgid "Ultra fast on-the-go trading"
-msgstr "超快速交易服务"
-
 msgid "Unable to read file %1"
 msgstr "无法读取文件 %1"
 
@@ -14038,9 +13900,6 @@ msgstr "查看账单"
 msgid "View your trading and withdrawal limits."
 msgstr "查看交易和取款限额。"
 
-msgid "Visa is an international company that supports digital payments around the world, most commonly through their brand of credit and debit cards. For more information, please visit %1."
-msgstr "Visa是支持世界各地数字支付的国际公司, 最普遍的是通过其品牌的信用和借记卡。欲知详情, 请访问 %1。"
-
 msgid "Volatility 10 (1s) Index"
 msgstr "波动率 10 (1s) 指数"
 
@@ -14289,9 +14148,6 @@ msgstr "文件号已成功验证"
 
 msgid "Web and software developer"
 msgstr "网络和软件开发员"
-
-msgid "WebMoney is an online payment settlement system that's been operating since 1998. For more information, please visit %1."
-msgstr "WebMoney 是在线支付结算系统, 1998年开始运作至今。欲知详情, 请访问 %1。"
 
 msgid "WebTrader"
 msgstr "WebTrader"
@@ -14718,15 +14574,6 @@ msgstr "从客户的MT5真实账户中提款时可以使用与其%1账户不相�
 
 msgid "Withdrawal via payment agent is available only if you deposit exclusively via payment agent."
 msgstr "必须完全通过付款代理存款才可使用付款代理提款。"
-
-msgid "Withdrawal: %1 day"
-msgstr "取款：%1 天"
-
-msgid "Withdrawal: %1 to %2 days"
-msgstr "取款：%1至%2 天"
-
-msgid "Withdrawal: Not applicable"
-msgstr "取款：不适用"
 
 msgid "Withdrawals are temporarily unavailable due to system maintenance. You can make your withdrawals when the maintenance is complete."
 msgstr "由于系统维护，暂时无法取款。一旦维护完成，即可取款。"
@@ -15373,9 +15220,6 @@ msgstr "大零币兑美元"
 msgid "ZEC/USD"
 msgstr "大零币/美元"
 
-msgid "ZingPay is a payment facility that allows online bank transfers for clients in South Africa."
-msgstr "ZingPay 是允许南非客户进行网上银行转账的支付工具 。"
-
 msgid "a client that is not a Professional client or Eligible Counterparty"
 msgstr "非专业客户或有资格当交易对手的客户"
 
@@ -15513,9 +15357,6 @@ msgstr "或"
 
 msgid "or upload photo – no scans or photocopies"
 msgstr "或上传照片 - 不接受扫描件或影印件"
-
-msgid "paysafecard offers a voucher-based online payment method that does not require a bank account, credit card, or other personal information. For more information, please visit %1."
-msgstr "paysafecard 提供基于凭证，不需要银行账户、信用卡或其他个人信息的在线支付方法 。欲知详情, 请访问 %1。"
 
 msgid "position(s)"
 msgstr "头寸"
