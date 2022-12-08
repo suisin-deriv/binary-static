@@ -372,7 +372,7 @@ const Authenticate = () => (
                         <div id='unverified_poinc' className='center-text gr-gutter gr-padding-20 invisible'>
                             <img className='gr-padding-20' src={it.url_for('images/pages/authenticate/invalid.svg')} />
                             <h1 className='gr-padding-10'>{it.L('Proof of income verification failed')}</h1>
-                            <p>{it.L('Please check your email for details')}</p>
+                            <p>{it.L('Please contact us via [_1]live chat[_2].', `<a href=${it.url_for('contact')} target="_blank">`, '</a>')}</p>
                         </div>
 
                         <p className='center-text notice-msg invisible' id='error_message' />

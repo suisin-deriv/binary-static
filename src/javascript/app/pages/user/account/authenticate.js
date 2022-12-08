@@ -7,6 +7,7 @@ const Client                  = require('../../../base/client');
 const Header                  = require('../../../base/header');
 const BinarySocket            = require('../../../base/socket');
 const isAuthenticationAllowed = require('../../../../_common/base/client_base').isAuthenticationAllowed;
+const isPoincAllowed          = require('../../../../_common/base/client_base').isPoincAllowed;
 const makeOption              = require('../../../../_common/common_functions').makeOption;
 const CompressImage           = require('../../../../_common/image_utility').compressImg;
 const ConvertToBase64         = require('../../../../_common/image_utility').convertToBase64;
@@ -1920,7 +1921,12 @@ const Authenticate = (() => {
                 }
                 case 'locked':
                 case 'rejected':
-                    $('#unverified_poinc').setVisibility(1);
+                    if (isPoincAllowed()){
+                        initPOInc();
+                        $not_authenticated_poinc.setVisibility(1);
+                    } else {
+                        $('#unverified_poinc').setVisibility(1);
+                    }
                     break;
                 case 'verified':
                     $('#verified_poinc').setVisibility(1);

@@ -4,6 +4,7 @@ const Client                   = require('./client');
 const BinarySocket             = require('./socket');
 const getCurrencyDisplayCode   = require('../common/currency').getCurrencyDisplayCode;
 const isAuthenticationAllowed  = require('../../_common/base/client_base').isAuthenticationAllowed;
+const isPoincAllowed           = require('../../_common/base/client_base').isPoincAllowed;
 const GTM                      = require('../../_common/base/gtm');
 const Login                    = require('../../_common/base/login');
 const SocketCache              = require('../../_common/base/socket_cache');
@@ -290,7 +291,7 @@ const Header = (() => {
             const hasVerification = (string) => {
                 const { prompt_client_to_authenticate } = get_account_status;
                 const { identity, document, needs_verification, income } = authentication;
-                if (!identity || !document || !needs_verification || !isAuthenticationAllowed()) {
+                if (!identity || !document || !needs_verification || !isAuthenticationAllowed() || !isPoincAllowed()) {
                     return false;
                 }
                 const verification_length = needs_verification.length;
