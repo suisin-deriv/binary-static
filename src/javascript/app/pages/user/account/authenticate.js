@@ -1299,9 +1299,7 @@ const Authenticate = (() => {
                 $('#idv_document_failed_upload_btn').setVisibility(0);
                 // If IDV has remaining attempt
                 if (Number(idv_submissions_left) > 0) {
-                    $('#idv_document_failed_try_again_btn').on('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
+                    $('#idv_document_failed_try_again_btn').on('click', () => {
                         $('#idv_document_failed').setVisibility(0);
                         handleCountrySelector();
                     });
